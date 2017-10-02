@@ -2,14 +2,12 @@
 
 .. toctree::
    :maxdepth: 1
+   :titlesonly:
 
-files/vnfsdk-apis
+   files/vnfsdk-apis
 
-VNFSDK
-======
-
-Documentation Outline
----------------------
+VNFSDK Documentation
+====================
 
 Components
 ----------
@@ -24,6 +22,13 @@ The deployment time requirements and dependencies define any and all compute inf
 The telemetry indicator definitions define a set of default indicators exposed by a given VNF product for use by monitoring and assurance tools. This list can be extended and customized once a given VNF product is on-boarded and instantiated at run-time.
 
 The VNF product model is specified using the TOSCA NFV simple profile. It is persisted, along with the product executables and data, using TOSCA CSAR files.
+
+.. toctree::
+   :maxdepth: 1
+   :titlesonly:
+
+   files/pkgtools
+   files/VNF\ SDK\ blueprints
 
 VNF SDK Tools 
 -------------
@@ -52,6 +57,12 @@ VNF Package Tools User Guide
 ----------------------------
 
 VNF Package Designer, provides VNF product DevOps engineers with a graphical tool to define the VNF product model and package content. It is made available as part of the VNF Supplier SDK tools.The package designer makes use of the VNF SDK command line interfaces (CLIs) and client-side API language bindings in order to define the model and the package content. As such, it is functionally equivalent to the VNF SDK tools.
+
+.. toctree::
+   :maxdepth: 1
+   :titlesonly:
+
+   files/VNF\ SDK\ -\ Guide\ for\ Bundling\ VNFs
 
 Marketplace User Guide for Operators 
 ------------------------------------
