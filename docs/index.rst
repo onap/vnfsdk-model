@@ -1,13 +1,14 @@
 .. This work is licensed under a Creative Commons Attribution 4.0 International License.
 
+
+VNFSDK Documentation
+====================
+
 .. toctree::
    :maxdepth: 1
    :titlesonly:
 
    files/vnfsdk-apis
-
-VNFSDK Documentation
-====================
 
 Components
 ----------
@@ -26,9 +27,10 @@ The VNF product model is specified using the TOSCA NFV simple profile. It is per
 .. toctree::
    :maxdepth: 1
    :titlesonly:
+   :glob:
 
-   files/pkgtools
-   files/VNF\ SDK\ blueprints
+   files/pkgtool
+   files/*blueprints
 
 VNF SDK Tools 
 -------------
@@ -61,8 +63,9 @@ VNF Package Designer, provides VNF product DevOps engineers with a graphical too
 .. toctree::
    :maxdepth: 1
    :titlesonly:
+   :glob:
 
-   files/VNF\ SDK\ -\ Guide\ for\ Bundling\ VNFs
+   files/*Bundling*
 
 Marketplace User Guide for Operators 
 ------------------------------------
