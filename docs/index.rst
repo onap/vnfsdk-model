@@ -32,6 +32,13 @@ The VNF product model is specified using the TOSCA NFV simple profile. It is per
    files/pkgtool
    files/*blueprints
 
+VNF SDK Marketplace
+-------------------
+.. toctree::
+   :maxdepth: 1
+
+   files/marketplace-overview
+
 VNF SDK Tools 
 -------------
 
@@ -47,10 +54,6 @@ VNF SDK tools provide VNF product DevOps engineers with command line tools and c
 
 •	VNF Package Dry Run - performs a "dry run" install to ensure that the package can be deployed during instantiation
 
-VNF Validation Tests 
---------------------
-
-TBD
 
 User Guides
 ----------- 
@@ -70,9 +73,18 @@ VNF Package Designer, provides VNF product DevOps engineers with a graphical too
 Marketplace User Guide for Operators 
 ------------------------------------
 
-TBD
+.. toctree::
+   :maxdepth: 1
+   :titlesonly:
+
+   files/VNFSDK-Marketplace-userguide-operators
 
 Marketplace User Guide for VNF Suppliers 
 ----------------------------------------
 
-TBD
+.. toctree::
+   :maxdepth: 1
+   :titlesonly:
+
+   files/VNFSDK-Marketplace-userguide-vendors
+
