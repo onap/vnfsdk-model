@@ -34,10 +34,16 @@ The VNF product model is specified using the TOSCA NFV simple profile. It is per
 
 VNF SDK Marketplace
 -------------------
+
+.. include:: files/marketplace-overview.rst
+
+Installation instructions
+-------------------------
+
 .. toctree::
    :maxdepth: 1
 
-   files/marketplace-overview
+   files/mktplace-install
 
 VNF SDK Tools 
 -------------
