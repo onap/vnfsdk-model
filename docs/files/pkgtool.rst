@@ -25,12 +25,16 @@ The following commands are executed in the cloned repository directory:
 	Install all required dependencies
 2. pip install .
 
-Install VNF SDK tools package 
+Or run the following commands in the cloned repository directory to install:
+
+1. python setup.py install
+
+Install VNF SDK tools package
 -----------------------------
 Usage
 
 * Create CSAR by specifying a directory
-	vnfsdk csar-create -d DESTINATION source entry
+	vnfsdk csar-create -d DESTINATION [--manifest MANIFEST] [--history HISTORY] [--tests TESTS] [--licenses LICENSES] source entry
 
 * Extract CSAR content
 	vnfsdk csar-open -d DESTINATION source
