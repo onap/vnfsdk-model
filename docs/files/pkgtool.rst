@@ -22,7 +22,7 @@ Python module with CLI is installed by Python pip command. It is possible to ins
 The following commands are executed in the cloned repository directory:
 
 1. pip install -r requirements.txt
-	Install all required dependencies
+    Install all required dependencies
 2. pip install .
 
 Or run the following commands in the cloned repository directory to install:
@@ -34,12 +34,12 @@ Install VNF SDK tools package
 Usage
 
 * Create CSAR by specifying a directory
-	vnfsdk csar-create -d DESTINATION [--manifest MANIFEST] [--history HISTORY] [--tests TESTS] [--licenses LICENSES] source entry
+    vnfsdk csar-create -d DESTINATION [--manifest MANIFEST] [--history HISTORY] [--tests TESTS] [--licenses LICENSES] source entry
 
 * Extract CSAR content
-	vnfsdk csar-open -d DESTINATION source
+    vnfsdk csar-open -d DESTINATION source
 
 * Validate CSAR content
-	vnfsdk csar-validate source
+    vnfsdk csar-validate source
  
 All commands have -h switch which displays help and description of all paramaters.

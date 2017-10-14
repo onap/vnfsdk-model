@@ -9,21 +9,20 @@ VNF SDK provides a reference implementation "marketplace" to help vendors valida
    :height: 600px
    :width: 800px
 
-1.  **VNF Repository** is a reference repository for VNFs. 
-	a. It provides functionalities:
-		i. Upload/Re-upload VNF
-		ii. Download VNF
-		iii. Query VNF based on several parameters
-		iv. Delete VNF
-	b. It also provides an intuitive Graphical user interface to perform above activities.
- 
-2. Along with these, VNFSDK also provides hooks to call other tools or libraries including **Validation and Function Tests**. 
+1.  **VNF Repository** is a reference repository for VNFs.
+    a. It provides functionalities:
+        i. Upload/Re-upload VNF
+        ii. Download VNF
+        iii. Query VNF based on several parameters
+        iv. Delete VNF
+    b. It also provides an intuitive Graphical user interface to perform above activities.
 
-	a. Validation verifies the package structure, mandatory files and their format. Currently, the tool performs basic validation to support SDC. In a future release, it will also ensure integrity and authenticity of the package as described by VNF Requirements.
-	b. Function Test provides Robot framework test cases present in each VNF. Function test executes those test cases and send the test response back to the marketplace. While the framework is in place, actual test development is deferred for a future release.
+2. Along with these, VNFSDK also provides hooks to call other tools or libraries including **Validation and Function Tests**.
+
+    a. Validation verifies the package structure, mandatory files and their format. Currently, the tool performs basic validation to support SDC. In a future release, it will also ensure integrity and authenticity of the package as described by VNF Requirements.
+    b. Function Test provides Robot framework test cases present in each VNF. Function test executes those test cases and send the test response back to the marketplace. While the framework is in place, actual test development is deferred for a future release.
 
 3. **VNFSDK Integration with SDC**
 
-	a. In Amsterdam, the SDC-UI is being integrated with the VNF Repository backend. It provides seamless download, search, view of the VNF present in VNF repository. The user can onboard these validated VNF into the SDC catalogue.
-
+    a. In Amsterdam, the SDC-UI is being integrated with the VNF Repository backend. It provides seamless download, search, view of the VNF present in VNF repository. The user can onboard these validated VNF into the SDC catalogue.
 
