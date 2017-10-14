@@ -13,7 +13,7 @@ VNFSDK Documentation
 Components
 ----------
 
-VNF Packaging Model/Blueprint 
+VNF Packaging Model/Blueprint
 -----------------------------
 
 VNF product model/blueprint provides a declarative way to define deployment, operational and functional attributes of a VNF product. The VNF product is defined in terms of deployment time requirements and dependencies and exposed telemetry indicator definitions.
@@ -45,7 +45,7 @@ Installation instructions
 
    files/mktplace-install
 
-VNF SDK Tools 
+VNF SDK Tools
 -------------
 
 VNF SDK tools provide VNF product DevOps engineers with command line tools and client side API language bindings to define the VNF product model and package content. The following tools are included...
@@ -56,15 +56,15 @@ VNF SDK tools provide VNF product DevOps engineers with command line tools and c
 
 •	VNF Package Extractor - extracts VNF product model and executables from the CSAR file
 
-•	VNF Package Parser - translates VNF proeduct blueprint into a format consumable by OPEN-O components
+•	VNF Package Parser - translates VNF proeduct blueprint into a format consumable by ONAP components
 
 •	VNF Package Dry Run - performs a "dry run" install to ensure that the package can be deployed during instantiation
 
 
 User Guides
------------ 
+-----------
 
-VNF Package Tools User Guide 
+VNF Package Tools User Guide
 ----------------------------
 
 VNF Package Designer, provides VNF product DevOps engineers with a graphical tool to define the VNF product model and package content. It is made available as part of the VNF Supplier SDK tools.The package designer makes use of the VNF SDK command line interfaces (CLIs) and client-side API language bindings in order to define the model and the package content. As such, it is functionally equivalent to the VNF SDK tools.
@@ -76,7 +76,7 @@ VNF Package Designer, provides VNF product DevOps engineers with a graphical too
 
    files/*Bundling*
 
-Marketplace User Guide for Operators 
+Marketplace User Guide for Operators
 ------------------------------------
 
 .. toctree::
@@ -85,7 +85,7 @@ Marketplace User Guide for Operators
 
    files/VNFSDK-Marketplace-userguide-operators
 
-Marketplace User Guide for VNF Suppliers 
+Marketplace User Guide for VNF Suppliers
 ----------------------------------------
 
 .. toctree::
