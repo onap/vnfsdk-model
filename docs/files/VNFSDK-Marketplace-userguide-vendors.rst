@@ -1,7 +1,7 @@
-VNF SDK Marketplace User Guide for Vendors
+VNF-SDK Marketplace User Guide for Vendors
 ==========================================
 
-The VNFSDK Marketplace helps vendors validate VNFs and connect with suppliers.  To upload and validate VNFs, vendors will use the web GUI.
+The VNF-SDK Marketplace helps vendors validate VNFs and connect with suppliers.  To upload and validate VNFs, vendors will use the web GUI.
 
 1. Log into the portal
 2. Click "upload" in the upper right to upload a VNF. Select the file and enter a short description and details.
