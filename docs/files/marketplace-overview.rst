@@ -5,17 +5,19 @@ VNF-SDK provides a reference implementation "marketplace" to help vendors valida
 
 |image0|
 
-.. |image0| image:: vnfsdk-marketplace.png
+.. |image0| image:: files/vnfsdk-marketplace.png
    :height: 600px
    :width: 800px
 
 1.  **VNF Repository** is a reference repository for VNFs.
+
     a. It provides functionalities such as:
         i. Upload/Re-upload VNF
         ii. Download VNF
         iii. Query VNF based on several parameters
         iv. Delete VNF
     b. It also provides an intuitive Graphical user interface to perform above activities.
+
 
 2. Along with these, VNF-SDK also provides hooks to call other tools or libraries including **Validation and Function Tests**.
 
