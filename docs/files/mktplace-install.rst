@@ -1,4 +1,4 @@
-VNFSDK Marketplace Installation Instructions
+VNF SDK Marketplace Installation Instructions
 ============================================
 
 1. Download vnfsdk/refrepo from Gerrit
