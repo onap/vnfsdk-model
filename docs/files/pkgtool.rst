@@ -41,5 +41,6 @@ Usage
 
 * Validate CSAR content
     vnfsdk csar-validate source
+
  
 All commands have -h switch which displays help and description of all paramaters.
