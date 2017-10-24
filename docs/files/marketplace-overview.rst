@@ -18,7 +18,8 @@ VNF SDK provides a reference implementation "marketplace" to help vendors valida
         iv. Delete VNF
     b. It also provides an intuitive Graphical user interface to perform above activities.
 
-2. Along with these, VNF SDK also provides hooks to call other tools or libraries including **Validation and Function Tests**.
+
+2.  Along with these, VNF SDK also provides hooks to call other tools or libraries including **Validation and Function Tests**.
 
     a. Validation verifies the package structure, mandatory files and their format. Currently, the tool performs basic validation to support SDC. In a future release, it will also ensure integrity and authenticity of the package as described by VNF Requirements.
     b. Function Test provides Robot framework test cases present in each VNF. Function test executes those test cases and send the test response back to the marketplace. While the framework is in place, actual test development is deferred for a future release.

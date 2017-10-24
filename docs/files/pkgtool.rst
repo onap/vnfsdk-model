@@ -9,7 +9,7 @@ Provided tools
 * VNF Package Extractor - extracts VNF product model and executables from the CSAR file
 * VNF Package Parser - translates VNF product blueprint into a format consumable by ONAP components
 * VNF Package Dry Run - performs a "dry run" install to ensure that the package can be deployed during instantiation
- 
+
 The tools are provided in a form of a shared library (Python module) that can be used in other projects. A CLI is also provided out-of-the box for DevOps to use the library with their scripts and autoamtion framework.
 
 Repository Name: vnfsdk/pkgtools
@@ -42,5 +42,5 @@ Usage
 * Validate CSAR content
     vnfsdk csar-validate source
 
- 
+
 All commands have -h switch which displays help and description of all paramaters.
