@@ -92,5 +92,15 @@ Marketplace User Guide for VNF Suppliers
    :maxdepth: 1
    :titlesonly:
 
-   files/VNFSDK-Marketplace-userguide-vendors
+   files/VNFSDK-Marketplace-userguide-operators
+
+VES Client Guidelines
+---------------------
+
+.. toctree::
+   :maxdepth: 1
+   :titlesonly:
+
+   files/VESEventRegistration
+   files/VESEventListener
 
