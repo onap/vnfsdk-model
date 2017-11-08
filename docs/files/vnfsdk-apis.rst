@@ -17,7 +17,7 @@ Upload/Re-upload VNF Package
 +--------------------+-----------------------------+
 |Operation Type      |POST                         |
 +--------------------+-----------------------------+
-|Content-Type        |multipart/form-data	   |
+|Content-Type        |multipart/form-data          |
 +--------------------+-----------------------------+
 
 Request Parameters:
@@ -83,7 +83,7 @@ Response:
 
 HTTP Success or Error Code
 
-Download VNF package files 
+Download VNF package filesï¿½
 ++++++++++++++++++++++++++
 
 +--------------------+--------------------------------------------+
@@ -161,17 +161,18 @@ PackageMetaData
 
 Sample:
 ::
-   {
-       "csarId":"78ede6f3-66cc-46ab-b748-38a6c010d272",
-       "name":"NanocellGateway",
-       "provider":"XYZ",
-       "version":"V1.0",
-       "createTime":"2016-06-29 03:33:15",
-       "modifyTime":"2016-06-29 09:33:15",
-       "size":"0.93M",
-       "downloadUri":"http://msb_ip:msb_port/files/marketplace/CSAR/XYZ/NanocellGW/v1.0/NanocellGateway.csar",
-       "type":"CSAR"
-   }
+
+  {
+     "csarId":"78ede6f3-66cc-46ab-b748-38a6c010d272",
+     "name":"NanocellGateway",
+     "provider":"XYZ",
+     "version":"V1.0",
+     "createTime":"2016-06-29 03:33:15",
+     "modifyTime":"2016-06-29 09:33:15",
+     "size":"0.93M",
+     "downloadUri":"http://msb_ip:msb_port/files/marketplace/CSAR/XYZ/NanocellGW/v1.0/NanocellGateway.csar",
+     "type":"CSAR"
+  }
 
 Query list of VNF package information by conditions
 +++++++++++++++++++++++++++++++++++++++++++++++++++

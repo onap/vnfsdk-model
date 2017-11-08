@@ -3,11 +3,13 @@ VNF SDK Marketplace Installation Instructions
 
 1. Download vnfsdk/refrepo from Gerrit
 ::
-    git clone http://gerrit.onap.org/r/vnfsdk/refrepo
+
+  git clone http://gerrit.onap.org/r/vnfsdk/refrepo
 
 2. Goto vnfmarket-be/deployment/install,
 ::
-    Enter command "docker-compose up -d"
+
+  Enter command "docker-compose up -d"
 
 This will start two Docker containers:
 
