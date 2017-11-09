@@ -1,11 +1,11 @@
 VNF SDK Marketplace
-==================
+===================
 
 VNF SDK provides a reference implementation "marketplace" to help vendors validate and manage VNF packages. It also supports the operator to onboard VNF into ONAP.
 
 |image0|
 
-.. |image0| image:: files/vnfsdk-marketplace.png
+.. |image0| image:: vnfsdk-marketplace.png
    :height: 600px
    :width: 800px
 
@@ -27,4 +27,3 @@ VNF SDK provides a reference implementation "marketplace" to help vendors valida
 3. **VNF SDK Integration with SDC**
 
     a. In Amsterdam release, the SDC-UI is being integrated with the VNF Repository backend. It provides seamless download, search, view of the VNF present in VNF repository. The user can onboard these validated VNF into the SDC catalogue.
-

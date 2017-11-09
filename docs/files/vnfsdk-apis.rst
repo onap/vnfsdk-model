@@ -83,7 +83,7 @@ Response:
 
 HTTP Success or Error Code
 
-Download VNF package files�
+Download VNF package files
 ++++++++++++++++++++++++++
 
 +--------------------+--------------------------------------------+
