@@ -37,14 +37,26 @@ It provides:
 VNF SDK works with SDC to facilitate VNF Onboarding.
 
 **Bug Fixes**
+
 N/A
+
 **Known Issues**
-N/A
+
+VNFSDK-126: The service 'GET /packageresource/csrs' ignores query parameters
+
 **Security Issues**
+
 N/A
+
 **Upgrade Notes**
+
 N/A
+
 **Deprecation Notes**
+
 N/A
+
 **Other**
-N/A
+
+VNF onboarding with SDC is manual in Amsterdam.
+

@@ -64,15 +64,19 @@ client side API language bindings to define the VNF product model and package
 content. The following tools are included...
 
 •	VNF Package Builder - creates a CSAR file based on inputs provided by the VNF
-product DevOps engineer
+	product DevOps engineer
+
 •	VNF Package Validator - validates the content of the VNF packages to ensure
-that everything has been built correctly
+	that everything has been built correctly
+
 •	VNF Package Extractor - extracts VNF product model and executables from the
-CSAR file
+	CSAR file
+
 •	VNF Package Parser - translates VNF proeduct blueprint into a format
-consumable by ONAP components
+	consumable by ONAP components
+
 •	VNF Package Dry Run - performs a "dry run" install to ensure that the package
-can be deployed during instantiation
+	can be deployed during instantiation
 
 
 User Guides

@@ -11,7 +11,7 @@ into ONAP.
 
 |image0|
 
-.. |image0| image:: vnfsdk-marketplace.png
+.. |image0| image:: files/vnfsdk-marketplace.png
    :height: 600px
    :width: 800px
 

@@ -103,39 +103,39 @@ Sample Request and Response
 Sample Request
 ^^^^^^^^^^^^^^
 
-+---------------------------------------------------------------+
-| POST /eventListener/v5 HTTPS/1.1                              |
-| Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==             |
-| content-type: application/json                                |
-| content-length: 12345                                         |
-| {                                    	                    |
-|   "event": {                                                  |                                                               
-| 	"commonEventHeader": {                               	    |        
-| 	  "version": 3.0,                                          |    
-| 	  "domain": "heartbeat",                                   |     
-| 	  "eventName": "Heartbeat\_vIsbcMmc",                      |     
-| 	  "eventId": "ab305d54-85b4-a31b-7db2fb6b9e546015",        |    
-| 	  "sequence": 0,                                           |     
-| 	  "priority": "Normal",                                    |     
-| 	  "reportingEntityId": "cc305d54-75b4-431badb2eb6b9e541234",|
-| 	  "reportingEntityName": "EricssonOamVf",                  |
-| 	  "sourceId": "de305d54-75b4-431b-adb2-eb6b9e546014",      |
-| 	  "sourceName": "ibcx0001vm002ssc001",                     |
-| 	  "nfNamingCode": "ibcx",                                  |
-| 	  "nfcNamingCode": "ssc",                                  |
-| 	  "startEpochMicrosec": 1413378172000000,                  |
-| 	  "lastEpochMicrosec": 1413378172000000                    |
-| 	 }                                                         |
-|   }                                                          |
-| }                                                             |
-+---------------------------------------------------------------+
+ .. code:: bash
+
+ 	POST /eventListener/v5 HTTPS/1.1
+ 	Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==
+ 	content-type: application/json
+ 	content-length: 12345
+ 	{
+ 	  "event": {
+ 		"commonEventHeader": {
+ 		  "version": 3.0,
+ 		  "domain": "heartbeat",
+ 		  "eventName": "Heartbeat\_vIsbcMmc",
+ 		  "eventId": "ab305d54-85b4-a31b-7db2fb6b9e546015",
+ 		  "sequence": 0,
+ 		  "priority": "Normal",
+ 		  "reportingEntityId": "cc305d54-75b4-431badb2eb6b9e541234",
+ 		  "reportingEntityName": "EricssonOamVf",
+ 		  "sourceId": "de305d54-75b4-431b-adb2-eb6b9e546014",
+ 		  "sourceName": "ibcx0001vm002ssc001",
+ 		  "nfNamingCode": "ibcx",
+ 		  "nfcNamingCode": "ssc",
+ 		  "startEpochMicrosec": 1413378172000000,
+ 		  "lastEpochMicrosec": 1413378172000000
+ 		 }
+ 	  }
+ 	}
 
 Sample Success Response
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-+--------------------------+
-| HTTPS/1.1 202 Accepted   |
-+--------------------------+
+ .. code:: bash
+
+	HTTPS/1.1 202 Accepted
 
 Resource Structure
 ==================
@@ -587,9 +587,7 @@ The diskUsage datatype defines the usage of a disk and consists of the following
 +-----------------------------+----------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | diskOctetsRead Avg          | number   | No          | Number of octets per second read from a disk or partition; provide the average measurement within the measurement interval                                                                                                    |
 +-----------------------------+----------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| diskOctetsRead              | number   | No          | Number of octets per second read from a disk or partition; provide the last measurement within the measurement interval                                                                                                       |
-|                             |          |             |                                                                                                                                                                                                                               |
-| Last                        |          |             |                                                                                                                                                                                                                               |
+| diskOctetsRead Last         | number   | No          | Number of octets per second read from a disk or partition; provide the last measurement within the measurement interval                                                                                                       |
 +-----------------------------+----------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | diskOctetsRead Max          | number   | No          | Number of octets per second read from a disk or partition; provide the maximum measurement within the measurement interval                                                                                                    |
 +-----------------------------+----------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1480,7 +1478,7 @@ RESTful Web Services Definition
 REST Operation Overview
 -----------------------
 
-REST Operation Summary 
+REST Operation Summary
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 +--------------------------------+------------+----------------------------------------------------------------------------+
@@ -1507,7 +1505,7 @@ older versions will break in some way, if they try to use the new API
 without modification (e.g., unmodified v1 clients would not be able to
 use v2 without error).
 
-Commands Toward Event Source Clients 
+Commands Toward Event Source Clients
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Note: Vendors are not currently required to implement support for
@@ -1548,7 +1546,7 @@ currently supported:
 |                             | -  if suppressedNvPairsList is not provided, then any existing list of suppressed name-value pairs shall be discarded                                                                                                                                                                                                                                                                                                                                                                                                                             |
 +-----------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Buffering of Events 
+Buffering of Events
 ~~~~~~~~~~~~~~~~~~~~
 
 {ServerRoot} is defined in section 3 of this document, which defines the
@@ -1604,7 +1602,7 @@ Call Flow
 
 |image1|
 
-Figure - publishAnyEvent Call Flow
+Figure 2 - publishAnyEvent Call Flow
 
 Input Parameters
 ~~~~~~~~~~~~~~~~
@@ -1696,190 +1694,108 @@ Sample Request and Response
 Sample Request
 ^^^^^^^^^^^^^^
 
-+-------------------------------------------------------------------------------+
-| POST /eventListener/v5 HTTPS/1.1                                              |
-|                                                                               |
-| Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==                             |
-|                                                                               |
-| content-type: application/json                                                |
-|                                                                               |
-| | content-length: 12345                                                       |
-| | {                                                                           |
-|                                                                               |
-| "event": {                                                                    |
-|                                                                               |
-| "commonEventHeader": {                                                        |
-|                                                                               |
-| "version": 3.0,                                                               |
-|                                                                               |
-| "domain": "fault",                                                            |
-|                                                                               |
-| "eventName": "Fault\_MobileCallRecording\_PilotNumberPoolExhaustion",         |
-|                                                                               |
-| "eventId": "ab305d54-85b4-a31b-7db2-fb6b9e546015",                            |
-|                                                                               |
-| "sequence": 0,                                                                |
-|                                                                               |
-| "priority": "High",                                                           |
-|                                                                               |
-| "reportingEntityId": "cc305d54-75b4-431b-adb2-eb6b9e541234",                  |
-|                                                                               |
-| "reportingEntityName": "EricssonOamVf",                                       |
-|                                                                               |
-| "sourceId": "de305d54-75b4-431b-adb2-eb6b9e546014",                           |
-|                                                                               |
-| "sourceName": "scfx0001vm002cap001",                                          |
-|                                                                               |
-| "nfNamingCode": "scfx",                                                       |
-|                                                                               |
-| "nfcNamingCode": "ssc",                                                       |
-|                                                                               |
-| "startEpochMicrosec": 1413378172000000,                                       |
-|                                                                               |
-| "lastEpochMicrosec": 1413378172000000                                         |
-|                                                                               |
-| },                                                                            |
-|                                                                               |
-| "faultFields": {                                                              |
-|                                                                               |
-| "faultFieldsVersion": 2.0,                                                    |
-|                                                                               |
-| "alarmCondition": "PilotNumberPoolExhaustion",                                |
-|                                                                               |
-| "eventSourceType": "other",                                                   |
-|                                                                               |
-| "specificProblem": "Calls cannot complete - pilot numbers are unavailable",   |
-|                                                                               |
-| "eventSeverity": "CRITICAL",                                                  |
-|                                                                               |
-| "vfStatus": "Active",                                                         |
-|                                                                               |
-| "alarmAdditionalInformation": [                                               |
-|                                                                               |
-| {                                                                             |
-|                                                                               |
-| "name": "PilotNumberPoolSize",                                                |
-|                                                                               |
-| "value": "1000"                                                               |
-|                                                                               |
-| }                                                                             |
-|                                                                               |
-| ]                                                                             |
-|                                                                               |
-| }                                                                             |
-|                                                                               |
-| }                                                                             |
-|                                                                               |
-| }                                                                             |
-+-------------------------------------------------------------------------------+
+ .. code:: bash
+ POST /eventListener/v5 HTTPS/1.1
+ Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==
+ content-type: application/json
+ content-length: 12345
+	{
+		"event": {
+			"commonEventHeader": {
+				"version": 3.0,
+				"domain": "fault",
+				"eventName": Fault\_MobileCallRecording\_PilotNumberPoolExhaustion",
+				"eventId": "ab305d54-85b4-a31b-7db2-fb6b9e546015",
+				"sequence": 0,
+				"priority": "High",
+				"reportingEntityId": "cc305d54-75b4-431b-adb2-eb6b9e541234",
+				"reportingEntityName": "EricssonOamVf",
+				"sourceId": "de305d54-75b4-431b-adb2-eb6b9e546014",
+				"sourceName": "scfx0001vm002cap001",
+				"nfNamingCode": "scfx",
+				"nfcNamingCode": "ssc",
+				"startEpochMicrosec": 1413378172000000,
+				"lastEpochMicrosec": 1413378172000000
+			},
+			"faultFields": {
+				"faultFieldsVersion": 2.0,
+				"alarmCondition": "PilotNumberPoolExhaustion",
+				"eventSourceType": "other",
+				"specificProblem": "Calls cannot complete - pilot numbers are unavailable",
+				"eventSeverity": "CRITICAL",
+				"vfStatus": "Active",
+				"alarmAdditionalInformation": [
+					{
+					"name": "PilotNumberPoolSize",
+					"value": "1000"
+					}
+				]
+			}
+		}
+	}
 
 Sample Success Response #1
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
     For success responses without a provided command list:
 
-+--------------------------+
-| HTTPS/1.1 202 Accepted   |
-+--------------------------+
+	.. code:: bash
+
+	HTTPS/1.1 202 Accepted
 
 Sample Success Response #2
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
     For success responses with a provided command list:
 
-+-----------------------------------------------------------------+
-| HTTPS/1.1 202 Accepted                                          |
-|                                                                 |
-| content-type: application/json                                  |
-|                                                                 |
-| content-length: nnn                                             |
-|                                                                 |
-| date: Sat, 04 Jul 2015 02:03:15 GMT                             |
-|                                                                 |
-| {                                                               |
-|                                                                 |
-| "commandList": [                                                |
-|                                                                 |
-| 	{   	                                                      |
-|                                                                 |
-| 		"commandType": "throttlingSpecification",        	      |
-|                                                                 |
-| 		"eventDomainThrottleSpecification": {               	  |
-|                                                                 |
-| 			"eventDomain": "fault",                         	  |
-|                                                                 |
-| 			"suppressedFieldNames": [                       	  |
-|                                                                 |
-| 				"alarmInterfaceA",                          	  |
-|                                                                 |
-| 				"alarmAdditionalInformation"                	  |
-|                                                                 |
-| 			]                                               	  |
-|                                                                 |
-|  		}                                                   	  |
-|                                                                 |
-|  	},                                                      	  |
-|                                                                 |
-|  {	                                                          |
-|                                                                 |
-|  		"commandType": "throttlingSpecification",           	  |
-|                                                                 |
-|  		"eventDomainThrottleSpecification": {               	  |
-|                                                                 |
-|  			"eventDomain": "thresholdCrossingAlert",        	  |
-|                                                                 |
-|  			"suppressedFieldNames": [                       	  |
-|                                                                 |
-|  				"associatedAlertIdList",                    	  |
-|                                                                 |
-|  				"possibleRootCause"                         	  |
-|                                                                 |
-| 			],                                              	  |
-|                                                                 |
-|  			"suppressedNvPairs" {                           	  |
-|                                                                 |
-|  				"nvPairFieldName": additionalParameters",   	  |
-|                                                                 |
-|  				"suppressedNvPairNames": [                  	  |
-|                                                                 |
-|  					"someCounterName",                      	  |
-|                                                                 |
-|  					"someOtherCounterName"                  	  |
-|                                                                 |
-|  				]                                           	  |
-|                                                                 |
-|  			}                                               	  |
-|                                                                 |
-|  		}                                                   	  |
-|                                                                 |
-|  	},                                                      	  |
-|                                                                 |
-|  	{                                                       	  |
-|                                                                 |
-| 		"commandType": "measurementIntervalChange",         	  |
-|                                                                 |
-| 		"measurementInterval": 600                          	  |
-|                                                                 |
-|  	},                                                      	  |
-|                                                                 |
-|  	{                                                       	  |
-|                                                                 |
-| 		"commandType": "heartbeatIntervalChange",           	  |
-|                                                                 |
-| 		"heartbeatInterval": 90                             	  |
-|                                                                 |
-|  	},                                                      	  |
-|                                                                 |
-|  	{                                                       	  |
-|                                                                 |
-| 		"commandType": "provideThrottlingState"             	  |
-|                                                                 |
-|  	}                                                       	  |
-|                                                                 |
-|  ]                                                           	  |
-|                                                                 |
-| }                                                               |
-+-----------------------------------------------------------------+
+	.. code:: bash
+
+		HTTPS/1.1 202 Accepted
+		content-type: application/json
+		content-length: nnn
+		date: Sat, 04 Jul 2015 02:03:15 GMT
+		{
+		"commandList": [
+			{
+				"commandType": "throttlingSpecification",
+				"eventDomainThrottleSpecification": {
+					"eventDomain": "fault",
+					"suppressedFieldNames": [
+						"alarmInterfaceA",
+						"alarmAdditionalInformation"
+					]
+				}
+			},
+			{
+				"commandType": "throttlingSpecification",
+				"eventDomainThrottleSpecification": {
+					"eventDomain": "thresholdCrossingAlert",
+					"suppressedFieldNames": [
+						"associatedAlertIdList",
+						"possibleRootCause"
+					],
+					"suppressedNvPairs" {
+						"nvPairFieldName": additionalParameters",
+						"suppressedNvPairNames": [
+							"someCounterName",
+							"someOtherCounterName"
+						]
+					}
+				}
+			},
+			{
+				"commandType": "measurementIntervalChange",
+				"measurementInterval": 600
+			},
+			{
+				"commandType": "heartbeatIntervalChange",
+				"heartbeatInterval": 90
+			},
+			{
+				"commandType": "provideThrottlingState"
+			}
+		]
+		}
 
 1. .. rubric:: Sample Error Responses
       :name: sample-error-responses
@@ -1887,68 +1803,42 @@ Sample Success Response #2
    1. .. rubric:: Sample Policy Exception
          :name: sample-policy-exception
 
-+---------------------------------------------------------------+
-| HTTPS/1.1 400 Bad Request                                     |
-|                                                               |
-| content-type: application/json                                |
-|                                                               |
-| content-length: 12345                                         |
-|                                                               |
-| Date: Thu, 04 Jun 2009 02:51:59 GMT                           |
-|                                                               |
-| {                                                             |
-|                                                               |
-| "requestError": {                                             |
-|                                                               |
-| "policyException": {                                          |
-|                                                               |
-| "messageId": "POL9003",                                       |
-|                                                               |
-| "text": "Message content size exceeds the allowable limit",   |
-|                                                               |
-| }                                                             |
-|                                                               |
-| }                                                             |
-|                                                               |
-| }                                                             |
-+---------------------------------------------------------------+
+	.. code:: bash
+
+		HTTPS/1.1 400 Bad Request
+		content-type: application/json
+		content-length: 12345
+		Date: Thu, 04 Jun 2009 02:51:59 GMT
+		{
+			"requestError": {
+				"policyException": {
+					"messageId": "POL9003",
+					"text": "Message content size exceeds the allowable limit",
+				}
+			}
+		}
 
 Sample Service Exception
 ''''''''''''''''''''''''
 
-+-----------------------------------------------------+
-| HTTPS/1.1 400 Bad Request                           |
-|                                                     |
-| content-type: application/json                      |
-|                                                     |
-| content-length: 12345                               |
-|                                                     |
-| Date: Thu, 04 Jun 2009 02:51:59 GMT                 |
-|                                                     |
-| {                                                   |
-|                                                     |
-| "requestError": {                                   |
-|                                                     |
-| "serviceException": {                               |
-|                                                     |
-| "messageId": "SVC2000",                             |
-|                                                     |
-| "text": "Missing Parameter: %1. Error code is %2"   |
-|                                                     |
-| "variables": [                                      |
-|                                                     |
-| "severity",                                         |
-|                                                     |
-| "400"                                               |
-|                                                     |
-| ]                                                   |
-|                                                     |
-| }                                                   |
-|                                                     |
-| }                                                   |
-|                                                     |
-| }                                                   |
-+-----------------------------------------------------+
+	.. code:: bash
+
+		HTTPS/1.1 400 Bad Request
+		content-type: application/json
+		content-length: 12345
+		Date: Thu, 04 Jun 2009 02:51:59 GMT
+		{
+			"requestError": {
+				"serviceException": {
+					"messageId": "SVC2000",
+					"text": "Missing Parameter: %1. Error code is %2"
+					"variables": [
+						"severity",
+						"400"
+					]
+				}
+			}
+		}
 
 Operation: publishEventBatch
 ----------------------------
@@ -1976,7 +1866,7 @@ Call Flow
 
 |image2|
 
-Figure " publishEventBatch Call Flow
+Figure 3 publishEventBatch Call Flow
 
 Input Parameters
 ~~~~~~~~~~~~~~~~
@@ -2068,246 +1958,137 @@ Sample Request and Response
 Sample Request
 ^^^^^^^^^^^^^^
 
-+-------------------------------------------------------------------------------+
-| POST /eventListener/v5/eventBatch HTTPS/1.1                                   |
-|                                                                               |
-| Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==                             |
-|                                                                               |
-| content-type: application/json                                                |
-|                                                                               |
-| | content-length: 12345                                                       |
-| | {                                                                           |
-|                                                                               |
-| "eventList": [                                                                |
-|                                                                               |
-| {                                                                             |
-|                                                                               |
-| "commonEventHeader": {                                                        |
-|                                                                               |
-| "version": 3.0,                                                               |
-|                                                                               |
-| "domain": "fault",                                                            |
-|                                                                               |
-| "eventName": "Fault\_MobileCallRecording\_PilotNumberPoolExhaustion",         |
-|                                                                               |
-| "eventId": "ab305d54-85b4-a31b-7db2-fb6b9e546015",                            |
-|                                                                               |
-| "sequence": 0,                                                                |
-|                                                                               |
-| "priority": "High",                                                           |
-|                                                                               |
-| "reportingEntityId": "cc305d54-75b4-431b-adb2-eb6b9e541234",                  |
-|                                                                               |
-| "reportingEntityName": "EricssonOamVf",                                       |
-|                                                                               |
-| "sourceId": "de305d54-75b4-431b-adb2-eb6b9e546014",                           |
-|                                                                               |
-| "sourceName": "scfx0001vm002cap001",                                          |
-|                                                                               |
-| "nfNamingCode": "scfx",                                                       |
-|                                                                               |
-| "nfcNamingCode": "ssc",                                                       |
-|                                                                               |
-| "startEpochMicrosec": 1413378172000000,                                       |
-|                                                                               |
-| "lastEpochMicrosec": 1413378172000000                                         |
-|                                                                               |
-| },                                                                            |
-|                                                                               |
-| "faultFields": {                                                              |
-|                                                                               |
-| "faultFieldsVersion": 2.0,                                                    |
-|                                                                               |
-| "alarmCondition": "PilotNumberPoolExhaustion",                                |
-|                                                                               |
-| "eventSourceType": "other",                                                   |
-|                                                                               |
-| "specificProblem": "Calls cannot complete - pilot numbers are unavailable",   |
-|                                                                               |
-| "eventSeverity": "CRITICAL",                                                  |
-|                                                                               |
-| "vfStatus": "Active",                                                         |
-|                                                                               |
-| "alarmAdditionalInformation": [                                               |
-|                                                                               |
-| {                                                                             |
-|                                                                               |
-| "name": "PilotNumberPoolSize",                                                |
-|                                                                               |
-| "value": "1000"                                                               |
-|                                                                               |
-| }                                                                             |
-|                                                                               |
-| ]                                                                             |
-|                                                                               |
-| }                                                                             |
-|                                                                               |
-| },                                                                            |
-|                                                                               |
-| {                                                                             |
-|                                                                               |
-| "commonEventHeader": {                                                        |
-|                                                                               |
-| "version": 3.0,                                                               |
-|                                                                               |
-| "domain": "fault",                                                            |
-|                                                                               |
-| "eventName": "Fault\_MobileCallRecording\_RecordingServerUnreachable",        |
-|                                                                               |
-| "eventId": "ab305d54-85b4-a31b-7db2-fb6b9e546025",                            |
-|                                                                               |
-| "sequence": 0,                                                                |
-|                                                                               |
-| "priority": "High",                                                           |
-|                                                                               |
-| "reportingEntityId": "cc305d54-75b4-431b-adb2-eb6b9e541234",                  |
-|                                                                               |
-| "reportingEntityName": "EricssonOamVf",                                       |
-|                                                                               |
-| "sourceId": "de305d54-75b4-431b-adb2-eb6b9e546014",                           |
-|                                                                               |
-| "sourceName": "scfx0001vm002cap001",                                          |
-|                                                                               |
-| "nfNamingCode": "scfx",                                                       |
-|                                                                               |
-| "nfcNamingCode": "ssc",                                                       |
-|                                                                               |
-| "startEpochMicrosec": 1413378172000010,                                       |
-|                                                                               |
-| "lastEpochMicrosec": 1413378172000010                                         |
-|                                                                               |
-| },                                                                            |
-|                                                                               |
-| "faultFields": {                                                              |
-|                                                                               |
-| "faultFieldsVersion": 2.0,                                                    |
-|                                                                               |
-| "alarmCondition": "RecordingServerUnreachable",                               |
-|                                                                               |
-| "eventSourceType": "other",                                                   |
-|                                                                               |
-| "specificProblem": "Recording server unreachable",                            |
-|                                                                               |
-| "eventSeverity": "CRITICAL",                                                  |
-|                                                                               |
-| "vfStatus": "Active"                                                          |
-|                                                                               |
-| }                                                                             |
-|                                                                               |
-| }                                                                             |
-|                                                                               |
-| ]                                                                             |
-|                                                                               |
-| }                                                                             |
-+-------------------------------------------------------------------------------+
+	.. code:: bash
+
+		POST /eventListener/v5/eventBatch HTTPS/1.1
+		Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==
+		content-type: application/json
+		content-length: 12345
+		{
+			"eventList": [
+			{
+				"commonEventHeader": {
+					"version": 3.0,
+					"domain": "fault",
+					"eventName": "Fault\_MobileCallRecording\_PilotNumberPoolExhaustion",
+					"eventId": "ab305d54-85b4-a31b-7db2-fb6b9e546015",
+					"sequence": 0,
+					"priority": "High",
+					"reportingEntityId": "cc305d54-75b4-431b-adb2-eb6b9e541234",
+					"reportingEntityName": "EricssonOamVf",
+					"sourceId": "de305d54-75b4-431b-adb2-eb6b9e546014",
+					"sourceName": "scfx0001vm002cap001",
+					"nfNamingCode": "scfx",
+					"nfcNamingCode": "ssc",
+					"startEpochMicrosec": 1413378172000000,
+					"lastEpochMicrosec": 1413378172000000
+				},
+				"faultFields": {
+					"faultFieldsVersion": 2.0,
+					"alarmCondition": "PilotNumberPoolExhaustion",
+					"eventSourceType": "other",
+					"specificProblem": "Calls cannot complete - pilot numbers are unavailable",
+					"eventSeverity": "CRITICAL",
+					"vfStatus": "Active",
+					"alarmAdditionalInformation": [
+						{
+							"name": "PilotNumberPoolSize",
+							"value": "1000"
+						}
+					]
+				}
+			},
+			{
+				"commonEventHeader": {
+					"version": 3.0,
+					"domain": "fault",
+					"eventName": "Fault\_MobileCallRecording\_RecordingServerUnreachable",
+					"eventId": "ab305d54-85b4-a31b-7db2-fb6b9e546025",
+					"sequence": 0,
+					"priority": "High",
+					"reportingEntityId": "cc305d54-75b4-431b-adb2-eb6b9e541234",
+					"reportingEntityName": "EricssonOamVf",
+					"sourceId": "de305d54-75b4-431b-adb2-eb6b9e546014",
+					"sourceName": "scfx0001vm002cap001",
+					"nfNamingCode": "scfx",
+					"nfcNamingCode": "ssc",
+					"startEpochMicrosec": 1413378172000010,
+					"lastEpochMicrosec": 1413378172000010
+				},
+				"faultFields": {
+					"faultFieldsVersion": 2.0,
+					"alarmCondition": "RecordingServerUnreachable",
+					"eventSourceType": "other",
+					"specificProblem": "Recording server unreachable",
+					"eventSeverity": "CRITICAL",
+					"vfStatus": "Active"
+				}
+			}
+			]
+		}
 
 Sample Success Response #1
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
     For success responses without a provided commandList:
 
-+--------------------------+
-| HTTPS/1.1 202 Accepted   |
-+--------------------------+
+	.. code:: bash
+
+		HTTPS/1.1 202 Accepted
 
 Sample Success Response #2
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
     For success responses with a provided commandList:
 
-+-----------------------------------------------------------------+
-| HTTPS/1.1 202 Accepted                                          |
-|                                                                 |
-| content-type: application/json                                  |
-|                                                                 |
-| content-length: nnn                                             |
-|                                                                 |
-| date: Sat, 04 Jul 2015 02:03:15 GMT                             |
-|                                                                 |
-| {                                                               |
-|                                                                 |
-|  	  "commandList": [                                            |
-|                                                                 |
-|  		  {                                                       |
-|                                                                 |
-|  			  "commandType": "throttlingSpecification",           |
-|                                                                 |
-| 			  "eventDomainThrottleSpecification": {               |
-|                                                                 |
-|  				  "eventDomain": "fault",                         |
-|                                                                 |
-|    			  "suppressedFieldNames": [                       |
-|                                                                 |
-|  					  "alarmInterfaceA",                          |
-|                                                                 |
-| 					  "alarmAdditionalInformation"                |
-|                                                                 |
-| 				  ]                                               |
-|                                                                 |
-|  			  }                                                   |
-|                                                                 |
-|  		  },                                                      |
-|                                                                 |
-|  		  {                                                       |
-|                                                                 |
-|  			  "commandType": "throttlingSpecification",           |
-|                                                                 |
-|  			  "eventDomainThrottleSpecification": {               |
-|                                                                 |
-|  				  "eventDomain": "thresholdCrossingAlert",        |
-|                                                                 |
-|  				  "suppressedFieldNames": [                       |
-|                                                                 |
-|  					  "associatedAlertIdList",                    |
-|                                                                 |
-|  					  "possibleRootCause"                         |
-|                                                                 |
-| 				  ],                                              |
-|                                                                 |
-|  				  "suppressedNvPairs" {                           |
-|                                                                 |
-|  					  "nvPairFieldName": additionalParameters",   |
-|                                                                 |
-|  					  "suppressedNvPairNames": [                  |
-|                                                                 |
-|  						  "someCounterName",                      |
-|                                                                 |
-|  						  "someOtherCounterName"                  |
-|                                                                 |
-|  					  ]                                           |
-|                                                                 |
-|  				  }                                               |
-|                                                                 |
-|  			  }                                                   |
-|                                                                 |
-|  		  },                                                      |
-|                                                                 |
-|  		  {                                                       |
-|                                                                 |
-| 			  "commandType": "measurementIntervalChange",         |
-|                                                                 |
-| 			  "measurementInterval": 600                          |
-|                                                                 |
-|  		  },                                                      |
-|                                                                 |
-|  		  {                                                       |
-|                                                                 |
-| 			  "commandType": "heartbeatIntervalChange",           |
-|                                                                 |
-| 			  "heartbeatInterval": 90                             |
-|                                                                 |
-|  		  },                                                      |
-|                                                                 |
-|  		  {                                                       |
-|                                                                 |
-| 			  "commandType": "provideThrottlingState"             |
-|                                                                 |
-|  		  }                                                       |
-|                                                                 |
-|  	  ]                                                           |
-|                                                                 |
-| }                                                               |
-+-----------------------------------------------------------------+
+	.. code:: bash
+
+		HTTPS/1.1 202 Accepted
+		content-type: application/json
+		content-length: nnn
+		date: Sat, 04 Jul 2015 02:03:15 GMT
+		{
+			"commandList": [
+			{
+				"commandType": "throttlingSpecification",
+				"eventDomainThrottleSpecification": {
+				"eventDomain": "fault",
+				"suppressedFieldNames": [
+					"alarmInterfaceA",
+					"alarmAdditionalInformation"
+					]
+				}
+			},
+			{
+			"commandType": "throttlingSpecification",
+			"eventDomainThrottleSpecification": {
+				"eventDomain": "thresholdCrossingAlert",
+				"suppressedFieldNames": [
+					"associatedAlertIdList",
+					"possibleRootCause"
+				],
+				"suppressedNvPairs" {
+					"nvPairFieldName": additionalParameters",
+					"suppressedNvPairNames": [
+						"someCounterName",
+						"someOtherCounterName"
+					]
+					}
+				}
+			},
+			{
+				"commandType": "measurementIntervalChange",
+				"measurementInterval": 600
+			},
+			{
+				"commandType": "heartbeatIntervalChange",
+				"heartbeatInterval": 90
+			},
+			{
+				"commandType": "provideThrottlingState"
+			}
+			]
+		}
 
 1. .. rubric:: Sample Error Responses
       :name: sample-error-responses-1
@@ -2315,68 +2096,42 @@ Sample Success Response #2
    1. .. rubric:: Sample Policy Exception
          :name: sample-policy-exception-1
 
-+---------------------------------------------------------------+
-| HTTPS/1.1 400 Bad Request                                     |
-|                                                               |
-| content-type: application/json                                |
-|                                                               |
-| content-length: 12345                                         |
-|                                                               |
-| Date: Thu, 04 Jun 2009 02:51:59 GMT                           |
-|                                                               |
-| {                                                             |
-|                                                               |
-| "requestError": {                                             |
-|                                                               |
-| "policyException": {                                          |
-|                                                               |
-| "messageId": "POL9003",                                       |
-|                                                               |
-| "text": "Message content size exceeds the allowable limit",   |
-|                                                               |
-| }                                                             |
-|                                                               |
-| }                                                             |
-|                                                               |
-| }                                                             |
-+---------------------------------------------------------------+
+	.. code:: bash
+
+		HTTPS/1.1 400 Bad Request
+		content-type: application/json
+		content-length: 12345
+		Date: Thu, 04 Jun 2009 02:51:59 GMT
+		{
+			"requestError": {
+				"policyException": {
+					"messageId": "POL9003",
+					"text": "Message content size exceeds the allowable limit",
+				}
+			}
+		}
 
 Sample Service Exception
 ''''''''''''''''''''''''
 
-+-----------------------------------------------------+
-| HTTPS/1.1 400 Bad Request                           |
-|                                                     |
-| content-type: application/json                      |
-|                                                     |
-| content-length: 12345                               |
-|                                                     |
-| Date: Thu, 04 Jun 2009 02:51:59 GMT                 |
-|                                                     |
-| {                                                   |
-|                                                     |
-| "requestError": {                                   |
-|                                                     |
-| "serviceException": {                               |
-|                                                     |
-| "messageId": "SVC2000",                             |
-|                                                     |
-| "text": "Missing Parameter: %1. Error code is %2"   |
-|                                                     |
-| "variables": [                                      |
-|                                                     |
-| "severity",                                         |
-|                                                     |
-| "400"                                               |
-|                                                     |
-| ]                                                   |
-|                                                     |
-| }                                                   |
-|                                                     |
-| }                                                   |
-|                                                     |
-| }                                                   |
-+-----------------------------------------------------+
+	.. code:: bash
+
+		HTTPS/1.1 400 Bad Request
+		content-type: application/json
+		content-length: 12345
+		Date: Thu, 04 Jun 2009 02:51:59 GMT
+		{
+			"requestError": {
+			"serviceException": {
+				"messageId": "SVC2000",
+				"text": "Missing Parameter: %1. Error code is %2"
+				"variables": [
+					"severity",
+					"400"
+				]
+				}
+			}
+		}
 
 Operation: provideThrottlingState
 ---------------------------------
@@ -2402,7 +2157,7 @@ Call Flow
 
 |image3|
 
-Figure - provideClientThrottlingState Call Flow
+Figure 4 - provideClientThrottlingState Call Flow
 
 Input Parameters
 ~~~~~~~~~~~~~~~~
@@ -2486,84 +2241,50 @@ Sample Request and Response
 Sample Request
 ^^^^^^^^^^^^^^
 
-+----------------------------------------------------------+
-| POST /eventListener/v5/clientThrottlingState HTTPS/1.1   |
-|                                                          |
-| Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==        |
-|                                                          |
-| content-type: application/json                           |
-|                                                          |
-| content-length: nnn                                      |
-|                                                          |
-| accept: application/json                                 |
-|                                                          |
-| {                                                        |
-|                                                          |
-| "eventThrottlingState": {                                |
-|                                                          |
-| "eventThrottlingMode": "throttled",                      |
-|                                                          |
-| "eventDomainThrottleSpecificationList": [                |
-|                                                          |
-| {                                                        |
-|                                                          |
-| "eventDomain": "fault",                                  |
-|                                                          |
-| "suppressedFieldNames": [                                |
-|                                                          |
-| "alarmInterfaceA",                                       |
-|                                                          |
-| "alarmAdditionalInformation"                             |
-|                                                          |
-| ]                                                        |
-|                                                          |
-| },                                                       |
-|                                                          |
-| {                                                        |
-|                                                          |
-| "eventDomain": "thresholdCrossingAlert",                 |
-|                                                          |
-| "suppressedFieldNames": [                                |
-|                                                          |
-| "associatedAlertIdList",                                 |
-|                                                          |
-| "possibleRootCause"                                      |
-|                                                          |
-| ],                                                       |
-|                                                          |
-| "suppressedNvPairsList": [                               |
-|                                                          |
-| {                                                        |
-|                                                          |
-| "nvPairFieldName": "additionalParameters",               |
-|                                                          |
-| "suppressedNvPairNames": [                               |
-|                                                          |
-| "someCounterName",                                       |
-|                                                          |
-| "someOtherCounterName"                                   |
-|                                                          |
-| ]                                                        |
-|                                                          |
-| }                                                        |
-|                                                          |
-| ]                                                        |
-|                                                          |
-| }                                                        |
-|                                                          |
-| ]                                                        |
-|                                                          |
-| }                                                        |
-|                                                          |
-| }                                                        |
-+----------------------------------------------------------+
+	.. code:: bash
+
+		POST /eventListener/v5/clientThrottlingState HTTPS/1.1
+		Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==
+		content-type: application/json
+		content-length: nnn
+		accept: application/json
+		{
+			"eventThrottlingState": {
+				"eventThrottlingMode": "throttled",
+				"eventDomainThrottleSpecificationList": [
+					{
+						"eventDomain": "fault",
+						"suppressedFieldNames": [
+							"alarmInterfaceA",
+							"alarmAdditionalInformation"
+						]
+					},
+					{
+						"eventDomain": "thresholdCrossingAlert",
+						"suppressedFieldNames": [
+							"associatedAlertIdList",
+							"possibleRootCause"
+						],
+						"suppressedNvPairsList": [
+							{
+								"nvPairFieldName": "additionalParameters",
+								"suppressedNvPairNames": [
+									"someCounterName",
+									"someOtherCounterName"
+								]
+							}
+						]
+					}
+				]
+			}
+		}
 
 Sample Success Response
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-+----------------------------+
-| HTTPS/1.1 204 No Content   |
-+----------------------------+
+	.. code:: bash
+
+		HTTPS/1.1 204 No Content
 
 1. .. rubric:: Sample Error Responses
       :name: sample-error-responses-2
@@ -2571,70 +2292,55 @@ Sample Success Response
    1. .. rubric:: Sample Policy Exception
          :name: sample-policy-exception-2
 
-+---------------------------------------------------------------+
-| HTTPS/1.1 400 Bad Request                                     |
-|                                                               |
-| content-type: application/json                                |
-|                                                               |
-| content-length: 12345                                         |
-|                                                               |
-| Date: Thu, 04 Jun 2009 02:51:59 GMT                           |
-|                                                               |
-| {                                                             |
-|                                                               |
-| "requestError": {                                             |
-|                                                               |
-| "policyException": {                                          |
-|                                                               |
-| "messageId": "POL9003",                                       |
-|                                                               |
-| "text": "Message content size exceeds the allowable limit",   |
-|                                                               |
-| }                                                             |
-|                                                               |
-| }                                                             |
-|                                                               |
-| }                                                             |
-+---------------------------------------------------------------+
+	.. code:: bash
+
+		HTTPS/1.1 400 Bad Request
+		content-type: application/json
+		content-length: 12345
+		Date: Thu, 04 Jun 2009 02:51:59 GMT
+		{
+			"requestError": {
+				"policyException": {
+					"messageId": "POL9003",
+					"text": "Message content size exceeds the allowable limit",
+				}
+			}
+		}
 
 Sample Service Exception
 ''''''''''''''''''''''''
 
-+-----------------------------------------------------+
-| HTTPS/1.1 400 Bad Request                           |
-|                                                     |
-| content-type: application/json                      |
-|                                                     |
-| content-length: 12345                               |
-|                                                     |
-| Date: Thu, 04 Jun 2009 02:51:59 GMT                 |
-|                                                     |
-| {                                                   |
-|                                                     |
-| "requestError": {                                   |
-|                                                     |
-| "serviceException": {                               |
-|                                                     |
-| "messageId": "SVC2000",                             |
-|                                                     |
-| "text": "Missing Parameter: %1. Error code is %2"   |
-|                                                     |
-| "variables": [                                      |
-|                                                     |
-| "severity",                                         |
-|                                                     |
-| "400"                                               |
-|                                                     |
-| ]                                                   |
-|                                                     |
-| }                                                   |
-|                                                     |
-| }                                                   |
-|                                                     |
-| }                                                   |
-+-----------------------------------------------------+
+	.. code:: bash
 
+		HTTPS/1.1 400 Bad Request
+		content-type: application/json
+		content-length: 12345
+		Date: Thu, 04 Jun 2009 02:51:59 GMT
+		{
+			"requestError": {
+				"serviceException": {
+					"messageId": "SVC2000",
+					"text": "Missing Parameter: %1. Error code is %2"
+					"variables": [
+						"severity",
+						"400"
+					]
+				}
+			}
+		}
 
+.. |image0| image:: ves-rest-resource-structure.png
+   :height: 600px
+   :width: 800px
+.. |image1| image:: ves-publishanyevent.png
+   :height: 600px
+   :width: 800px
+.. |image2| image:: ves-publisheventbatch.png
+   :height: 600px
+   :width: 800px
+.. |image3| image:: ves-providethrottlingstate.png
+   :height: 600px
+   :width: 800px
 
 
 
