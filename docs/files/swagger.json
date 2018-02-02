@@ -1,0 +1,343 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "These are the APIs for the ONAP VNFSDK Marketplace.  VNFSDK helps to package and validate VNFs for onboarding into ONAP.  You can find out more about     VNFSDK at [http://onap.readthedocs.io](http://onap.readthedocs.io/en/latest/submodules/vnfsdk/model.git/docs/files/vnfsdk-apis.html).",
+    "version": "1.0.0",
+    "title": "ONAP VNFSDK",
+    "contact": {
+      "email": "onap-discuss@lists.onap.org"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "host": "onap.readthedocs.io",
+  "basePath": "/onapapi/marketplace/v1",
+  "tags": [
+    {
+      "name": "csars",
+      "description": "VNF CSAR information",
+      "externalDocs": {
+        "description": "Find out more",
+        "url": "http://wiki.onap.org"
+      }
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/csars": {
+      "get": {
+        "summary": "Query VNF Package by conditions",
+        "description": "Query VNF package",
+        "operationId": "queryVnf",
+        "produces": [
+          "application/json"
+        ],
+        "tags": [
+          "VNF package"
+        ],
+        "parameters": [
+          {
+            "name": "conditions",
+            "in": "query",
+            "description": "Conditions that need to be considered for filter",
+            "required": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Csars"
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        }
+      },
+      "post": {
+        "summary": "Upload/Re-Upload VNF Package",
+        "description": "",
+        "operationId": "addVnf",
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "tags": [
+          "VNF package"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "VNF objects to add to the Marketplace",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Csars"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse"
+            }
+          }
+        }
+      }
+    },
+    "/csars/{csarId}": {
+      "get": {
+        "tags": [
+          "csarId"
+        ],
+        "summary": "Find vnf by CSAR ID",
+        "description": "Returns a single vnf",
+        "operationId": "getVnfByCsarId",
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "csarId",
+            "in": "path",
+            "description": "CSAR ID of VNF to return",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Csars"
+            }
+          },
+          "400": {
+            "description": "Invalid ID supplied"
+          },
+          "404": {
+            "description": "VNF not found"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "csarId"
+        ],
+        "summary": "Updates a VNF in the Marketplace with form data",
+        "description": "",
+        "operationId": "updateCsar",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "csarId",
+            "in": "path",
+            "description": "CSAR ID of VNF that needs to be updated",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "name",
+            "in": "formData",
+            "description": "Updated name of the VNF",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "fileNamee",
+            "in": "formData",
+            "description": "Updated filename of the csar",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "csarId"
+        ],
+        "summary": "Deletes a VNF",
+        "description": "",
+        "operationId": "deleteVnf",
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "csarId",
+            "in": "path",
+            "description": "VNF CSAR ID to delete",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid ID supplied"
+          }
+        }
+      }
+    },
+    "/csars/{csarId}/files": {
+      "get": {
+        "tags": [
+          "csarId"
+        ],
+        "summary": "Download vnf",
+        "description": "Download a single vnf",
+        "operationId": "downloadVnf",
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "csarId",
+            "in": "path",
+            "description": "CSAR ID of VNF to return",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Csars"
+            }
+          },
+          "400": {
+            "description": "Invalid ID supplied"
+          },
+          "404": {
+            "description": "VNF not found"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Csars": {
+      "type": "object",
+      "required": [
+        "csarId"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "example": "CSAR"
+        },
+        "name": {
+          "type": "string",
+          "example": "NanocellGateway"
+        },
+        "fileName": {
+          "type": "string"
+        },
+        "creationDate": {
+          "type": "string"
+        },
+        "modificationDate": {
+          "type": "string"
+        },
+        "readDate": {
+          "type": "string"
+        },
+        "size": {
+          "type": "string",
+          "example": "37 MB"
+        },
+        "provider": {
+          "type": "string",
+          "example": "XYZ"
+        },
+        "version": {
+          "type": "string",
+          "example": "v1.0.0"
+        },
+        "createTime": {
+          "type": "string"
+        },
+        "modifyTime": {
+          "type": "string"
+        },
+        "downloadUri": {
+          "type": "string",
+          "example": "http://msb_ip:msb_port/files/marketplace/CSAR/XYZ/NanocellGW/v1.0"
+        },
+        "shortdesc": {
+          "type": "string",
+          "example": "XYZ Nanocell Gateway VNF"
+        },
+        "details": {
+          "type": "string"
+        },
+        "csarId": {
+          "type": "string",
+          "example": "78ede6f3-66cc-46ab-b748-38a6c010d272"
+        },
+        "parameters": {
+          "type": "array",
+          "xml": {
+            "name": "parameters",
+            "wrapped": true
+          },
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "xml": {
+        "name": "Csars"
+      }
+    },
+    "ApiResponse": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "type": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "externalDocs": {
+    "description": "Find out more about VNFSDK",
+    "url": "https://onap.readthedocs.io/en/latest/submodules/vnfsdk/model.git/docs/index.html"
+  }
+}
