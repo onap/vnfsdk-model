@@ -9,6 +9,7 @@ VNFSDK Documentation
    :maxdepth: 1
    :titlesonly:
 
+   files/swagger.json
    files/vnfsdk-apis
 
 Components
