@@ -127,3 +127,12 @@ VES Client Guidelines
 
    files/VESEventRegistration
    files/VESEventListener
+
+VNF Certification Testing Framework - Dovetail
+----------------------------------------------
+
+.. toctree::
+   :maxdepth: 1
+   :titlesonly:
+
+   files/Dovetail
