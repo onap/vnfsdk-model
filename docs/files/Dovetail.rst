@@ -1,3 +1,5 @@
+.. This work is licensed under a Creative Commons Attribution 4.0 International License.
+.. http://creativecommons.org/licenses/by/4.0
 .. Dovetail Integeration documentation master file, created by
    sphinx-quickstart on Fri Feb 23 11:49:11 2018.
    You can adapt this file completely to your liking, but it should at least
