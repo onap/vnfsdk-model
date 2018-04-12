@@ -12,7 +12,8 @@ VNF SDK Marketplace Installation Instructions
 
 2. Goto vnfmarket-be/deployment/install,
 ::
-
+  Delete old docker images of refrepo (if any).
+  Enter command "source .env" to set up few environment variables.
   Enter command "docker-compose up -d"
 
 This will start two Docker containers:
@@ -22,4 +23,4 @@ This will start two Docker containers:
 
 Once started, access the Marketplace from your web browser.
 
-3. Connect to http://{host}:8702/openoui/vnfmarket to access the user interface
+3. Connect to http://{host}:8702/onapui/vnfmarket to access the user interface
