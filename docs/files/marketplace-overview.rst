@@ -7,7 +7,7 @@ VNF SDK Marketplace
 
 VNF SDK provides a reference implementation "marketplace" to help vendors
 validate and manage VNF packages. It also supports the operator to onboard VNF
-into ONAP.
+into ONAP.The API documentation using swagger can be found at http://hostIP:8702/apidocs
 
 |image0|
 
