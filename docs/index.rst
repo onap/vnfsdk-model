@@ -9,8 +9,9 @@ VNFSDK Documentation
    :maxdepth: 1
    :titlesonly:
 
-   files/swagger.json
    files/vnfsdk-apis
+   :download:`swagger json <files/swagger.json>`
+   :download:`swagger yaml <files/swagger.yaml>`
 
 Components
 ----------
