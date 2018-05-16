@@ -13,6 +13,40 @@ Release Notes
    * developing tools for vendor CI/CD toolchains
    * developing validation and testing tools
 
+Version: 1.1.0
+--------------
+
+
+:Release Date: 2018-05-24
+
+
+
+**New Features**
+	* Integration with SDC for VNF Onboarding
+	* Functional test support
+	* Incorporation of ICE tools for HEAT validation
+	* Experimental integration with OPNFV Dovetail
+	* Preliminary support for SOL-004
+	* Support for HTTPS
+
+**Bug Fixes**
+	* Fix localization support
+
+**Known Issues**
+
+
+**Security Issues**
+	* https://wiki.onap.org/pages/viewpage.action?pageId=28377592
+
+**Upgrade Notes**
+	* Updated to use Swagger for APIs
+
+**Deprecation Notes**
+
+
+**Other**
+
+
 Version: 1.0.0
 --------------
 
