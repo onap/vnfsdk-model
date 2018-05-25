@@ -2,6 +2,7 @@
 .. http://creativecommons.org/licenses/by/4.0
 .. Copyright 2017 AT&T Intellectual Property, All rights reserved
 .. Copyright 2017 Huawei Technologies Co., Ltd.
+
 =============================
 Service: *VES Event Listener*
 =============================
@@ -79,7 +80,7 @@ Three types of version numbers supported by this specification:
 -  The field blocks are versioned. Field blocks include the commonEventHeader and the domain blocks (e.g., the faultFields block). Going forward, the major number of each field block will be incremented whenever any change to that block could break an existing client (e.g., a field name is deleted or changed). All other changes to that block (e.g., a field name is added or text changes are made to the field descriptions) will increment only the minor number.
 
 Security
-========
+--------
 
 Event sources must identify themselves to the VES Event Listener.
 
@@ -174,7 +175,7 @@ The command datatype is used by an event collector to request changes in the beh
 +=====================================+====================================+=============+=====================================================================================================+
 | commandType                         | string                             | Yes         | Enumeration: 'heartbeatIntervalChange', 'measurementIntervalChange',                                |
 |                                     |                                    |             |                                                                                                     |
-|                                     |                                    |             | 'provideThrottlingState', 'throttllingSpecification'                                               |
+|                                     |                                    |             | 'provideThrottlingState', 'throttllingSpecification'                                                |
 +-------------------------------------+------------------------------------+-------------+-----------------------------------------------------------------------------------------------------+
 | eventDomainThrottle Specification   | eventDomainThrottleSpecification   | No          | If commandType is 'throttlingSpecification', the fields to suppress within an event domain          |
 +-------------------------------------+------------------------------------+-------------+-----------------------------------------------------------------------------------------------------+
@@ -229,9 +230,9 @@ The eventThrottlingState datatype reports the throttling in force at the event s
 +----------------------------------------+----------------------------------------+-------------+------------------------------------------------------------------------------------------------------------------------------+
 | Field                                  | Type                                   | Required?   | Description                                                                                                                  |
 +========================================+========================================+=============+==============================================================================================================================+
-| eventThrottlingMode                    | string                                 | Yes         | Enumeration: 'normal', 'throttled'                                                                                          |
+| eventThrottlingMode                    | string                                 | Yes         | Enumeration: 'normal', 'throttled'                                                                                           |
 +----------------------------------------+----------------------------------------+-------------+------------------------------------------------------------------------------------------------------------------------------+
-| eventDomainThrottleSpecificationList   | eventDomainThrottleSpecificationList   | No          | A list of eventDomainThrottleSpecifications currently in force at the event source, if the eventManagerMode is 'throttled'  |
+| eventDomainThrottleSpecificationList   | eventDomainThrottleSpecificationList   | No          | A list of eventDomainThrottleSpecifications currently in force at the event source, if the eventManagerMode is 'throttled'   |
 +----------------------------------------+----------------------------------------+-------------+------------------------------------------------------------------------------------------------------------------------------+
 
 Datatype: suppressedNvPairs
@@ -380,7 +381,7 @@ structure:
 +-------------+----------+-------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Field       | Type     | Required?   | Description                                                                                                                                                                                                                                                                                    |
 +=============+==========+=============+================================================================================================================================================================================================================================================================================================+
-| messageId   | string   | Yes         | Unique message identifier of the format 'ABCnnnn'where 'ABC'is either 'SVC'for Service Exceptions or 'POL'for Policy Exception. Exception numbers may be in the range of 0001 to 9999 where 0001 to 2999 are defined by OMA (see section 5.1) and 3000-9999 are available and undefined.   |
+| messageId   | string   | Yes         | Unique message identifier of the format 'ABCnnnn'where 'ABC'is either 'SVC'for Service Exceptions or 'POL'for Policy Exception. Exception numbers may be in the range of 0001 to 9999 where 0001 to 2999 are defined by OMA (see section 5.1) and 3000-9999 are available and undefined.       |
 +-------------+----------+-------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | text        | string   | Yes         | Message text, with replacement variables marked with %n, where n is an index into the list of <variables> elements, starting at 1                                                                                                                                                              |
 +-------------+----------+-------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -399,9 +400,9 @@ The vendorVnfNameFields provides vendor, vnf and vfModule identifying informatio
 +================+==========+=============+===============================================================+
 | vendorName     | string   | Yes         | VNF vendor name                                               |
 +----------------+----------+-------------+---------------------------------------------------------------+
-| vfModuleName   | string   | No          | The Sdc vfModuleName for the vfModule generating the event   |
+| vfModuleName   | string   | No          | The Sdc vfModuleName for the vfModule generating the event    |
 +----------------+----------+-------------+---------------------------------------------------------------+
-| vnfName        | string   | No          | The Sdc modelName for the VNF generating the event           |
+| vnfName        | string   | No          | The Sdc modelName for the VNF generating the event            |
 +----------------+----------+-------------+---------------------------------------------------------------+
 
 'Common Event Header'Datatypes
@@ -419,11 +420,11 @@ The commonEventHeader datatype consists of the following fields common to all ev
 +-------------------------+-------------------------+-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | eventName               | string                  | Yes         | Unique event name (see section 1 for more information)                                                                                                                                                                                                                         |
 +-------------------------+-------------------------+-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| domain                  | string                  | Yes         | Event domain enumeration: 'fault', 'heartbeat', 'measurementsForVfScaling', 'mobileFlow', 'other', 'sipSignaling', 'stateChange', 'syslog', 'thresholdCrossingAlert', 'voiceQuality'                                                                                          |
+| domain                  | string                  | Yes         | Event domain enumeration: 'fault', 'heartbeat', 'measurementsForVfScaling', 'mobileFlow', 'other', 'sipSignaling', 'stateChange', 'syslog', 'thresholdCrossingAlert', 'voiceQuality'                                                                                           |
 +-------------------------+-------------------------+-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | eventId                 | string                  | Yes         | Event key that is unique to the event source                                                                                                                                                                                                                                   |
 +-------------------------+-------------------------+-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| eventType               | string                  | No          | For example: 'applicationVnf', 'guestOS', 'hostOS', 'platform'                                                                                                                                                                                                                |
+| eventType               | string                  | No          | For example: 'applicationVnf', 'guestOS', 'hostOS', 'platform'                                                                                                                                                                                                                 |
 +-------------------------+-------------------------+-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | nfcNamingCode           | string                  | No          | Network function component type: 3 characters (aligned with vfc naming standards)                                                                                                                                                                                              |
 +-------------------------+-------------------------+-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -437,7 +438,7 @@ The commonEventHeader datatype consists of the following fields common to all ev
 +-------------------------+-------------------------+-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | reportingEntityName     | string                  | Yes         | Name of the entity reporting the event, for example, an EMS name. May be the same as the sourceName. For synthetic events generated by DCAE, it is the name of the app generating the event.                                                                                   |
 +-------------------------+-------------------------+-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| priority                | string                  | Yes         | Processing priority enumeration: 'High', 'Medium', 'Normal', 'Low'                                                                                                                                                                                                            |
+| priority                | string                  | Yes         | Processing priority enumeration: 'High', 'Medium', 'Normal', 'Low'                                                                                                                                                                                                             |
 +-------------------------+-------------------------+-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | startEpochMicrosec      | number                  | Yes         | the earliest unix time aka epoch time associated with the event from any component--as microseconds elapsed since 1 Jan 1970 not including leap seconds                                                                                                                        |
 +-------------------------+-------------------------+-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -470,17 +471,17 @@ The faultFields datatype consists of the following fields:
 +===============================+=============+=============+================================================================================================================================================================+
 | faultFieldsVersion            | number      | Yes         | Version of the faultFields block (currently: 2.0)                                                                                                              |
 +-------------------------------+-------------+-------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| eventSeverity                 | string      | Yes         | Event severity enumeration: 'CRITICAL', 'MAJOR', 'MINOR', 'WARNING', 'NORMAL'                                                                                 |
+| eventSeverity                 | string      | Yes         | Event severity enumeration: 'CRITICAL', 'MAJOR', 'MINOR', 'WARNING', 'NORMAL'                                                                                  |
 +-------------------------------+-------------+-------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| eventSourceType               | string      | Yes         | Examples: 'card', 'host', 'other', 'port', 'portThreshold', 'router', 'slotThreshold', 'switch', 'virtualMachine', 'virtualNetworkFunction'                   |
+| eventSourceType               | string      | Yes         | Examples: 'card', 'host', 'other', 'port', 'portThreshold', 'router', 'slotThreshold', 'switch', 'virtualMachine', 'virtualNetworkFunction'                    |
 +-------------------------------+-------------+-------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| eventCategory                 | string      | No          | Event category, for example: 'license', 'link', 'routing', 'security', 'signaling'                                                                            |
+| eventCategory                 | string      | No          | Event category, for example: 'license', 'link', 'routing', 'security', 'signaling'                                                                             |
 +-------------------------------+-------------+-------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | alarmCondition                | string      | Yes         | Alarm condition reported by the device (e.g., 'tpLgCgiNotInConfig')                                                                                            |
 +-------------------------------+-------------+-------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | specificProblem               | string      | Yes         | Short description of the alarm or problem (e.g., 'This event is sent when the LG is asked to perform a location for a CGI that is not in its configuration')   |
 +-------------------------------+-------------+-------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| vfStatus                      | string      | Yes         | Virtual function status enumeration: 'Active', 'Idle', 'Preparing to terminate', 'Ready to terminate', 'Requesting Termination'                               |
+| vfStatus                      | string      | Yes         | Virtual function status enumeration: 'Active', 'Idle', 'Preparing to terminate', 'Ready to terminate', 'Requesting Termination'                                |
 +-------------------------------+-------------+-------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | alarmInterfaceA               | string      | No          | Card, port, channel or interface name of the device generating the alarm                                                                                       |
 +-------------------------------+-------------+-------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -505,8 +506,8 @@ The heartbeatFields datatype is an optional field block for fields specific to h
 | heartbeatInterval        | Integer     | Yes         | Current heartbeatInterval in seconds                    |
 +--------------------------+-------------+-------------+---------------------------------------------------------+
 
- 'Measurements For VF Scaling'Domain Datatypes
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Measurements For VF Scaling'Domain Datatypes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Datatype: codecsInUse
 ^^^^^^^^^^^^^^^^^^^^^
@@ -830,7 +831,7 @@ The vNicPerformance datatype consists of the following fields which describe the
 +------------------------------------------+----------+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 | transmittedUnicastPacketsDelta           | number   | No          | Count of unicast packets transmitted within the measurement interval                                                                          |
 +------------------------------------------+----------+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
-| valuesAreSuspect                         | string   | Yes         | Enumeration: 'true'or 'false'. If 'true'then the vNicPerformance values are likely inaccurate due to counter overflow or other condtions.   |
+| valuesAreSuspect                         | string   | Yes         | Enumeration: 'true'or 'false'. If 'true'then the vNicPerformance values are likely inaccurate due to counter overflow or other condtions.     |
 +------------------------------------------+----------+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 | vNicIdentifier                           | string   | Yes         | vNic identification                                                                                                                           |
 +------------------------------------------+----------+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -870,9 +871,9 @@ The stateChangeFields datatype consists of the following fields:
 +----------------------------+-------------+-------------+----------------------------------------------------------------------------+
 | additionalFields           | field [ ]   | No          | Additional stateChange fields if needed                                    |
 +----------------------------+-------------+-------------+----------------------------------------------------------------------------+
-| newState                   | string      | Yes         | New state of the entity: 'inService', 'maintenance', 'outOfService'       |
+| newState                   | string      | Yes         | New state of the entity: 'inService', 'maintenance', 'outOfService'        |
 +----------------------------+-------------+-------------+----------------------------------------------------------------------------+
-| oldState                   | string      | Yes         | Previous state of the entity: 'inService', 'maintenance', 'outOfService'  |
+| oldState                   | string      | Yes         | Previous state of the entity: 'inService', 'maintenance', 'outOfService'   |
 +----------------------------+-------------+-------------+----------------------------------------------------------------------------+
 | stateInterface             | string      | Yes         | Card or port name of the entity that changed state                         |
 +----------------------------+-------------+-------------+----------------------------------------------------------------------------+
@@ -890,11 +891,11 @@ The syslogFields datatype consists of the following fields:
 +=======================+===========+=============+===============================================================================================================================================+
 | syslogFieldsVersion   | number    | Yes         | Version of the syslogFields block (currently: 3.0)                                                                                            |
 +-----------------------+-----------+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
-| additionalFields      | string    | No          | Additional syslog fields if needed, provided as name=value delimited by a pipe '\|'symbol, for example: "name1=value1\|name2=value2\|""      |
+| additionalFields      | string    | No          | Additional syslog fields if needed, provided as name=value delimited by a pipe '\|'symbol, for example: "name1=value1\|name2=value2\|""       |
 +-----------------------+-----------+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 | eventSourceHost       | string    | No          | Hostname of the device                                                                                                                        |
 +-----------------------+-----------+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
-| eventSourceType       | string    | Yes         | Examples: 'other', 'router', 'switch', 'host', 'card', 'port', 'slotThreshold', 'portThreshold', 'virtualMachine', 'virtualNetworkFunction'  |
+| eventSourceType       | string    | Yes         | Examples: 'other', 'router', 'switch', 'host', 'card', 'port', 'slotThreshold', 'portThreshold', 'virtualMachine', 'virtualNetworkFunction'   |
 +-----------------------+-----------+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 | syslogFacility        | integer   | No          | Numeric code from 0 to 23 for facility:                                                                                                       |
 |                       |           |             |                                                                                                                                               |
@@ -966,23 +967,23 @@ The syslogFields datatype consists of the following fields:
 +-----------------------+-----------+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 | syslogSev             | string    | No          | Level-of-severity enumeration in quotes below:                                                                                                |
 |                       |           |             |                                                                                                                                               |
-|                       |           |             | 'Emergency': system is unusable                                                                                                           |
+|                       |           |             | 'Emergency': system is unusable                                                                                                               |
 |                       |           |             |                                                                                                                                               |
-|                       |           |             | 'Alert': action must be taken immediately                                                                                     |
+|                       |           |             | 'Alert': action must be taken immediately                                                                                                     |
 |                       |           |             |                                                                                                                                               |
-|                       |           |             | 'Critical': critical conditions                                                                                                   |
+|                       |           |             | 'Critical': critical conditions                                                                                                               |
 |                       |           |             |                                                                                                                                               |
-|                       |           |             | 'Error': error conditions                                                                                                     |
+|                       |           |             | 'Error': error conditions                                                                                                                     |
 |                       |           |             |                                                                                                                                               |
-|                       |           |             | 'Warning': warning conditions                                                                                                       |
+|                       |           |             | 'Warning': warning conditions                                                                                                                 |
 |                       |           |             |                                                                                                                                               |
-|                       |           |             | 'Notice': normal but significant condition                                                                                       |
+|                       |           |             | 'Notice': normal but significant condition                                                                                                    |
 |                       |           |             |                                                                                                                                               |
-|                       |           |             | 'Info': Informational: informational messages                                                                               |
+|                       |           |             | 'Info': Informational: informational messages                                                                                                 |
 |                       |           |             |                                                                                                                                               |
-|                       |           |             | 'Debug': debug-level messages                                                                                                    |
+|                       |           |             | 'Debug': debug-level messages                                                                                                                 |
 +-----------------------+-----------+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
-| syslogTag             | string    | Yes         | MsgId indicating the type of message such as 'TCPOUT'or 'TCPIN'; 'NILVALUE'should be used when no other value can be provided               |
+| syslogTag             | string    | Yes         | MsgId indicating the type of message such as 'TCPOUT'or 'TCPIN'; 'NILVALUE'should be used when no other value can be provided                 |
 +-----------------------+-----------+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 | syslogVer             | number    | No          | IANA assigned version of the syslog protocol specification (typically '1')                                                                    |
 +-----------------------+-----------+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1024,7 +1025,7 @@ The counter datatype consists of the following fields:
 +---------------------+----------+-------------+-----------------------------------+
 | threshholdCrossed   | string   | Yes         | Last threshold that was crossed   |
 +---------------------+----------+-------------+-----------------------------------+
-| criticality         | string   | Yes         | Enumeration: 'CRIT', 'MAJ'       |
+| criticality         | string   | Yes         | Enumeration: 'CRIT', 'MAJ'        |
 +---------------------+----------+-------------+-----------------------------------+
 
 Datatype: thresholdCrossingAlertFields
@@ -1042,25 +1043,25 @@ fields:
 +-----------------------------------+---------------+-------------+-----------------------------------------------------------------------------------------------------------------------------+
 | additionalParameters              | counter [ ]   | Yes         | Array of performance counters                                                                                               |
 +-----------------------------------+---------------+-------------+-----------------------------------------------------------------------------------------------------------------------------+
-| alertAction                       | string        | Yes         | Enumeration: 'SET', 'CONT', 'CLEAR'                                                                                        |
+| alertAction                       | string        | Yes         | Enumeration: 'SET', 'CONT', 'CLEAR'                                                                                         |
 +-----------------------------------+---------------+-------------+-----------------------------------------------------------------------------------------------------------------------------+
 | alertDescription                  | string        | Yes         | Unique short alert description (e.g., NE-CPUMEM)                                                                            |
 +-----------------------------------+---------------+-------------+-----------------------------------------------------------------------------------------------------------------------------+
-| alertType                         | string        | Yes         | Enumeration: 'CARD-ANOMALY', 'INTERFACE-ANOMALY', ELEMENT-ANOMALY', 'SERVICE-ANOMALY'                                      |
+| alertType                         | string        | Yes         | Enumeration: 'CARD-ANOMALY', 'INTERFACE-ANOMALY', ELEMENT-ANOMALY', 'SERVICE-ANOMALY'                                       |
 +-----------------------------------+---------------+-------------+-----------------------------------------------------------------------------------------------------------------------------+
 | alertValue                        | string        | No          | Calculated API value (if applicable)                                                                                        |
 +-----------------------------------+---------------+-------------+-----------------------------------------------------------------------------------------------------------------------------+
 | associatedAlertIdList             | string [ ]    | No          | List of eventIds associated with the event being reported                                                                   |
 +-----------------------------------+---------------+-------------+-----------------------------------------------------------------------------------------------------------------------------+
-| collectionTimestamp               | string        | Yes         | Time when the performance collector picked up the data; with RFC 2822 compliant format: 'Sat, 13 Mar 2010 11:29:05 -0800'  |
+| collectionTimestamp               | string        | Yes         | Time when the performance collector picked up the data; with RFC 2822 compliant format: 'Sat, 13 Mar 2010 11:29:05 -0800'   |
 +-----------------------------------+---------------+-------------+-----------------------------------------------------------------------------------------------------------------------------+
 | dataCollector                     | string        | No          | Specific performance collector instance used                                                                                |
 +-----------------------------------+---------------+-------------+-----------------------------------------------------------------------------------------------------------------------------+
 | elementType                       | string        | No          | Type of network element (internal AT&T field)                                                                               |
 +-----------------------------------+---------------+-------------+-----------------------------------------------------------------------------------------------------------------------------+
-| eventSeverity                     | string        | Yes         | Event severity or priority enumeration: 'CRITICAL', 'MAJOR', 'MINOR', 'WARNING', 'NORMAL'                                  |
+| eventSeverity                     | string        | Yes         | Event severity or priority enumeration: 'CRITICAL', 'MAJOR', 'MINOR', 'WARNING', 'NORMAL'                                   |
 +-----------------------------------+---------------+-------------+-----------------------------------------------------------------------------------------------------------------------------+
-| eventStartTimestamp               | string        | Yes         | Time closest to when the measurement was made; with RFC 2822 compliant format: 'Sat, 13 Mar 2010 11:29:05 -0800'           |
+| eventStartTimestamp               | string        | Yes         | Time closest to when the measurement was made; with RFC 2822 compliant format: 'Sat, 13 Mar 2010 11:29:05 -0800'            |
 +-----------------------------------+---------------+-------------+-----------------------------------------------------------------------------------------------------------------------------+
 | interfaceName                     | string        | No          | Physical or logical port or card (if applicable)                                                                            |
 +-----------------------------------+---------------+-------------+-----------------------------------------------------------------------------------------------------------------------------+
@@ -1072,8 +1073,8 @@ fields:
 Technology Specific Datatypes
 -----------------------------
 
- 'Mobile Flow' Domain Datatypes
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Mobile Flow' Domain Datatypes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Datatype: gtpPerFlowMetrics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1103,7 +1104,7 @@ The gtpPerFlowMetrics datatype consists of the following fields:
 +------------------------------------+---------------------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | flowActivationMicrosec             | number              | Yes         | Integer microseconds for the start of the flow connection                                                                                                                                                         |
 +------------------------------------+---------------------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| flowActivationTime                 | string              | No          | Time the connection is activated in the flow being reported on, or transmission time of the first packet if activation time is not available; with RFC 2822 compliant format: 'Sat, 13 Mar 2010 11:29:05 -0800'  |
+| flowActivationTime                 | string              | No          | Time the connection is activated in the flow being reported on, or transmission time of the first packet if activation time is not available; with RFC 2822 compliant format: 'Sat, 13 Mar 2010 11:29:05 -0800'   |
 +------------------------------------+---------------------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | flowDeactivatedBy                  | string              | No          | Endpoint deactivating the flow                                                                                                                                                                                    |
 +------------------------------------+---------------------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1111,7 +1112,7 @@ The gtpPerFlowMetrics datatype consists of the following fields:
 +------------------------------------+---------------------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | flowDeactivationMicrosec           | number              | Yes         | Integer microseconds for the start of the flow connection                                                                                                                                                         |
 +------------------------------------+---------------------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| flowDeactivationTime               | string              | Yes         | Transmission time of the first packet in the flow connection being reported on; with RFC 2822 compliant format: 'Sat, 13 Mar 2010 11:29:05 -0800'                                                                |
+| flowDeactivationTime               | string              | Yes         | Transmission time of the first packet in the flow connection being reported on; with RFC 2822 compliant format: 'Sat, 13 Mar 2010 11:29:05 -0800'                                                                 |
 +------------------------------------+---------------------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | flowStatus                         | string              | Yes         | Connection status at reporting time as a working / inactive / failed indicator value                                                                                                                              |
 +------------------------------------+---------------------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1259,8 +1260,8 @@ The mobileFlowFields datatype consists of the following fields:
 | vlanId                    | string               | No          | VLAN identifier used by this flow                                                                                                                                                            |
 +---------------------------+----------------------+-------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
- 'SipSignaling'Domain Datatypes
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'SipSignaling'Domain Datatypes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Datatype: sipSignalingFields
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1293,8 +1294,8 @@ following fields:
 | vendorVnfNameFields         | vendorVnfNameFields   | Yes         | Vendor, VNF and VfModule names                                |
 +-----------------------------+-----------------------+-------------+---------------------------------------------------------------+
 
- 'Voice Quality'Domain Datatypes
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Voice Quality'Domain Datatypes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Datatype: endOfCallVqmSummaries
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1307,7 +1308,7 @@ metrics; it consists of the following fields:
 +===============================+==========+=============+==================================================================================================================================================================================================================+
 | adjacencyName                 | string   | Yes         | Adjacency name                                                                                                                                                                                                   |
 +-------------------------------+----------+-------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| endpointDescription           | string   | Yes         | Enumeration: 'Caller', 'Callee'                                                                                                                                                                                 |
+| endpointDescription           | string   | Yes         | Enumeration: 'Caller', 'Callee'                                                                                                                                                                                  |
 +-------------------------------+----------+-------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | endpointJitter                | number   | No          | Endpoint jitter                                                                                                                                                                                                  |
 +-------------------------------+----------+-------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1391,7 +1392,7 @@ exceptions may be defined: service exceptions and policy exceptions.
 +------------------+----------------------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | **Field Name**   | **Data Type**              | **Required?**   | **Description**                                                                                                                                                                                                                                                        |
 +==================+============================+=================+========================================================================================================================================================================================================================================================================+
-| messageId        | xs:string                  | Yes             | Unique message identifier of the format 'ABCnnnn'where 'ABC'is either 'SVC'for Service Exceptions or 'POL'for Policy Exception.                                                                                                                                    |
+| messageId        | xs:string                  | Yes             | Unique message identifier of the format 'ABCnnnn'where 'ABC'is either 'SVC'for Service Exceptions or 'POL'for Policy Exception.                                                                                                                                        |
 |                  |                            |                 |                                                                                                                                                                                                                                                                        |
 |                  |                            |                 | Exception numbers may be in the range of 0001 to 9999 where :                                                                                                                                                                                                          |
 |                  |                            |                 |                                                                                                                                                                                                                                                                        |
@@ -1525,9 +1526,9 @@ currently supported:
 +-----------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | **Command**                 | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 +-----------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| heartbeatInterval Change    | Commands the event source to change the interval (in seconds) it waits between heartbeat events sent to the VES Event Listener. If '0'is provided, the event source should return to its default heartbeatInterval.                                                                                                                                                                                                                                                                                                                              |
+| heartbeatInterval Change    | Commands the event source to change the interval (in seconds) it waits between heartbeat events sent to the VES Event Listener. If '0'is provided, the event source should return to its default heartbeatInterval.                                                                                                                                                                                                                                                                                                                               |
 +-----------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| measurementIntervalChange   | Commands the event source to change its measurementInterval to the number provided (in seconds). If '0'is provided, the event source should return to its default measurementInterval.                                                                                                                                                                                                                                                                                                                                                           |
+| measurementIntervalChange   | Commands the event source to change its measurementInterval to the number provided (in seconds). If '0'is provided, the event source should return to its default measurementInterval.                                                                                                                                                                                                                                                                                                                                                            |
 +-----------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | provideThrottlingState      | Commands the event source to invoke the provideThrottlingState operation on the event consumer.                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 +-----------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1658,7 +1659,7 @@ event collector toward the event source):
 +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | **Parameter**   | **Data Type**   | **Required?**   | **Brief description**                                                                                                                                                                                                                                                                                                                                                                                     |
 +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| commandList     | commandList     | No              | Array of commands (e.g., measurement Interval changes and/or what fields to suppress within specified event domains and/or a request to report the state of event throttling by event domain that is currently in force in the event source). Note: for 'provideThrottlingState'commands, the client should subsequently provide the throttling state by calling the provideThrottlingState operation.   |
+| commandList     | commandList     | No              | Array of commands (e.g., measurement Interval changes and/or what fields to suppress within specified event domains and/or a request to report the state of event throttling by event domain that is currently in force in the event source). Note: for 'provideThrottlingState'commands, the client should subsequently provide the throttling state by calling the provideThrottlingState operation.    |
 +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Body Fields (for error Responses):
@@ -1695,6 +1696,7 @@ Sample Request
 ^^^^^^^^^^^^^^
 
  .. code:: bash
+ 
  POST /eventListener/v5 HTTPS/1.1
  Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==
  content-type: application/json
@@ -1739,50 +1741,50 @@ Sample Success Response #1
 
     For success responses without a provided command list:
 
-	.. code:: bash
+    .. code:: bash
 
-	HTTPS/1.1 202 Accepted
+    HTTPS/1.1 202 Accepted
 
 Sample Success Response #2
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
     For success responses with a provided command list:
 
-	.. code:: bash
+    .. code:: bash
 
-		HTTPS/1.1 202 Accepted
-		content-type: application/json
-		content-length: nnn
-		date: Sat, 04 Jul 2015 02:03:15 GMT
-		{
-		"commandList": [
-			{
-				"commandType": "throttlingSpecification",
-				"eventDomainThrottleSpecification": {
-					"eventDomain": "fault",
-					"suppressedFieldNames": [
-						"alarmInterfaceA",
-						"alarmAdditionalInformation"
-					]
-				}
-			},
-			{
-				"commandType": "throttlingSpecification",
-				"eventDomainThrottleSpecification": {
-					"eventDomain": "thresholdCrossingAlert",
-					"suppressedFieldNames": [
-						"associatedAlertIdList",
-						"possibleRootCause"
-					],
-					"suppressedNvPairs" {
-						"nvPairFieldName": additionalParameters",
-						"suppressedNvPairNames": [
-							"someCounterName",
-							"someOtherCounterName"
-						]
-					}
-				}
-			},
+    HTTPS/1.1 202 Accepted
+    content-type: application/json
+    content-length: nnn
+    date: Sat, 04 Jul 2015 02:03:15 GMT
+    {
+    "commandList": [
+        {
+            "commandType": "throttlingSpecification",
+            "eventDomainThrottleSpecification": {
+                "eventDomain": "fault",
+                "suppressedFieldNames": [
+                    "alarmInterfaceA",
+                    "alarmAdditionalInformation"
+		]
+	    }
+	},
+        {
+            "commandType": "throttlingSpecification",
+            eventDomainThrottleSpecification": {
+		"eventDomain": "thresholdCrossingAlert",
+		"suppressedFieldNames": [
+        		"associatedAlertIdList",
+			"possibleRootCause"
+		],
+		"suppressedNvPairs" {
+			"nvPairFieldName": additionalParameters",
+			"suppressedNvPairNames": [
+				"someCounterName",
+				"someOtherCounterName"
+			]
+		}
+             }
+	},
 			{
 				"commandType": "measurementIntervalChange",
 				"measurementInterval": 600
@@ -1798,10 +1800,12 @@ Sample Success Response #2
 		}
 
 1. .. rubric:: Sample Error Responses
+
       :name: sample-error-responses
 
    1. .. rubric:: Sample Policy Exception
-         :name: sample-policy-exception
+
+        :name: sample-policy-exception
 
 	.. code:: bash
 
@@ -1922,7 +1926,7 @@ event collector toward the event source):
 +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | **Parameter**   | **Data Type**   | **Required?**   | **Brief description**                                                                                                                                                                                                                                                                                                                                                                                     |
 +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| commandList     | commandList     | No              | Array of commands (e.g., measurement Interval changes and/or what fields to suppress within specified event domains and/or a request to report the state of event throttling by event domain that is currently in force in the event source). Note: for 'provideThrottlingState'commands, the client should subsequently provide the throttling state by calling the provideThrottlingState operation.   |
+| commandList     | commandList     | No              | Array of commands (e.g., measurement Interval changes and/or what fields to suppress within specified event domains and/or a request to report the state of event throttling by event domain that is currently in force in the event source). Note: for 'provideThrottlingState'commands, the client should subsequently provide the throttling state by calling the provideThrottlingState operation.    |
 +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Body Fields (for error Responses):
@@ -2091,12 +2095,14 @@ Sample Success Response #2
 		}
 
 1. .. rubric:: Sample Error Responses
+
       :name: sample-error-responses-1
 
-   1. .. rubric:: Sample Policy Exception
-         :name: sample-policy-exception-1
+2. .. rubric:: Sample Policy Exception
 
-	.. code:: bash
+      :name: sample-policy-exception-1
+
+      .. code:: bash
 
 		HTTPS/1.1 400 Bad Request
 		content-type: application/json
@@ -2287,9 +2293,11 @@ Sample Success Response
 		HTTPS/1.1 204 No Content
 
 1. .. rubric:: Sample Error Responses
+
       :name: sample-error-responses-2
 
    1. .. rubric:: Sample Policy Exception
+
          :name: sample-policy-exception-2
 
 	.. code:: bash

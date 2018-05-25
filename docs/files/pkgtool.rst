@@ -25,7 +25,7 @@ use the library with their scripts and autoamtion framework.
 
 Repository Name: vnfsdk/pkgtools
 
-Clone command: git clone http://gerrit.onap.org/r/vnfsdk/pkgtools
+Clone command: git clone ssh://$lfid@gerrit.onap.org:29418/vnfsdk/pkgtools
 
 Installation
 ------------

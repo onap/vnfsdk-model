@@ -12,7 +12,7 @@ or :download:`json <swagger.json>` :download:`yaml <swagger.yaml>`
 
 |image0|
 
-.. |image0| image:: files/vnfsdk-marketplace.png
+.. |image0| image:: vnfsdk-marketplace.png
    :height: 600px
    :width: 800px
 

@@ -12,6 +12,7 @@ VNF SDK Marketplace Installation Instructions
 
 2. Goto vnfmarket-be/deployment/install,
 ::
+
   Delete old docker images of refrepo (if any).
   Enter command "source .env" to set up few environment variables.
   Enter command "docker-compose up -d"
