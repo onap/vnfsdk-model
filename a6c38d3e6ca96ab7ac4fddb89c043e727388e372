@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_8a6c3cd2",
+        "filename": "docs/files/pkgtool.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 309
+      },
+      "writtenOn": "2018-05-28T02:03:09Z",
+      "side": 1,
+      "message": "I think it\u0027d be better to git clone from https://git.onap.org/vnfsdk/pkgtools .\n\nUsers don\u0027t need to have LF id to get onap code.",
+      "range": {
+        "startLine": 28,
+        "startChar": 66,
+        "endLine": 28,
+        "endChar": 74
+      },
+      "revId": "a6c38d3e6ca96ab7ac4fddb89c043e727388e372",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
