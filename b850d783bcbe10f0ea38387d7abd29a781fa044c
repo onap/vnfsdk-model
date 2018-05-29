@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_0847d4bd",
+        "filename": "docs/files/ICE.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 269
+      },
+      "writtenOn": "2018-05-29T14:47:51Z",
+      "side": 1,
+      "message": "some missing \u003d at the end of line",
+      "revId": "b850d783bcbe10f0ea38387d7abd29a781fa044c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_c8100cae",
+        "filename": "docs/files/ICE.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 269
+      },
+      "writtenOn": "2018-05-29T14:47:51Z",
+      "side": 1,
+      "message": "missing empty line",
+      "revId": "b850d783bcbe10f0ea38387d7abd29a781fa044c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
