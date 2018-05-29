@@ -2,6 +2,7 @@
 .. http://creativecommons.org/licenses/by/4.0
 .. Copyright 2017 AT&T Intellectual Property, All rights reserved
 .. Copyright 2017 Huawei Technologies Co., Ltd.
+
 ======================
 VES Event Registration
 ======================
@@ -511,7 +512,9 @@ preceding event definitions. For example:
       }}
 	}}
     ...
+    
     ---
+    
     # Rules
     rules: [
 
@@ -573,6 +576,7 @@ file.
 Example rules definition:
 
 ::
+
 	rules: [
 		rule: {
 			trigger: A,
@@ -621,6 +625,7 @@ vMRF VNF. Note: some of the lines have been manually wrapped/indented to
 make it easier to read.
 
 ::
+
 	---
 	# registration for Fault\_vMrf\_alarm003
 	# Constants: the values of domain, eventName, priority, vfstatus
@@ -661,6 +666,7 @@ make it easier to read.
 	}}
 
 	...
+	
 	---
 	# registration for clearing Fault\_vMrf\_alarm003Cleared
 	# Constants: the values of domain, eventName, priority,
@@ -696,6 +702,7 @@ make it easier to read.
 	}}
 
 	...
+	
 	---
 	# registration for Heartbeat_vMRF
 	# Constants: the values of domain, eventName, priority, version
@@ -726,6 +733,7 @@ make it easier to read.
 	}}
 
 	...
+	
 	---
 	# registration for Mfvs\_vMRF
 	# Constants: the values of domain, eventName, priority, version,
@@ -992,7 +1000,9 @@ make it easier to read.
 			]}
 		}}
 	}}
+	
 	...
+	
 	---
 	# registration for Syslog\_vMRF
 	# Constants: the values of domain, eventName, priority, lastEpochMicrosec, version,
@@ -1027,7 +1037,9 @@ make it easier to read.
 			syslogTag: {presence: required, value: vMRF},
 		}}
 	}}
+	
 	...
+	
 	---
 	#Rules
 	Rules: [
@@ -1042,5 +1054,6 @@ make it easier to read.
 			microservices: [scaleIn]
 			}
 		]
-		...
+		
+	...
 
