@@ -1,6 +1,6 @@
 .. This work is licensed under a Creative Commons Attribution 4.0 International License.
 .. http://creativecommons.org/licenses/by/4.0
-.. Copyright 2017 Huawei Technologies Co., Ltd.
+.. Copyright 2017-2018 Huawei Technologies Co., Ltd.
 
 VNF Package Tool
 ================
@@ -25,7 +25,7 @@ use the library with their scripts and autoamtion framework.
 
 Repository Name: vnfsdk/pkgtools
 
-Clone command: git clone ssh://$lfid@gerrit.onap.org:29418/vnfsdk/pkgtools
+Clone command: git clone https://git.onap.org/vnfsdk/pkgtools
 
 Installation
 ------------
