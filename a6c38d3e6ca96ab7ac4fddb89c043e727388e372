@@ -1,0 +1,8 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review-1: Lianhao Lu <lianhao.lu@intel.com>
+Code-Review+2: Andy Mayer <am803u@att.com>
+Submitted-by: Andy Mayer <am803u@att.com>
+Submitted-at: Tue, 29 May 2018 13:57:20 +0000
+Reviewed-on: https://gerrit.onap.org/r/49199
+Project: vnfsdk/model
+Branch: refs/heads/master
