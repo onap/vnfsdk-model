@@ -137,3 +137,13 @@ VNF Certification Testing Framework - Dovetail
    :titlesonly:
 
    files/Dovetail
+
+ICE tools for HEAT validation
+-----------------------------
+
+.. toctree::
+   :maxdepth: 1
+   :titlesonly:
+
+   files/ICE
+
