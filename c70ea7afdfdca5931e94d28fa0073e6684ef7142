@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_63079b1e",
+        "filename": "docs/release-notes.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 335
+      },
+      "writtenOn": "2018-05-30T00:10:36Z",
+      "side": 1,
+      "message": "D",
+      "range": {
+        "startLine": 41,
+        "startChar": 4,
+        "endLine": 41,
+        "endChar": 5
+      },
+      "revId": "c70ea7afdfdca5931e94d28fa0073e6684ef7142",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_03049716",
+        "filename": "docs/release-notes.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 335
+      },
+      "writtenOn": "2018-05-30T00:10:36Z",
+      "side": 1,
+      "message": "D",
+      "range": {
+        "startLine": 44,
+        "startChar": 9,
+        "endLine": 44,
+        "endChar": 10
+      },
+      "revId": "c70ea7afdfdca5931e94d28fa0073e6684ef7142",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_23019306",
+        "filename": "docs/release-notes.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 335
+      },
+      "writtenOn": "2018-05-30T00:10:36Z",
+      "side": 1,
+      "message": "D",
+      "range": {
+        "startLine": 46,
+        "startChar": 33,
+        "endLine": 46,
+        "endChar": 34
+      },
+      "revId": "c70ea7afdfdca5931e94d28fa0073e6684ef7142",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_430a9f28",
+        "filename": "docs/release-notes.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 335
+      },
+      "writtenOn": "2018-05-30T00:10:36Z",
+      "side": 1,
+      "message": "D",
+      "range": {
+        "startLine": 48,
+        "startChar": 48,
+        "endLine": 48,
+        "endChar": 49
+      },
+      "revId": "c70ea7afdfdca5931e94d28fa0073e6684ef7142",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
