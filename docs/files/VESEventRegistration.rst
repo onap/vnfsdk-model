@@ -164,6 +164,7 @@ YAML files consist of a series of YAML documents delimited by ‘---‘ and
 ‘…’ for example:
 
 ::
+
     ---
 
     # Event Registration for eventName ‘name1’
@@ -480,6 +481,7 @@ based on the named ‘conditions’ asserted in action qualifiers in the
 preceding event definitions. For example:
 
 ::
+
     ---
 
     # Event Registration for eventName ‘name1’
@@ -531,17 +533,13 @@ The YAML ‘rules’ document begins with the keyword ‘rules’ followed by a
 colon and square brackets. Each rule is then defined within the square
 brackets. Commas are used to separate rules.
 
-Each rule is expressed as follows:
+Each rule is expressed as follows::
 
-rule: {
-
-trigger: *logical expression in terms of conditions*,
-
-microservices: [ *microservice1, microservice2, microservice3…* ]
-
-alerts: [tcaE*ventName1, tcaEventName2, tcaEventName3…* ],
-
-}
+     rule: {
+          trigger: *logical expression in terms of conditions*,
+          microservices: [ *microservice1, microservice2, microservice3…* ]
+          alerts: [tcaE*ventName1, tcaEventName2, tcaEventName3…* ],
+     }
 
 Notes:
 
@@ -573,9 +571,7 @@ Example logical expression:
 Where A, B, C and D are named conditions expressed earlier in the YAML
 file.
 
-Example rules definition:
-
-::
+Example rules definition::
 
 	rules: [
 		rule: {
@@ -603,6 +599,7 @@ with a colon and curly braces. The time based rule is placed in the
 curly braces as follows:
 
 ::
+
 	trigger: B:{3 times in 300 seconds}
 
 This means that if condition B occurs 3 (or more) times in 300 seconds
@@ -611,6 +608,7 @@ This means that if condition B occurs 3 (or more) times in 300 seconds
 More complex triggers can be created as follows:
 
 ::
+
 	trigger: B:{3 times in 300 seconds} \|\| (C & D:{2 times in 600 seconds}),
 
 This means that the trigger fires if condition B occurs 3 (or more)
@@ -665,7 +663,7 @@ make it easier to read.
 		}}
 	}}
 
-	...
+::
 	
 	---
 	# registration for clearing Fault\_vMrf\_alarm003Cleared
@@ -701,7 +699,7 @@ make it easier to read.
 		}}
 	}}
 
-	...
+::
 	
 	---
 	# registration for Heartbeat_vMRF
@@ -732,7 +730,7 @@ make it easier to read.
 		}}
 	}}
 
-	...
+::
 	
 	---
 	# registration for Mfvs\_vMRF
@@ -1001,7 +999,7 @@ make it easier to read.
 		}}
 	}}
 	
-	...
+::
 	
 	---
 	# registration for Syslog\_vMRF
@@ -1038,7 +1036,7 @@ make it easier to read.
 		}}
 	}}
 	
-	...
+::
 	
 	---
 	#Rules
@@ -1054,6 +1052,5 @@ make it easier to read.
 			microservices: [scaleIn]
 			}
 		]
-		
-	...
+	
 

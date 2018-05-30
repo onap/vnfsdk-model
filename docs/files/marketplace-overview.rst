@@ -3,7 +3,7 @@
 .. Copyright 2017 Huawei Technologies Co., Ltd.
 
 VNF SDK Marketplace
-===================
+-------------------
 
 VNF SDK provides a reference implementation "marketplace" to help vendors
 validate and manage VNF packages. It also supports the operator to onboard VNF
@@ -12,7 +12,7 @@ or :download:`json <swagger.json>` :download:`yaml <swagger.yaml>`
 
 |image0|
 
-.. |image0| image:: vnfsdk-marketplace.png
+.. |image0| image:: files/vnfsdk-marketplace.png
    :height: 600px
    :width: 800px
 
