@@ -46,7 +46,7 @@ persisted, along with the product executables and data, using TOSCA CSAR files.
    files/*blueprints
 
 VNF SDK Marketplace
--------------------
+===================
 
 .. include:: files/marketplace-overview.rst
 
@@ -82,7 +82,7 @@ content. The following tools are included...
 
 
 User Guides
------------
+===========
 
 VNF Package Tools User Guide
 ----------------------------
