@@ -663,7 +663,7 @@ make it easier to read.
 		}}
 	}}
 
-::
+        ...
 	
 	---
 	# registration for clearing Fault\_vMrf\_alarm003Cleared
@@ -699,7 +699,7 @@ make it easier to read.
 		}}
 	}}
 
-::
+        ...
 	
 	---
 	# registration for Heartbeat_vMRF
@@ -730,7 +730,7 @@ make it easier to read.
 		}}
 	}}
 
-::
+        ...
 	
 	---
 	# registration for Mfvs\_vMRF
@@ -999,7 +999,7 @@ make it easier to read.
 		}}
 	}}
 	
-::
+        ...
 	
 	---
 	# registration for Syslog\_vMRF
@@ -1036,7 +1036,7 @@ make it easier to read.
 		}}
 	}}
 	
-::
+        ...
 	
 	---
 	#Rules
