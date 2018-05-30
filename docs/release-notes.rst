@@ -36,20 +36,14 @@ Version: 1.1.0
 
 **Security Notes**
 
-ONAP has adopted the `CII Best Practice Badge Program <https://bestpractices.coreinfrastructure.org/en>`_. The goal of the Beijing release is for all ONAP projects to be close to achieving a CII Passing badge.
+VNFSDK code has been formally scanned during build time using NexusIQ and all Critical vulnerabilities have been addressed, items that remain open have been assessed for risk and determined to be false positive. The VNFSDK open Critical security vulnerabilities and their risk assessment have been documented as part of the `project <https://wiki.onap.org/pages/viewpage.action?pageId=28377592>`_.
 
-VNFSDK code has been formally scanned during build time using NexusIQ and all Critical vulnerabilities found in these scans are closed. The 'VNFSDK security vulnerabilities and their workarounds <https://bestpractices.coreinfrastructure.org/en/projects/1588>'_ have been documented as part of the project.
-
-***Quick Links***
- 	- `VNFSDK project page <https://wiki.onap.org/display/DW/VNF+SDK+Project>'_
+Quick Links:
+ 	- `VNFSDK project page <https://wiki.onap.org/display/DW/VNF+SDK+Project>`_
  	
- 	- `Badging information for VNFSDK <https://bestpractices.coreinfrastructure.org/en/projects/1588>'_
+ 	- `Passing Badge information for VNFSDK <https://bestpractices.coreinfrastructure.org/en/projects/1588>`_
  	
- 	- `Project Vulnerability Review Table for VNFSDK <https://wiki.onap.org/pages/viewpage.action?pageId=28377592>'_
- 	
- 	- `Badging Requirements <https://github.com/coreinfrastructure/best-practices-badge#core-infrastructure-initiative-best-practices-badge>'_
- 	
- 	- `Badging Status for all ONAP projects <https://bestpractices.coreinfrastructure.org/en/projects?q=onap>'_
+ 	- `Project Vulnerability Review Table for VNFSDK <https://wiki.onap.org/pages/viewpage.action?pageId=28377592>`_
 
 **Upgrade Notes**
 	* Updated to use Swagger for APIs
