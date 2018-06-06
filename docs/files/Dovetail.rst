@@ -47,7 +47,7 @@ The Open Platform for NFV (OPNFV) is a collaborative project under the
 Linux Foundation that is transforming global networks through open
 source Network Functions Virtualization (NFV). OPNFV focuses on
 developing test suites for Open Source implementations of the NFV
-infrastructure components such as those specified in the ETSI Mano
+infrastructure components such as those specified in the ETSI NFV ISG MANO
 architecture. Areas of focus in OPNFV include: Virtualized
 Infrastructure Managers (VIM) such as OpenStack and Software Defined
 Networking Controllers (SDNC) such as Open Daylight.

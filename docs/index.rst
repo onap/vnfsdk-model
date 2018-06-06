@@ -74,7 +74,7 @@ content. The following tools are included...
 •	VNF Package Extractor - extracts VNF product model and executables from the
 	CSAR file
 
-•	VNF Package Parser - translates VNF proeduct blueprint into a format
+•	VNF Package Parser - translates VNF product blueprint into a format
 	consumable by ONAP components
 
 •	VNF Package Dry Run - performs a "dry run" install to ensure that the package

@@ -1,6 +1,6 @@
 .. This work is licensed under a Creative Commons Attribution 4.0 International License.
 .. http://creativecommons.org/licenses/by/4.0
-.. Copyright 2017 Huawei Technologies Co., Ltd.
+.. Copyright 2017-2018 Huawei Technologies Co., Ltd.
 
 Release Notes
 =============
@@ -99,5 +99,4 @@ N/A
 
 **Other**
 
-VNF onboarding with SDC is manual in Amsterdam.
-
+N/A

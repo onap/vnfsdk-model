@@ -21,7 +21,7 @@ Provided tools
 
 The tools are provided in a form of a shared library (Python module) that can
 be used in other projects. A CLI is also provided out-of-the box for DevOps to
-use the library with their scripts and autoamtion framework.
+use the library with their scripts and automation framework.
 
 Repository Name: vnfsdk/pkgtools
 
@@ -58,4 +58,4 @@ Usage
 
 
 All commands have -h switch which displays help and description of all
-paramaters.
+parameters.
