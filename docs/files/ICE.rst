@@ -42,7 +42,7 @@ Go into the ice_validator directory:
 
 ``$ cd ice/validation-scripts/ice_validator``
 
-The Heat templates validation may generate different ouput format (plain, tap, html):
+The Heat templates validation may generate different output format (plain, tap, html):
 
 - plain format
 

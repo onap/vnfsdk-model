@@ -1,7 +1,7 @@
 .. This work is licensed under a Creative Commons Attribution 4.0 International License.
 .. http://creativecommons.org/licenses/by/4.0
 .. Copyright 2017 AT&T Intellectual Property, All rights reserved
-.. Copyright 2017 Huawei Technologies Co., Ltd.
+.. Copyright 2017-2018 Huawei Technologies Co., Ltd.
 
 ======================
 VES Event Registration
@@ -133,13 +133,13 @@ YAML file names should conform to the following naming convention:
 The ‘#’ should be replaced with the current numbered version of the
 file.
 
-‘ASDC’ is a reference to the Service Provider’s Service Design and
+‘SDC’ is a reference to the Service Provider’s Service Design and
 Creation environment. The sdcModelType is an enumeration with several
 values of which the following three are potentially relevant:
 
 -  Service
 
--  Vnf
+-  VNF
 
 -  VfModule
 
@@ -355,7 +355,7 @@ Examples:
        ] }
 
     # whenever the above event occurs, a vnfDown condition is asserted
-    and the vnf should be rebooted, plus the indicated tca should be
+    and the VNF should be rebooted, plus the indicated tca should be
     generated.
 
 Presence
@@ -370,9 +370,7 @@ Examples
 
 -  element: { presence: optional } # element is optional
 
--  element: { value: blue } # by omitting a presence definition, the
-
-    element is assumed to be optional
+-  element: { value: blue } # by omitting a presence definition, the element is assumed to be optional
 
 Range
 ~~~~~
@@ -406,20 +404,13 @@ object.
 Example:
 
 -  objectName: { structure: {
-
-element1: { },
-
-element2: { },
-
-anotherObject: { structure: {
-
-element3: { },
-
-element4: { }
-
-} }
-
-} }
+	element1: { },
+	element2: { },
+	anotherObject: { structure: {
+	element3: { },
+	element4: { }
+		} }
+   } }
 
 Units
 ~~~~~
