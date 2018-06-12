@@ -3,9 +3,9 @@
 .. Copyright 2017 AT&T Intellectual Property, All rights reserved
 .. Copyright 2017-2018 Huawei Technologies Co., Ltd.
 
-=============================
-Service: *VES Event Listener*
-=============================
+===================================
+Service: *VES Event Listener 5.4.1*
+===================================
 
 .. contents:: Table of Contents
 
