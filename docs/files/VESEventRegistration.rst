@@ -3,9 +3,9 @@
 .. Copyright 2017 AT&T Intellectual Property, All rights reserved
 .. Copyright 2017-2018 Huawei Technologies Co., Ltd.
 
-======================
-VES Event Registration
-======================
+==========================
+VES Event Registration 1.6
+==========================
 
 .. contents:: Table of Contents
 
