@@ -126,8 +126,10 @@ VES Client Guidelines
    :maxdepth: 1
    :titlesonly:
 
-   files/VESEventRegistration
-   files/VESEventListener
+   files/EventRegistration-v2.0
+   files/VesEventListener-v6.0
+   :download:`common event format json <files/CommonEventFormat_29.json>`
+
 
 VNF Certification Testing Framework - Dovetail
 ----------------------------------------------
