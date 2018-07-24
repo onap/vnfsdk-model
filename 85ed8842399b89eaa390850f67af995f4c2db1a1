@@ -1,0 +1,8 @@
+Code-Review+2: Andy Mayer <am803u@att.com>
+Verified+1: Andy Mayer <am803u@att.com>
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Submitted-by: Chris Donley <christopher.donley@huawei.com>
+Submitted-at: Tue, 24 Jul 2018 22:12:06 +0000
+Reviewed-on: https://gerrit.onap.org/r/57387
+Project: vnfsdk/model
+Branch: refs/heads/master
