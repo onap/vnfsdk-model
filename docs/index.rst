@@ -1,6 +1,6 @@
 .. This work is licensed under a Creative Commons Attribution 4.0 International License.
 .. http://creativecommons.org/licenses/by/4.0
-.. Copyright 2017 Huawei Technologies Co., Ltd.
+.. Copyright 2017-2018 Huawei Technologies Co., Ltd.
 
 VNFSDK Documentation
 ====================
@@ -126,8 +126,8 @@ VES Client Guidelines
    :maxdepth: 1
    :titlesonly:
 
-   files/EventRegistration-v2.0
-   files/VesEventListener-v6.0
+   files/VESEventRegistration_3_0.rst
+   files/VESEventListener_7_0_1.rst
    :download:`common event format json <files/CommonEventFormat_29.json>`
 
 
