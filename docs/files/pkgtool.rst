@@ -16,8 +16,6 @@ Provided tools
   CSAR file
 * VNF Package Parser - translates VNF product blueprint into a format
   consumable by ONAP components
-* VNF Package Dry Run - performs a "dry run" install to ensure that the package
-  can be deployed during instantiation
 
 The tools are provided in a form of a shared library (Python module) that can
 be used in other projects. A CLI is also provided out-of-the box for DevOps to
@@ -32,18 +30,20 @@ Installation
 Python module with CLI is installed by Python pip command. It is possible to
 install into a virtual environment (virtualenv).
 
-The following commands are executed in the cloned repository directory:
+To install the vnfsdk package tool from source, run the following commands
+in the cloned repository directory:
 
 1. pip install -r requirements.txt
     Install all required dependencies
 2. pip install .
 
-Or run the following commands in the cloned repository directory to install:
+To install the vnfsdk pkgtools from onap hosted pypi repository, run the
+following commands in a python virtual environment:
 
-1. python setup.py install
+1. pip install -i https://nexus3.onap.org/repository/PyPi.release/simple --extra-index-url https://pypi.org/simple vnfsdk
 
-Install VNF SDK tools package
------------------------------
+Use VNF SDK package tools
+-------------------------
 Usage
 
 * Create CSAR by specifying a directory
