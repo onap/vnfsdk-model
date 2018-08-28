@@ -47,15 +47,25 @@ Use VNF SDK package tools
 Usage
 
 * Create CSAR by specifying a directory
-    vnfsdk csar-create -d DESTINATION [--manifest MANIFEST] [--history HISTORY]
-    [--tests TESTS] [--licenses LICENSES] source entry
+
+  vnfsdk [-v] csar-create [-h] -d DESTINATION [--manifest MANIFEST] [--history HISTORY]
+  [--tests TESTS] [--licenses LICENSES] [--licenses LICENSES] [--digest {SHA256,SHA512}]
+  [--certificate CERTIFICATE] [--privkey PRIVKEY] source entry
+
+  e.g. $ vnfsdk csar-create -d /tmp/helloworld.csar --manifest helloworld.mf --history ChangeLog.txt
+  --tests Tests --licenses Licenses --certificate test.crt --privkey test.key --digest SHA256
+  ./hello-world/ helloworld.yaml
 
 * Extract CSAR content
-    vnfsdk csar-open -d DESTINATION source
+
+  vnfsdk -v csar-open [-h] -d DESTINATION [--no-verify-cert] source
+
+  e.g. $ vnfsdk csar-open -d /tmp/helloworld --no-verify-cert /tmp/helloworld.csar
 
 * Validate CSAR content
-    vnfsdk csar-validate source
 
+  vnfsdk -v csar-validate [-h] source
 
-All commands have -h switch which displays help and description of all
-parameters.
+  e.g. $ vnfsdk csar-validate /tmp/helloworld.csar
+
+All commands have -h switch which displays help and description of all parameters.
