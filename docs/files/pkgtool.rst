@@ -49,7 +49,7 @@ Usage
 * Create CSAR by specifying a directory
 
   vnfsdk [-v] csar-create [-h] -d DESTINATION [--manifest MANIFEST] [--history HISTORY]
-  [--tests TESTS] [--licenses LICENSES] [--licenses LICENSES] [--digest {SHA256,SHA512}]
+  [--tests TESTS] [--licenses LICENSES] [--digest {SHA256,SHA512}]
   [--certificate CERTIFICATE] [--privkey PRIVKEY] source entry
 
   e.g. $ vnfsdk csar-create -d /tmp/helloworld.csar --manifest helloworld.mf --history ChangeLog.txt
