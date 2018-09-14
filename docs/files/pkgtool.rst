@@ -33,14 +33,17 @@ install into a virtual environment (virtualenv).
 To install the vnfsdk package tool from source, run the following commands
 in the cloned repository directory:
 
-1. pip install -r requirements.txt
-    Install all required dependencies
-2. pip install .
+.. code-block:: bash
+
+ $ pip install -r requirements.txt
+ $ pip install .
 
 To install the vnfsdk pkgtools from onap hosted pypi repository, run the
 following commands in a python virtual environment:
 
-1. pip install -i https://nexus3.onap.org/repository/PyPi.release/simple --extra-index-url https://pypi.org/simple vnfsdk
+.. code-block:: bash
+
+  $ pip install -i https://nexus3.onap.org/repository/PyPi.public/simple vnfsdk
 
 Use VNF SDK package tools
 -------------------------
@@ -48,24 +51,42 @@ Usage
 
 * Create CSAR by specifying a directory
 
+.. code-block:: bash
+
   vnfsdk [-v] csar-create [-h] -d DESTINATION [--manifest MANIFEST] [--history HISTORY]
   [--tests TESTS] [--licenses LICENSES] [--digest {SHA256,SHA512}]
   [--certificate CERTIFICATE] [--privkey PRIVKEY] source entry
 
-  e.g. $ vnfsdk csar-create -d /tmp/helloworld.csar --manifest helloworld.mf --history ChangeLog.txt
+e.g.
+
+.. code-block:: bash
+
+  $ vnfsdk csar-create -d /tmp/helloworld.csar --manifest helloworld.mf --history ChangeLog.txt
   --tests Tests --licenses Licenses --certificate test.crt --privkey test.key --digest SHA256
   ./hello-world/ helloworld.yaml
 
 * Extract CSAR content
 
+.. code-block:: bash
+
   vnfsdk -v csar-open [-h] -d DESTINATION [--no-verify-cert] source
 
-  e.g. $ vnfsdk csar-open -d /tmp/helloworld --no-verify-cert /tmp/helloworld.csar
+e.g.
+
+.. code-block:: bash
+
+  $ vnfsdk csar-open -d /tmp/helloworld --no-verify-cert /tmp/helloworld.csar
 
 * Validate CSAR content
 
+.. code-block:: bash
+
   vnfsdk -v csar-validate [-h] source
 
-  e.g. $ vnfsdk csar-validate /tmp/helloworld.csar
+e.g.
+
+.. code-block:: bash
+
+  $ vnfsdk csar-validate /tmp/helloworld.csar
 
 All commands have -h switch which displays help and description of all parameters.
