@@ -83,7 +83,7 @@ N/A
 
 **Known Issues**
 
-VNFSDK-126: The service 'GET /packageresource/csrs' ignores query parameters
+`VNFSDK-126 <https://jira.onap.org/browse/VNFSDK-126>`_ : The service 'GET /packageresource/csrs' ignores query parameters
 
 **Security Issues**
 
