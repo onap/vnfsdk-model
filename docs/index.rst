@@ -43,7 +43,6 @@ persisted, along with the product executables and data, using TOSCA CSAR files.
    :glob:
 
    files/pkgtool
-   files/*blueprints
 
 VNF SDK Marketplace
 ===================
