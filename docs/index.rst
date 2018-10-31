@@ -147,4 +147,12 @@ ICE tools for HEAT validation
    :titlesonly:
 
    files/ICE
+   
+VNF SDK in LF Networking User Guide
+-----------------------------------
 
+.. toctree::
+   :maxdepth: 1
+   :titlesonly:
+
+   files/VNFSDK-LFN-CVC.rst
