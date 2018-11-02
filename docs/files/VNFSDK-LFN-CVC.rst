@@ -29,18 +29,6 @@ We propose expanding the program in 2018 to include VNF Compliance
 
 - Back-end infrastructure provided by Linux Foundation
 
-References
-==========
-
-Dovetail Introduction
----------------------
-
-.. toctree::
-   :maxdepth: 1
-   :titlesonly:
-
-   Dovetail
-
 CVC Structures
 ==============
 
