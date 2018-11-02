@@ -1,0 +1,11 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+2: Gao Weitao <victor.gao@huawei.com>
+Code-Review+1: Chuanyu Chen <chenchuanyu@huawei.com>
+Code-Review+1: lu xin <luxin7@huawei.com>
+Verified+1: Gao Weitao <victor.gao@huawei.com>
+Code-Review+2: Lianhao Lu <lianhao.lu@intel.com>
+Submitted-by: Lianhao Lu <lianhao.lu@intel.com>
+Submitted-at: Fri, 02 Nov 2018 06:12:01 +0000
+Reviewed-on: https://gerrit.onap.org/r/71610
+Project: vnfsdk/model
+Branch: refs/heads/master
