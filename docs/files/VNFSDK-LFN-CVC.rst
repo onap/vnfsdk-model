@@ -25,9 +25,40 @@ We propose expanding the program in 2018 to include VNF Compliance
 
 - Requirements and tests defined by ONAP
 
-- Test framework provided by OPNFV(Dovetail)
+- Test framework provided by OPNFV(Dovetail) and ONAP VNF Test Platform (VTP)
 
 - Back-end infrastructure provided by Linux Foundation
+
+VNF Test Platform (VTP)
+=======================
+Deploy VNF test cases once and trigger it safely from anywhere 
+
+Objectives
+----------
+* LFN/ONAP wants test platform where VNF packages could be certified using ONAP requirements to drive industry adoption
+* Provide an platform where vendor/operator can develop, deploy, run test cases and query the results
+* Test cases, test results and VNF should be manageable .i,e with authorization, so only user with given roles is allowed to perform operation like
+VNF package upload/download, run compliance verification tests, allow only specific VIM for specific users, etc.
+* Test results should be persisted and should be available for human analysis later via LFN infrastructure.
+* Provides test flow where author make flow across different test cases for a given program like compliance verification and  VNFREQS/SOL0004.
+* Provide integration with OPNFV dovetail to run test cases across dovetail and VNFSDK.
+* Deployable as docker container.
+
+|image0|
+
+.. |image0| image:: VTP.png
+   :height: 600px
+   :width: 600px
+
+Architecture
+------------
+
+|image1|
+
+.. |image1| image:: VTParch.png
+   :height: 600px
+   :width: 600px
+
 
 CVC Structures
 ==============
