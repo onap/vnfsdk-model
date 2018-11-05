@@ -92,14 +92,8 @@ Casablanca Implemented requriements
    * - R-35851
      - The VNF Package MUST include VNF topology that describes basic network and application connectivity internal and external to the VNF including Link type, KPIs, Bandwidth, latency, jitter, QoS (if applicable) for each interface.
 
-   * - R-43958
-     - The VNF Package MUST include documentation describing the tests that were conducted by the VNF provider and the test results.
-
    * - R-66070
      - The VNF Package MUST include VNF Identification Data to uniquely identify the resource for a given VNF provider. The identification data must include: an identifier for the VNF, the name of the VNF as was given by the VNF provider, VNF description, VNF provider, and version.
 
    * - R-77707
      - The VNF provider MUST include a Manifest File that contains a list of all the components in the VNF package.
-	 
-   * - R-77786
-     - The VNF Package MUST include all relevant cookbooks to be loaded on the ONAP Chef Server.

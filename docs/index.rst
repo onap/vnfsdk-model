@@ -136,6 +136,7 @@ VNF Certification Testing Framework - Dovetail
 .. toctree::
    :maxdepth: 1
    :titlesonly:
+   :hidden:
 
    files/Dovetail
 
