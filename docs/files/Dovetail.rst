@@ -8,18 +8,9 @@
 Welcome to Dovetail Integration's documentation!
 =================================================
 
-Contents:
-
 .. toctree::
    :maxdepth: 2
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`search`
-
+   
 User Stories
 ============
 
