@@ -13,6 +13,46 @@ Release Notes
    * developing tools for vendor CI/CD toolchains
    * developing validation and testing tools
 
+Version: 1.1.1
+--------------
+
+
+:Release Date: 2018-11-15
+
+
+
+**New Features**
+	* Integration with SDC for VNF Onboarding
+	* Functional test support
+	* Incorporation of ICE tools for HEAT validation
+	* Experimental integration with OPNFV Dovetail
+	* Preliminary support for SOL-004
+	* Support for HTTPS
+
+**Bug Fixes**
+	* Fix localization support
+
+**Known Issues**
+
+**Security Notes**
+
+VNFSDK code has been formally scanned during build time using NexusIQ and all Critical vulnerabilities have been addressed, items that remain open have been assessed for risk and determined to be false positive. The VNFSDK open Critical security vulnerabilities and their risk assessment have been documented as part of the `project <https://wiki.onap.org/pages/viewpage.action?pageId=28377592>`_.
+
+Quick Links:
+ 	- `VNFSDK project page <https://wiki.onap.org/display/DW/VNF+SDK+Project>`_
+ 	
+ 	- `Passing Badge information for VNFSDK <https://bestpractices.coreinfrastructure.org/en/projects/1588>`_
+ 	
+ 	- `Project Vulnerability Review Table for VNFSDK <https://wiki.onap.org/pages/viewpage.action?pageId=45298880>`_
+
+**Upgrade Notes**
+	* Updated to use Swagger for APIs
+
+**Deprecation Notes**
+
+
+**Other**
+
 Version: 1.1.0
 --------------
 
