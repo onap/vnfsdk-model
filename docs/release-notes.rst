@@ -13,6 +13,47 @@ Release Notes
    * developing tools for vendor CI/CD toolchains
    * developing validation and testing tools
 
+Version: 1.2.0
+--------------
+
+
+:Release Date: 2018-11-30
+
+
+
+**New Features**
+	* LFN CVC test support
+	* Introduce VTP(VNF Test Platform) framework for Test
+	* Better integration with OPNFV Dovetail(VTP)
+	* Experimental integration with OPNFV Dovetail
+	* Preliminary implemented VNF requirements
+
+**Bug Fixes**
+N/A
+
+**Known Issues**
+N/A
+
+**Security Notes**
+
+VNFSDK code has been formally scanned during build time using NexusIQ and all Critical vulnerabilities have been addressed, items that remain open have been assessed for risk and determined to be false positive. The VNFSDK open Critical security vulnerabilities and their risk assessment have been documented as part of the `project <https://wiki.onap.org/pages/viewpage.action?pageId=28377592>`_.
+
+Quick Links:
+ 	- `VNFSDK project page <https://wiki.onap.org/display/DW/VNF+SDK+Project>`_
+ 	
+ 	- `Passing Badge information for VNFSDK <https://bestpractices.coreinfrastructure.org/en/projects/1588>`_
+ 	
+ 	- `Project Vulnerability Review Table for VNFSDK <https://wiki.onap.org/pages/viewpage.action?pageId=45298880>`_
+
+**Upgrade Notes**
+N/A
+
+**Deprecation Notes**
+N/A
+
+**Other**
+N/A
+
 Version: 1.1.0
 --------------
 
