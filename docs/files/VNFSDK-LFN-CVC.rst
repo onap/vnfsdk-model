@@ -37,8 +37,7 @@ Objectives
 ----------
 * LFN/ONAP wants test platform where VNF packages could be certified using ONAP requirements to drive industry adoption
 * Provide an platform where vendor/operator can develop, deploy, run test cases and query the results
-* Test cases, test results and VNF should be manageable .i,e with authorization, so only user with given roles is allowed to perform operation like
-VNF package upload/download, run compliance verification tests, allow only specific VIM for specific users, etc.
+* Test cases, test results and VNF should be manageable .i,e with authorization, so only user with given roles is allowed to perform operation like VNF package upload/download, run compliance verification tests, allow only specific VIM for specific users, etc.
 * Test results should be persisted and should be available for human analysis later via LFN infrastructure.
 * Provides test flow where author make flow across different test cases for a given program like compliance verification and  VNFREQS/SOL0004.
 * Provide integration with OPNFV dovetail to run test cases across dovetail and VNFSDK.
@@ -48,7 +47,7 @@ VNF package upload/download, run compliance verification tests, allow only speci
 
 .. |image0| image:: VTP.png
    :height: 600px
-   :width: 600px
+   :width: 900px
 
 Architecture
 ------------
@@ -57,15 +56,15 @@ Architecture
 
 .. |image1| image:: VTParch.png
    :height: 600px
-   :width: 600px
+   :width: 900px
 
 
 CVC Structures
 ==============
 
-|image0|
+|image2|
 
-.. |image0| image:: cvc.png
+.. |image2| image:: cvc.png
    :height: 600px
    :width: 600px
 
