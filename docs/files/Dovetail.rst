@@ -5,14 +5,14 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Dovetail Integration's documentation!
-=================================================
+Dovetail Integration
+====================
 
 .. toctree::
    :maxdepth: 2
    
 User Stories
-============
+------------
 
 1. An ONAP User wants to ensure that VNFs which appear in the VNF
    Marketplace can be on-boarded with the Service Design & Creation tool
@@ -32,7 +32,7 @@ User Stories
    develop tests.
 
 OPNFV Dovetail Description
-==========================
+--------------------------
 
 The Open Platform for NFV (OPNFV) is a collaborative project under the
 Linux Foundation that is transforming global networks through open
@@ -85,7 +85,7 @@ Figure 1 below illustrates the Dovetail test framework architecture.
 Figure 1: OPNFV Dovetail Test Framework Architecture
 
 Implementation Overview
-=======================
+-----------------------
 
 OPNFV Dovetail will be integrated into the ONAP VNF Marketplace. The
 ONAP VNF Marketplace is an ONAP application which displays all VNFs that
@@ -180,10 +180,10 @@ Marketplace.
     ONAP VNF On Boarding processes.
 
 Implementation Details
-======================
+----------------------
 
 Introduce a new test module under VNFSDK
-----------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A new test module ‘VnfTest’ will be added as a subproject in VNF-SDK.
 
@@ -191,7 +191,7 @@ This project will be similar to ‘Yardstick’ in the way it defines and
 runs tests.
 
 Dovetail to support new type
-----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A new test framework type will be introduced to dovetail –
 “VNFTest\ **”.**
