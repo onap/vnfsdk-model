@@ -2,12 +2,23 @@
 .. http://creativecommons.org/licenses/by/4.0
 .. Copyright 2017 Huawei Technologies Co., Ltd.
 
-VNF SDK - Guide for Bundling VNFs
-=================================
 
+
+VNF Package Tools User Guide
+============================
+
+VNF Package Designer, provides VNF product DevOps engineers with a graphical
+tool to define the VNF product model and package content. It is made available
+as part of the VNF Supplier SDK tools.The package designer makes use of the VNF
+SDK command line interfaces (CLIs) and client-side API language bindings in
+order to define the model and the package content. As such, it is functionally
+equivalent to the VNF SDK tools.
+
+VNF SDK - Guide for Bundling VNFs
+---------------------------------
 
 Step 1: Requirements
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
 1. Virtual machine images for each of your VDUs (likely in qcow2 format).
 2. Scripts for installing and configuring each VDU per the standard TOSCA
@@ -16,14 +27,14 @@ Step 1: Requirements
 4. VNF SDK pkgtools
 
 Step 2: Start with the provided VNF blueprint as a template
------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The VNF SDK comes with a "pingpong.yaml" template.
 
 Copy the file and rename it as is appropriate for your VNF.
 
 Step 3: Edit the VNF blueprint
-------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You will need a node template for each VDU, which in turn has a "dependency"
 requirement on a host (a Compute node template).
@@ -70,7 +81,7 @@ Otherwise, this is a standard TOSCA blueprint using the Simple Profile for NFV,
 and you may extend the blueprint as is required.
 
 Step 4: Bundle the VNF
-----------------------
+~~~~~~~~~~~~~~~~~~~~~~
 
 Arrange all your files (the TOSCA template, your scripts, and your virtual
 machine images) in the correct directory structure. File references provided in
