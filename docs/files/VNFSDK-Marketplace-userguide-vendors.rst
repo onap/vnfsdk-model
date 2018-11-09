@@ -2,7 +2,7 @@
 .. http://creativecommons.org/licenses/by/4.0
 .. Copyright 2017 Huawei Technologies Co., Ltd.
 
-VNF SDK Marketplace User Guide for Vendors
+VNF SDK Marketplace User Guide for VNF Suppliers
 ==========================================
 
 The VNF SDK Marketplace helps vendors validate VNFs and connect with suppliers.
