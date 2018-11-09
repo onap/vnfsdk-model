@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9adffdf1_cf879e60",
+        "filename": "docs/release-notes.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 309
+      },
+      "writtenOn": "2018-11-09T00:03:16Z",
+      "side": 1,
+      "message": "I think we could add 2 more things for vnfsdk pkgtools:\n\n- Support CSAR packaging SOL-004 option 1 (CSAR with TOSCA-Metadata directory).\n- Support HPA schema validation",
+      "range": {
+        "startLine": 29,
+        "startChar": 37,
+        "endLine": 29,
+        "endChar": 49
+      },
+      "revId": "e2a719fa7408fbf4c649237c354fa116df521533",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
