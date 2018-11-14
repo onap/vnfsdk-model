@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9adffdf1_3e48cc5a",
+        "filename": "docs/files/VNF SDK blueprints.rst",
+        "patchSetId": 13
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 39
+      },
+      "writtenOn": "2018-11-14T03:34:50Z",
+      "side": 1,
+      "message": "Gildas,as we discussed before, the file should be removed cause out of date.",
+      "revId": "7831bbae1544a16c6ca3c09125e7db8722a21901",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9adffdf1_fe79e493",
+        "filename": "docs/files/vnf-packaging-model-blueprint.rst",
+        "patchSetId": 13
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 39
+      },
+      "writtenOn": "2018-11-14T03:34:50Z",
+      "side": 1,
+      "message": "suggest removing this.",
+      "revId": "7831bbae1544a16c6ca3c09125e7db8722a21901",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
