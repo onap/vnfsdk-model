@@ -10,6 +10,6 @@ VES Client Guidelines
    :maxdepth: 1
    :titlesonly:
 
-   VESEventRegistration_3_0.rst
-   VESEventListener_7_0_1.rst
-   :download:`common event format json <files/CommonEventFormat_29.json>`
+   VES_Registraion_3_2.rst
+   ves7_1spec.rst
+   :download:`common event format json <files/CommonEventFormat_30.1_ONAP.json>`
