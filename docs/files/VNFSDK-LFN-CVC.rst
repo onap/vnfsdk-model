@@ -12,7 +12,7 @@ VNF SDK Compliance Verification Program
 Background
 ==========
 
-LF Networking is providing a testing program to demonstrate SDN/NFV 
+LF Networking is providing a testing program to demonstrate SDN/NFV
 capabilities and interoperability.
 
 Program began with OPNFV Verified Programs
@@ -31,7 +31,7 @@ We propose expanding the program in 2018 to include VNF Compliance
 
 VNF Test Platform (VTP)
 =======================
-Deploy VNF test cases once and trigger it safely from anywhere 
+Deploy VNF test cases once and trigger it safely from anywhere
 
 Objectives
 ----------
@@ -57,6 +57,99 @@ Architecture
 .. |image1| image:: VTParch.png
    :height: 600px
    :width: 900px
+
+VTP deployment
+----------------
+
+Install VTP Backend
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+export NEXUS_DOCKER_REPO=nexus3.onap.org:10001
+
+export REFREPO_TAG=1.2.1-STAGING-20181228T020411Z
+
+export POSTGRES_TAG=latest
+
+export MTU=1450
+
+wget https://raw.githubusercontent.com/onap/vnfsdk-refrepo/master/vnfmarket-be/deployment/install/docker-compose.yml
+
+docker-compose up -d
+
+
+Install VTP CLI
+~~~~~~~~~~~~~~~~
+
+export CLI_TAG=2.0.5-STAGING-20181227T184001Z
+
+docker pull ${NEXUS_DOCKER_REPO}/onap/cli:${CLI_TAG}
+
+docker run -d -e OPEN_CLI_MODE=daemon -p 30260:80 -p 30271:8080 --name vtp-cli ${NEXUS_DOCKER_REPO}/onap/cli:${CLI_TAG}
+
+
+VERIFY deployment
+~~~~~~~~~~~~~~~~~~~~~
+
+docker exec vtp-cli  bash -c "OPEN_CLI_PRODUCT_IN_USE=onap-vtp oclip vnftest-list --host-url http://<docker host ip>:8702"
+
++----------------+------------------------+
+|tescase         |yaml                    |
++----------------+------------------------+
+|csar-validate   |vtp-validate-csar.yaml  |
++----------------+------------------------+
+
+
+NOTE: if failed to run, then follow below guidelines
+
+    docker exec -it refrepo  bash
+
+    export OPEN_CLI_HOME=/opt/vtp
+
+    cd $OPEN_CLI_HOME/bin
+
+    ./oclip-grpc-server.sh &
+
+    Exit docker by running CTRL+p+q
+
+    Run the vnftest-list again as above and verity that its working !!
+
+
+Setup sample csars
+~~~~~~~~~~~~~~~~~~~
+
+Download the sample CSAR to VTP docker from github
+
+    docker exec -it refrepo  bash
+
+    echo nameserver 8.8.8.8 >> /etc/resolv.conf
+
+    cd /opt/vtp
+
+    mkdir csar
+
+    cd csar
+
+    wget https://github.com/onap/vnfsdk-validation/raw/master/csarvalidation/src/test/resources/VoLTE.csar
+
+    exit
+
+NOTE: To test vendor specific CSAR, copy them to /opt/vtp/csar folder using 'docker cp xxx.csar refrepo:/opt/vtp/csar' command
+
+
+Run the validate csar test case
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+docker exec vtp-cli  bash -c "OPEN_CLI_PRODUCT_IN_USE=onap-vtp BUILD_TAG=demo oclip vnftest-run --name csar-validate --param csar=/opt/vtp/csar/VoLTE.csar --host-url http://<docker host ip>:8702"
+
++------------+------------------+
+|property    |value             |
++------------+------------------+
+|results     |{error=SUCCESS}   |
++------------+------------------+
+|build_tag   |demo              |
++------------+------------------+
+|criteria    |PASS              |
++------------+------------------+
 
 
 CVC Structures
@@ -96,3 +189,6 @@ Casablanca Implemented requriements
 
    * - R-77707
      - The VNF provider MUST include a Manifest File that contains a list of all the components in the VNF package.
+
+   * - R-77786
+     - The VNF Package MUST include all relevant cookbooks to be loaded on the ONAP Chef Server.
