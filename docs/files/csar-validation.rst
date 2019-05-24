@@ -1,51 +1,25 @@
+
+
 .. This work is licensed under a Creative Commons Attribution 4.0 International License.
 .. http://creativecommons.org/licenses/by/4.0
-.. Copyright 2018 Huawei Technologies Co., Ltd.
+.. Copyright 2019 Huawei Technologies Co., Ltd.
 
-=======================================
-VNF SDK Compliance Verification Program
-=======================================
+.. _csar-validation:
 
-.. toctree::
-   :maxdepth: 1
+CSAR Compliance check for SOL004 and SOL001
+===========================================
 
-Background
-==========
+ONAP enabled the required compaliance check by following VNFREQS and reports the non-compalint entries as errors.
 
-LF Networking is providing a testing program to demonstrate SDN/NFV
-capabilities and interoperability.
+When :ref:`vnf-test-platform` is deployed, by default this testing is enabled with test case name as below
 
-Program began with OPNFV Verified Programs
+scenario: onap-vtp
 
-- Supports both self-testing and third-party lab testing
+testsuite: validation
 
-- Initial version will test VIM+NFVI
+testcase: csar-validate
 
-We propose expanding the program in 2018 to include VNF Compliance
-
-- Requirements and tests defined by ONAP
-
-- Test framework provided by OPNFV(Dovetail) and ONAP VNF Test Platform (VTP)
-
-- Back-end infrastructure provided by Linux Foundation
-
-.. toctree::
-   :maxdepth: 1
-
-   vnf-test-platform.rst
-
-
-
-
-CVC Structures
-==============
-
-|image2|
-
-.. |image2| image:: cvc.png
-   :height: 600px
-   :width: 600px
-
+And every VNFREQS is modelled as seprate test case with name csar-validate-rxxxxx, where xxxxx represents the VNFREQS.
 
 Casablanca Implemented requirements
 ===================================
