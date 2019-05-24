@@ -28,8 +28,6 @@ User Guides
    files/*Bundling*
    files/VNFSDK-Marketplace-userguide-operators
    files/VNFSDK-Marketplace-userguide-vendors
-   files/ves-client-guidelines
    files/Dovetail
-   files/ICE
    files/VNFSDK-LFN-CVC
    
