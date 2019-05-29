@@ -13,6 +13,42 @@ Release Notes
    * developing tools for vendor CI/CD toolchains
    * developing validation and testing tools
 
+Version: 1.3.0
+--------------
+
+
+:Release Date: 2019-05-31
+
+
+
+**New Features**
+	* VTP (VNF Test Platform) is enabled with scenario and test case execution management
+    * ONAP SDC is integrated with VTP for providing the validation as part of VSP on-boarding
+	* CSAR validation is enabled with PNF and VNF compliance check for SOL004, SOL001 and VNFREQS
+	* 
+
+**Bug Fixes**
+
+N/A
+
+**Known Issues**
+
+N/A
+
+**Security Notes**
+
+**Upgrade Notes**
+
+N/A
+
+**Deprecation Notes**
+
+N/A
+
+**Other**
+
+N/A
+
 Version: 1.2.0
 --------------
 
