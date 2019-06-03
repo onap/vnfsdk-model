@@ -25,7 +25,7 @@ Version: 1.3.0
 	* VTP (VNF Test Platform) is enabled with scenario and test case execution management
     * ONAP SDC is integrated with VTP for providing the validation as part of VSP on-boarding
 	* CSAR validation is enabled with PNF and VNF compliance check for SOL004, SOL001 and VNFREQS
-	* 
+	*
 
 **Bug Fixes**
 
@@ -36,6 +36,12 @@ N/A
 N/A
 
 **Security Notes**
+
+*Fixed Security Issues*
+
+*Known Security Issues*
+
+*Known Vulnerabilities in Used Modules*
 
 **Upgrade Notes**
 
@@ -80,9 +86,9 @@ VNFSDK code has been formally scanned during build time using NexusIQ and all Cr
 
 Quick Links:
  	- `VNFSDK project page <https://wiki.onap.org/display/DW/VNF+SDK+Project>`_
- 	
+
  	- `Passing Badge information for VNFSDK <https://bestpractices.coreinfrastructure.org/en/projects/1588>`_
- 	
+
  	- `Project Vulnerability Review Table for VNFSDK <https://wiki.onap.org/pages/viewpage.action?pageId=45298880>`_
 
 **Upgrade Notes**
@@ -126,9 +132,9 @@ VNFSDK code has been formally scanned during build time using NexusIQ and all Cr
 
 Quick Links:
  	- `VNFSDK project page <https://wiki.onap.org/display/DW/VNF+SDK+Project>`_
- 	
+
  	- `Passing Badge information for VNFSDK <https://bestpractices.coreinfrastructure.org/en/projects/1588>`_
- 	
+
  	- `Project Vulnerability Review Table for VNFSDK <https://wiki.onap.org/pages/viewpage.action?pageId=28377592>`_
 
 **Upgrade Notes**
