@@ -42,6 +42,7 @@ N/A
 *Known Security Issues*
 
 	* In default deployment VNFSDK (refrepo) exposes HTTP port 30297 outside of cluster. [`OJSI-154 <https://jira.onap.org/browse/OJSI-154>`_]
+	* CVE-2019-12126 - demo-vnfsdk-vnfsdk exposes JDWP port 8000 on localhost which allows to gain root privileges inside the container [`OJSI-88 <https://jira.onap.org/browse/OJSI-88>`_]
 
 *Known Vulnerabilities in Used Modules*
 
