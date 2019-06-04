@@ -41,6 +41,8 @@ N/A
 
 *Known Security Issues*
 
+	* In default deployment VNFSDK (refrepo) exposes HTTP port 30297 outside of cluster. [`OJSI-154 <https://jira.onap.org/browse/OJSI-154>`_]
+
 *Known Vulnerabilities in Used Modules*
 
 **Upgrade Notes**
