@@ -7,11 +7,10 @@
 VNF Package Tools User Guide
 ============================
 
-VNF Package Designer, provides VNF product DevOps engineers with a graphical
+VNF Package Designer provides VNF product DevOps engineers with a graphical
 tool to define the VNF product model and package content. It is made available
-as part of the VNF Supplier SDK tools.The package designer makes use of the VNF
-SDK command line interfaces (CLIs) and client-side API language bindings in
-order to define the model and the package content. As such, it is functionally
+as part of the VNF Supplier SDK tools. The package designer makes use of the VNF
+SDK command-line interfaces (CLIs) and client-side API language bindings in order to define the model and the package content. As such, it is functionally
 equivalent to the VNF SDK tools.
 
 VNF SDK - Guide for Bundling VNFs

@@ -1,6 +1,6 @@
 .. This work is licensed under a Creative Commons Attribution 4.0 International License.
 .. http://creativecommons.org/licenses/by/4.0
-.. Dovetail Integeration documentation master file, created by
+.. Dovetail Integration documentation master file, created by
    sphinx-quickstart on Fri Feb 23 11:49:11 2018.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
@@ -35,12 +35,12 @@ OPNFV Dovetail Description
 --------------------------
 
 The Open Platform for NFV (OPNFV) is a collaborative project under the
-Linux Foundation that is transforming global networks through open
+Linux Foundation is transforming global networks through open
 source Network Functions Virtualization (NFV). OPNFV focuses on
 developing test suites for Open Source implementations of the NFV
 infrastructure components such as those specified in the ETSI NFV ISG MANO
 architecture. Areas of focus in OPNFV include: Virtualized
-Infrastructure Managers (VIM) such as OpenStack and Software Defined
+Infrastructure Managers (VIM) such as OpenStack and Software-Defined
 Networking Controllers (SDNC) such as Open Daylight.
 
 The OPNFV Dovetail project is responsible for the testing framework in
@@ -103,9 +103,9 @@ Validation test suite.
 The Dovetail client will also be available as a service in the VNF
 Marketplace. The Dovetail client is an interactive application which
 allows additional VNF Certification tests to be run on a VNF after the
-VNF Package has been uploaded to the VNF Marketplace. The Dovetail
+VNF package has been uploaded to the VNF Marketplace. The Dovetail
 client will indicate which certification tests have been successfully
-run on each VNF in the VNF Marketplace. VNF Vendors that are interested
+run on each VNF in the VNF Marketplace. VNF vendors that are interested
 in obtaining additional certifications for VNFs that have been uploaded
 in the marketplace will have the ability to work with Certification Test
 suppliers to obtain and run advanced certification tests. Figure 2
@@ -162,8 +162,8 @@ Marketplace.
 
 ..
 
-    ONAP services used by the VNF Package On Boarding test suite may
-    need to access components of the VNF package for validate their
+    ONAP services used by the VNF Package On-Boarding test suite may
+    need to access components of the VNF package for validating their
     content.
 
 6. Report Certification Results Back
@@ -200,7 +200,7 @@ Dovetail will handle the new type in the same way yardstick/functest
 types are handled.
 
 When dovetail needs to fetch the “VnfTest” docker image, it will consult
-with configuration for determining the exact image name and version.
+with the configuration for determining the exact image name and version.
 
 The “VnfTest” framework is expected to support the same APIs and format
 currently used between dovetail and yardstick/functest.

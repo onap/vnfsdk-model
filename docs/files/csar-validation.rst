@@ -9,7 +9,7 @@
 CSAR Compliance check for SOL004 and SOL001
 ===========================================
 
-ONAP enabled the required compaliance check by following VNFREQS and reports the non-compalint entries as errors.
+ONAP enabled the required compliance check by following VNFREQS and reports the non-compliant entries as errors.
 
 When :ref:`vnf-test-platform` is deployed, by default this testing is enabled with test case name as below
 
@@ -19,7 +19,7 @@ testsuite: validation
 
 testcase: csar-validate
 
-And every VNFREQS is modelled as seprate test case with name csar-validate-rxxxxx, where xxxxx represents the VNFREQS.
+And every VNFREQS is modeled as separate test case with name csar-validate-rxxxxx, where xxxxx represents the VNFREQS.
 
 Casablanca Implemented requirements
 ===================================
@@ -73,7 +73,7 @@ Dublin Implemented requirements
      - The VNF/PNF Descriptor (VNFD/PNFD) provided by VNF/PNF vendor MUST comply with TOSCA/YAML based Service template for VNF/PNF descriptor specified in ETSI NFV-SOL001.
 
    * - R-57019
-     - The PNF TOSCA CSAR package Manifest file MUST start with the PNF package metadata in the form of a name-value pairs. Each pair shall appear on a different line. The name is specified as following: pnfd_provider, pnfd_name, pnfd_release_date_time, pnfd_archive_version
+     - The PNF TOSCA CSAR package Manifest file MUST start with the PNF package metadata in the form of name-value pairs. Each pair shall appear on a different line. The name is specified as following: pnfd_provider, pnfd_name, pnfd_release_date_time, pnfd_archive_version
 
    * - R-87234
      - The VNF/PNF package provided by a VNF/PNF vendor MAY be either with TOSCA-Metadata directory (CSAR Option 1) or without TOSCA-Metadata directory (CSAR Option 2) as specified in ETSI GS NFV-SOL004. On-boarding entity (ONAP SDC) must support both options.
@@ -82,10 +82,10 @@ Dublin Implemented requirements
      - The VNF/PNF package Manifest file MUST contain: non-mano artifact set with following ONAP public tag: onap_ves_events, onap_pm_dictionary, onap_yang_module, onap_others
 
    * - R-293901
-     - For a VNF/PNF package CSAR MUST contains a TOSCA-Metadata directory with the TOSCA.meta metadata file. The TOSCA.meta metadata file MUST includes block_0 with the Entry-Definitions keyword pointing to a TOSCA definitions YAML file. Additional keyname extension must be included as following: ETSI-Entry-Manifest, ETSI-Entry-Change-Log
+     - For a VNF/PNF package, CSAR MUST contains a TOSCA-Metadata directory with the TOSCA.meta metadata file. The TOSCA.meta metadata file MUST include block_0 with the Entry-Definitions keyword pointing to a TOSCA definitions YAML file. Additional keyname extension must be included as following: ETSI-Entry-Manifest, ETSI-Entry-Change-Log
 
    * - R-787965
-     - If the VNF or PNF CSAR Package utilizes Option 2 for package security, then the complete CSAR file MUST be digitally signed with the VNF or PNF provider private key. The VNF or PNF provider delivers one zip file consisting of the CSAR file, a signature file and a certificate file that includes the VNF or PNF provider public key. The certificate may also be included in the signature container, if the signature format allows that. The VNF or PNF provider creates a zip file consisting of the CSAR file with .csar extension, signature and certificate files. The signature and certificate files must be siblings of the CSAR file with extensions .cms and .cert respectively.
+     - If the VNF or PNF CSAR Package utilizes Option 2 for package security, then the complete CSAR file MUST be digitally signed with the VNF or PNF provider private key. The VNF or PNF provider delivers one zip file consisting of the CSAR file, a signature file and a certificate file that includes the VNF or PNF provider public key. The certificate may also be included in the signature container if the signature format allows that. The VNF or PNF provider creates a zip file consisting of the CSAR file with .csar extension, signature and certificate files. The signature and certificate files must be siblings of the CSAR file with extensions .cms and .cert respectively.
 
 OCLIP additional parameters in Dublin
 =====================================
@@ -106,7 +106,7 @@ Generate certificates
 ---------------------
   openssl req -nodes -x509 -sha256 -newkey rsa:4096 -keyout "pnf.key" -out "pnf.cert" -days 365 -subj "/C=NL/ST=Zuid Holland/L=Rotterdam/O=Sparkling Network/OU=IT Dept/CN=$(whoami)s Sign Key"
 
-Sign csar file with private key
+Sign csar file with the private key
 -------------------------------
   openssl dgst -sha256 -sign "pnf.key" -out pnf.sha256.cms pnf.csar
 

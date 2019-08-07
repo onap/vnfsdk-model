@@ -23,28 +23,24 @@ or :download:`json <../swagger.json>` :download:`yaml <../swagger.yaml>`
         ii. Download VNF
         iii. Query VNF based on several parameters
         iv. Delete VNF
-    b. It also provides an intuitive Graphical user interface to perform above
+    b. It also provides an intuitive Graphic user interface to perform above
        activities.
 
 2.  Along with these, VNF SDK also provides hooks to call other tools or
     libraries including **Validation and Function Tests**.
 
-    a. Validation verifies the package structure, mandatory files and their
-    format. Currently, the tool performs basic validation to support SDC. In a
-    future release, it will also ensure integrity and authenticity of the
-    package as described by VNF Requirements.
+    a. Validation verifies the package structure, mandatory files, and their format. Currently, the tool performs basic validation to support SDC. In a future release, it will also ensure the integrity and authenticity of the
+    the package as described by VNF Requirements.
 
     b. Function Test provides Robot framework test cases present in each VNF.
-    Function test executes those test cases and send the test response back to
-    the marketplace. While the framework is in place, actual test development
+    Function test executes those test cases and sends the test response back to the marketplace. While the framework is in place, actual test development
     is deferred for a future release.
 
 3. **VNF SDK Integration with SDC**
 
     a. In Amsterdam release, the SDC-UI is being integrated with the VNF
-    Repository backend. It provides seamless download, search, view of the VNF
-    present in VNF repository. The user can onboard these validated VNF into
-    the SDC catalogue.
+    Repository backend. It provides a seamless download, search, view of the VNF
+    present in VNF repository. The user can onboard these validated VNF into the SDC catalog.
 
 VNF SDK Marketplace Installation Instructions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -59,7 +55,7 @@ VNF SDK Marketplace Installation Instructions
 
   Delete old docker images of refrepo (if any).
   Enter command "source .env" to set up few environment variables.
-  Enter command "docker-compose up -d"
+  Enter the command "docker-compose up -d"
 
 This will start two Docker containers:
 
@@ -73,21 +69,21 @@ Once started, access the Marketplace from your web browser.
 VNF SDK Tools
 ~~~~~~~~~~~~~
 
-VNF SDK tools provide VNF product DevOps engineers with command line tools and
-client side API language bindings to define the VNF product model and package
+VNF SDK tools provide VNF product DevOps engineers with command-line tools and
+client-side API language bindings to define the VNF product model and package
 content. The following tools are included...
 
-•	VNF Package Builder - creates a CSAR file based on inputs provided by the VNF
-	product DevOps engineer
+•    VNF Package Builder - creates a CSAR file based on inputs provided by the VNF
+    product DevOps engineer
 
-•	VNF Package Validator - validates the content of the VNF packages to ensure
-	that everything has been built correctly
+•    VNF Package Validator - validates the content of the VNF packages to ensure
+    that everything has been built correctly
 
-•	VNF Package Extractor - extracts VNF product model and executables from the
-	CSAR file
+•    VNF Package Extractor - extracts VNF product model and executables from the
+    CSAR file
 
-•	VNF Package Parser - translates VNF product blueprint into a format
-	consumable by ONAP components
+•    VNF Package Parser - translates VNF product blueprint into a format
+    consumable by ONAP components
 
-•	VNF Package Dry Run - performs a "dry run" install to ensure that the package
-	can be deployed during instantiation
+•    VNF Package Dry Run - performs a "dry run" install to ensure that the package
+    can be deployed during instantiation
