@@ -44,7 +44,7 @@ or :download:`json <../swagger.json>` :download:`yaml <../swagger.yaml>`
     a. In Amsterdam release, the SDC-UI is being integrated with the VNF
     Repository backend. It provides seamless download, search, view of the VNF
     present in VNF repository. The user can onboard these validated VNF into
-    the SDC catalogue.
+    the SDC catalog.
 
 VNF SDK Marketplace Installation Instructions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
