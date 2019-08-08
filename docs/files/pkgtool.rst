@@ -17,8 +17,8 @@ Provided tools
 * VNF Package Parser - translates VNF product blueprint into a format
   consumable by ONAP components
 
-The tools are provided in a form of a shared library (Python module) that can
-be used in other projects. A CLI is also provided out-of-the box for DevOps to
+The tools are provided in the form of a shared library (Python module) that can
+be used in other projects. A CLI is also provided out-of-the-box for DevOps to
 use the library with their scripts and automation framework.
 
 Repository Name: vnfsdk/pkgtools
