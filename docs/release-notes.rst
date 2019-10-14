@@ -13,6 +13,55 @@ Release Notes
    * developing tools for vendor CI/CD toolchains
    * developing validation and testing tools
 
+
+Version: 1.4.0
+--------------
+
+
+:Release Date: 2019-10-07
+
+
+
+**New Features**
+	* TOSCA based VNF validation enabled for supporting OVP & CVC
+	* TOSCA based VNF compliance check based on some operators requirements
+	* SDC now integrated VNFSDK VTP on VNF validation
+	* ETSI SOL004 security check (CMS signature validation) enabled
+	* Code quality improvement(e.g. replace the Jackson to Gson, sonar issue fix)
+	* A C++ implement of VES spec 7.0.1 on ves-agent.
+
+**Bug Fixes**
+
+N/A
+
+**Known Issues**
+
+N/A
+
+**Security Notes**
+
+*Fixed Security Issues*
+
+*Known Security Issues*
+
+	* In default deployment VNFSDK (refrepo) exposes HTTP port 30297 outside of cluster. [`OJSI-154 <https://jira.onap.org/browse/OJSI-154>`_]
+	* CVE-2019-12126 - demo-vnfsdk-vnfsdk exposes JDWP port 8000 on localhost which allows to gain root privileges inside the container [`OJSI-88 <https://jira.onap.org/browse/OJSI-88>`_]
+
+*Known Vulnerabilities in Used Modules*
+
+**Upgrade Notes**
+
+N/A
+
+**Deprecation Notes**
+
+N/A
+
+**Other**
+
+N/A
+   
+   
 Version: 1.3.0
 --------------
 
@@ -23,7 +72,7 @@ Version: 1.3.0
 
 **New Features**
 	* VTP (VNF Test Platform) is enabled with scenario and test case execution management
-    * ONAP SDC is integrated with VTP for providing the validation as part of VSP on-boarding
+	* ONAP SDC is integrated with VTP for providing the validation as part of VSP on-boarding
 	* CSAR validation is enabled with PNF and VNF compliance check for SOL004, SOL001 and VNFREQS
 	*
 
