@@ -19,6 +19,7 @@ Version: 1.4.0
 
 
 :Release Date: 2019-10-07
+:Docker Version: 1.4.0
 
 
 
