@@ -14,11 +14,12 @@ Release Notes
    * developing validation and testing tools
 
 
-Version: 1.4.0
+Version: 5.0.1
 --------------
 
 
 :Release Date: 2019-10-07
+:Docker Version: 1.4.0
 
 
 
