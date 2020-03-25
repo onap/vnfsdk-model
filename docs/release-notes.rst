@@ -13,8 +13,54 @@ Release Notes
    * developing tools for vendor CI/CD toolchains
    * developing validation and testing tools
 
+ Version: 1.5.0
+ --------------
 
-Version: 5.0.1
+
+ :Release Date: 2020-03-25
+ :Docker Version: 1.5.0
+
+
+
+ **New Features**
+  * Pods to run as non root user
+  * Direct Vulnerability issues are addressed
+  * Added VTP2OVP result translation tool to support OVP 2019.12
+  * HTTPS enabled
+  * Implemented PNF package validation on PNF software version
+
+ **Bug Fixes**
+
+ N/A
+
+ **Known Issues**
+
+ N/A
+
+ **Security Notes**
+
+ *Fixed Security Issues*
+
+ *Known Security Issues*
+
+ N/A
+
+ *Known Vulnerabilities in Used Modules*
+
+ **Upgrade Notes**
+
+ N/A
+
+ **Deprecation Notes**
+
+ N/A
+
+ **Other**
+
+ N/A
+
+
+Version: 1.4.0
 --------------
 
 
@@ -24,12 +70,12 @@ Version: 5.0.1
 
 
 **New Features**
-	* TOSCA based VNF validation enabled for supporting OVP & CVC
-	* TOSCA based VNF compliance check based on some operators requirements
-	* SDC now integrated VNFSDK VTP on VNF validation
-	* ETSI SOL004 security check (CMS signature validation) enabled
-	* Code quality improvement(e.g. replace the Jackson to Gson, sonar issue fix)
-	* A C++ implement of VES spec 7.0.1 on ves-agent.
+    * TOSCA based VNF validation enabled for supporting OVP & CVC
+    * TOSCA based VNF compliance check based on some operators requirements
+    * SDC now integrated VNFSDK VTP on VNF validation
+    * ETSI SOL004 security check (CMS signature validation) enabled
+    * Code quality improvement(e.g. replace the Jackson to Gson, sonar issue fix)
+    * A C++ implement of VES spec 7.0.1 on ves-agent.
 
 **Bug Fixes**
 
@@ -45,8 +91,8 @@ N/A
 
 *Known Security Issues*
 
-	* In default deployment VNFSDK (refrepo) exposes HTTP port 30297 outside of cluster. [`OJSI-154 <https://jira.onap.org/browse/OJSI-154>`_]
-	* CVE-2019-12126 - demo-vnfsdk-vnfsdk exposes JDWP port 8000 on localhost which allows to gain root privileges inside the container [`OJSI-88 <https://jira.onap.org/browse/OJSI-88>`_]
+    * In default deployment VNFSDK (refrepo) exposes HTTP port 30297 outside of cluster. [`OJSI-154 <https://jira.onap.org/browse/OJSI-154>`_]
+    * CVE-2019-12126 - demo-vnfsdk-vnfsdk exposes JDWP port 8000 on localhost which allows to gain root privileges inside the container [`OJSI-88 <https://jira.onap.org/browse/OJSI-88>`_]
 
 *Known Vulnerabilities in Used Modules*
 
@@ -61,8 +107,8 @@ N/A
 **Other**
 
 N/A
-   
-   
+
+
 Version: 1.3.0
 --------------
 
@@ -72,10 +118,10 @@ Version: 1.3.0
 
 
 **New Features**
-	* VTP (VNF Test Platform) is enabled with scenario and test case execution management
-	* ONAP SDC is integrated with VTP for providing the validation as part of VSP on-boarding
-	* CSAR validation is enabled with PNF and VNF compliance check for SOL004, SOL001 and VNFREQS
-	*
+    * VTP (VNF Test Platform) is enabled with scenario and test case execution management
+    * ONAP SDC is integrated with VTP for providing the validation as part of VSP on-boarding
+    * CSAR validation is enabled with PNF and VNF compliance check for SOL004, SOL001 and VNFREQS
+    *
 
 **Bug Fixes**
 
@@ -91,8 +137,8 @@ N/A
 
 *Known Security Issues*
 
-	* In default deployment VNFSDK (refrepo) exposes HTTP port 30297 outside of cluster. [`OJSI-154 <https://jira.onap.org/browse/OJSI-154>`_]
-	* CVE-2019-12126 - demo-vnfsdk-vnfsdk exposes JDWP port 8000 on localhost which allows to gain root privileges inside the container [`OJSI-88 <https://jira.onap.org/browse/OJSI-88>`_]
+    * In default deployment VNFSDK (refrepo) exposes HTTP port 30297 outside of cluster. [`OJSI-154 <https://jira.onap.org/browse/OJSI-154>`_]
+    * CVE-2019-12126 - demo-vnfsdk-vnfsdk exposes JDWP port 8000 on localhost which allows to gain root privileges inside the container [`OJSI-88 <https://jira.onap.org/browse/OJSI-88>`_]
 
 *Known Vulnerabilities in Used Modules*
 
@@ -117,13 +163,13 @@ Version: 1.2.0
 
 
 **New Features**
-	* LFN CVC test support
-	* Introduce VTP (VNF Test Platform) framework for test
-	* Better integration with OPNFV Dovetail (VTP)
-	* Experimental integration with OPNFV Dovetail
-	* Preliminary implementation of VNF requirements
-	* Support CSAR packaging SOL-004 option 1 (CSAR with TOSCA-Metadata directory)
-	* Support HPA schema validation
+    * LFN CVC test support
+    * Introduce VTP (VNF Test Platform) framework for test
+    * Better integration with OPNFV Dovetail (VTP)
+    * Experimental integration with OPNFV Dovetail
+    * Preliminary implementation of VNF requirements
+    * Support CSAR packaging SOL-004 option 1 (CSAR with TOSCA-Metadata directory)
+    * Support HPA schema validation
 
 **Bug Fixes**
 
@@ -138,11 +184,11 @@ N/A
 VNFSDK code has been formally scanned during build time using NexusIQ and all Critical vulnerabilities have been addressed, items that remain open have been assessed for risk and determined to be false positive. The VNFSDK open Critical security vulnerabilities and their risk assessment have been documented as part of the `project <https://wiki.onap.org/pages/viewpage.action?pageId=45298880>`_.
 
 Quick Links:
- 	- `VNFSDK project page <https://wiki.onap.org/display/DW/VNF+SDK+Project>`_
+     - `VNFSDK project page <https://wiki.onap.org/display/DW/VNF+SDK+Project>`_
 
- 	- `Passing Badge information for VNFSDK <https://bestpractices.coreinfrastructure.org/en/projects/1588>`_
+     - `Passing Badge information for VNFSDK <https://bestpractices.coreinfrastructure.org/en/projects/1588>`_
 
- 	- `Project Vulnerability Review Table for VNFSDK <https://wiki.onap.org/pages/viewpage.action?pageId=45298880>`_
+     - `Project Vulnerability Review Table for VNFSDK <https://wiki.onap.org/pages/viewpage.action?pageId=45298880>`_
 
 **Upgrade Notes**
 
@@ -165,15 +211,15 @@ Version: 1.1.0
 
 
 **New Features**
-	* Integration with SDC for VNF Onboarding
-	* Functional test support
-	* Incorporation of ICE tools for HEAT validation
-	* Experimental integration with OPNFV Dovetail
-	* Preliminary support for SOL-004
-	* Support for HTTPS
+    * Integration with SDC for VNF Onboarding
+    * Functional test support
+    * Incorporation of ICE tools for HEAT validation
+    * Experimental integration with OPNFV Dovetail
+    * Preliminary support for SOL-004
+    * Support for HTTPS
 
 **Bug Fixes**
-	* Fix localization support
+    * Fix localization support
 
 **Known Issues**
 
@@ -184,14 +230,14 @@ N/A
 VNFSDK code has been formally scanned during build time using NexusIQ and all Critical vulnerabilities have been addressed, items that remain open have been assessed for risk and determined to be false positive. The VNFSDK open Critical security vulnerabilities and their risk assessment have been documented as part of the `project <https://wiki.onap.org/pages/viewpage.action?pageId=28377592>`_.
 
 Quick Links:
- 	- `VNFSDK project page <https://wiki.onap.org/display/DW/VNF+SDK+Project>`_
+     - `VNFSDK project page <https://wiki.onap.org/display/DW/VNF+SDK+Project>`_
 
- 	- `Passing Badge information for VNFSDK <https://bestpractices.coreinfrastructure.org/en/projects/1588>`_
+     - `Passing Badge information for VNFSDK <https://bestpractices.coreinfrastructure.org/en/projects/1588>`_
 
- 	- `Project Vulnerability Review Table for VNFSDK <https://wiki.onap.org/pages/viewpage.action?pageId=28377592>`_
+     - `Project Vulnerability Review Table for VNFSDK <https://wiki.onap.org/pages/viewpage.action?pageId=28377592>`_
 
 **Upgrade Notes**
-	* Updated to use Swagger for APIs
+    * Updated to use Swagger for APIs
 
 **Deprecation Notes**
 
