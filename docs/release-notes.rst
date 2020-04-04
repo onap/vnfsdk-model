@@ -13,21 +13,21 @@ Release Notes
    * developing tools for vendor CI/CD toolchains
    * developing validation and testing tools
 
- Version: 1.5.0
+ Version: 1.5.1
  --------------
 
-
- :Release Date: 2020-03-25
- :Docker Version: 1.5.0
-
+ :Release Date: 2020-04-04
+ :Docker Version: 1.5.1
 
 
  **New Features**
-  * Pods to run as non root user
+  * Pods are enabled to run as non root user
   * Direct Vulnerability issues are addressed
+  * HTTPS enabled in OOM deployment
   * Added VTP2OVP result translation tool to support OVP 2019.12
-  * HTTPS enabled
-  * Implemented PNF package validation on PNF software version
+  * VTP architecture is contributed into LFN CNTT under VNF testing framework
+  * VTP REST API is contributed to TMF v19.5 specifications 704, 706, 707, 708, 709, 710
+
 
  **Bug Fixes**
 
