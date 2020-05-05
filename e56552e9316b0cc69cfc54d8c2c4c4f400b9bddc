@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "167d7589_72c22235",
+        "filename": "INFO.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-05-05T16:50:53Z",
+      "side": 1,
+      "message": "Since the last time INFO.yaml files were scanned in this repo, global-jjb has gone through several iterations on the validation job for this file. \nThe INFO.yaml does no longer allows several names in a single Addition block. Please break each name in a separate block",
+      "range": {
+        "startLine": 92,
+        "startChar": 0,
+        "endLine": 97,
+        "endChar": 34
+      },
+      "revId": "e56552e9316b0cc69cfc54d8c2c4c4f400b9bddc",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
