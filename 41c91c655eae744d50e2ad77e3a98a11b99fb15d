@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3af722d1_e9097818",
+        "filename": "INFO.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 3433
+      },
+      "writtenOn": "2020-05-06T06:48:34Z",
+      "side": 0,
+      "message": "Dose it mean that I will have committer rights only to the vnf-model?\nWhat about a vnfsdk-validation and vnfsdk-refrepo?",
+      "revId": "41c91c655eae744d50e2ad77e3a98a11b99fb15d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
