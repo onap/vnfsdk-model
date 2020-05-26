@@ -14,11 +14,11 @@ Release Notes
    * developing tools for vendor CI/CD toolchains
    * developing validation and testing tools
 
- Version: 1.5.1
+ Version: 1.5.2
  --------------
 
- :Release Date: 2020-04-04
- :Docker Version: 1.5.1
+ :Release Date: 2020-05-26
+ :Docker Version: 1.5.2
 
 
  **New Features**
