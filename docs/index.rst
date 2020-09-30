@@ -31,4 +31,5 @@ User Guides
    files/VNFSDK-Marketplace-userguide-vendors
    files/Dovetail
    files/VNFSDK-LFN-CVC
+   files/VNFSDK-Marketplace-userguide-installation
    
