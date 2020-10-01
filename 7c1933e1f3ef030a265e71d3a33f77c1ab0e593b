@@ -16,6 +16,24 @@
       "revId": "7c1933e1f3ef030a265e71d3a33f77c1ab0e593b",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4383e291_21bd33cf",
+        "filename": "docs/files/VNFSDK-Marketplace-userguide-installation.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 6482
+      },
+      "writtenOn": "2020-10-01T11:32:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "241c1623_84a425e0",
+      "revId": "7c1933e1f3ef030a265e71d3a33f77c1ab0e593b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
