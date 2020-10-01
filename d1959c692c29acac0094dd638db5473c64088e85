@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6135f9b6_2d0e2f4b",
+        "filename": "docs/files/VNFSDK-Marketplace-userguide-installation.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 3433
+      },
+      "writtenOn": "2020-10-01T09:15:39Z",
+      "side": 1,
+      "message": "Add section: \nPrerequisite\nAll operations must be executed at RKE.\n\n- log in at RKE",
+      "revId": "d1959c692c29acac0094dd638db5473c64088e85",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1df9f659_49b122c0",
+        "filename": "docs/files/VNFSDK-Marketplace-userguide-installation.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 3433
+      },
+      "writtenOn": "2020-10-01T09:15:39Z",
+      "side": 1,
+      "message": "add TIP: operation takes a 30-60 minutes. Pls wait until it ends.",
+      "revId": "d1959c692c29acac0094dd638db5473c64088e85",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "810eccca_ca48c11a",
+        "filename": "docs/files/VNFSDK-Marketplace-userguide-installation.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 3433
+      },
+      "writtenOn": "2020-10-01T09:15:39Z",
+      "side": 1,
+      "message": "Pls mark that this is a command not sentence",
+      "revId": "d1959c692c29acac0094dd638db5473c64088e85",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6b9fa0db_b42eb3dd",
+        "filename": "docs/files/VNFSDK-Marketplace-userguide-installation.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 3433
+      },
+      "writtenOn": "2020-10-01T09:15:39Z",
+      "side": 1,
+      "message": "add information where this folder is: /home/ubuntu\nadd information where to change refrepo image.",
+      "revId": "d1959c692c29acac0094dd638db5473c64088e85",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1588eb7d_217f8903",
+        "filename": "docs/files/VNFSDK-Marketplace-userguide-installation.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 3433
+      },
+      "writtenOn": "2020-10-01T09:15:39Z",
+      "side": 1,
+      "message": "Capital letter at the beginning of sentence",
+      "revId": "d1959c692c29acac0094dd638db5473c64088e85",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
