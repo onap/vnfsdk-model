@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "607aa2fb_e58327ea",
+        "filename": "docs/files/VNFSDK-Marketplace-userguide-installation.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 6482
+      },
+      "writtenOn": "2020-10-01T11:33:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6135f9b6_2d0e2f4b",
+      "revId": "d1959c692c29acac0094dd638db5473c64088e85",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1df9f659_49b122c0",
         "filename": "docs/files/VNFSDK-Marketplace-userguide-installation.rst",
         "patchSetId": 1
@@ -33,6 +51,24 @@
       "revId": "d1959c692c29acac0094dd638db5473c64088e85",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "97b5cd47_9cda9919",
+        "filename": "docs/files/VNFSDK-Marketplace-userguide-installation.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 6482
+      },
+      "writtenOn": "2020-10-01T11:33:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1df9f659_49b122c0",
+      "revId": "d1959c692c29acac0094dd638db5473c64088e85",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     },
     {
       "key": {
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "691d6da2_d5f96486",
+        "filename": "docs/files/VNFSDK-Marketplace-userguide-installation.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 6482
+      },
+      "writtenOn": "2020-10-01T11:33:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "810eccca_ca48c11a",
+      "revId": "d1959c692c29acac0094dd638db5473c64088e85",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6b9fa0db_b42eb3dd",
         "filename": "docs/files/VNFSDK-Marketplace-userguide-installation.rst",
         "patchSetId": 1
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "5c4ece6b_aeabf9ab",
+        "filename": "docs/files/VNFSDK-Marketplace-userguide-installation.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 6482
+      },
+      "writtenOn": "2020-10-01T11:33:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6b9fa0db_b42eb3dd",
+      "revId": "d1959c692c29acac0094dd638db5473c64088e85",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1588eb7d_217f8903",
         "filename": "docs/files/VNFSDK-Marketplace-userguide-installation.rst",
         "patchSetId": 1
@@ -84,6 +156,24 @@
       "revId": "d1959c692c29acac0094dd638db5473c64088e85",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9c28f237_764d6051",
+        "filename": "docs/files/VNFSDK-Marketplace-userguide-installation.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 6482
+      },
+      "writtenOn": "2020-10-01T11:33:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1588eb7d_217f8903",
+      "revId": "d1959c692c29acac0094dd638db5473c64088e85",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
