@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "adc27978_59ef9e2a",
+        "filename": "docs/files/VNFSDK-Marketplace-userguide-installation.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 3433
+      },
+      "writtenOn": "2020-10-05T11:59:45Z",
+      "side": 1,
+      "message": "How to insall VNF SDK with ONAP from OOM",
+      "revId": "3cb2ae03fcbb4a23b02d7a6497b1e365ebe4410c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4e91fe85_3ae45e18",
+        "filename": "docs/files/VNFSDK-Marketplace-userguide-installation.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 3433
+      },
+      "writtenOn": "2020-10-05T11:59:45Z",
+      "side": 1,
+      "message": "How to update only VNF SDK component from OOM",
+      "revId": "3cb2ae03fcbb4a23b02d7a6497b1e365ebe4410c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
