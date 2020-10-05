@@ -11,7 +11,7 @@ Prerequisite
 
     All operations must be executed at RKE - log in at RKE.
 
-How to install VNF SDK from OOM:
+How to install ONAP from OOM:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **1. Uninstall all components**
@@ -55,6 +55,29 @@ How to install VNF SDK from OOM:
 
     helm deploy dev local/onap --namespace onap -f onap/resources/overrides/onap-all.yaml -f ./openstack-30-elalto.yaml  --timeout 1000 --verbose 2>&1 | tee ~/helm-installation-manual.log
 
+
+How to install VNF SDK from OOM
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**1. Uninstall VNF SDK Component**
+
+    helm undeploy dev-vnfsdk  --purge
+
+**2. Clear all what have left**
+
+    sudo rm -rf /dockerdata-nfs/dev/vnfsdk/
+
+**3. After changes in component in directory oom/kubernetes execute:**
+
+    make vnfsdk
+
+    NOTE:
+    This folder is in /home/ubuntu folder
+    If you need to change a refrepo image or do other modifications, you need to make changes in values.yaml. Mentioned file is in /home/ubuntu/oom/kubernetes/vnfsdk.
+
+**4. Install ONAP on lab**
+
+    helm deploy dev-vnfsdk local/onap --namespace onap -f onap/resources/overrides/onap-all.yaml -f ./openstack-30-elalto.yaml  --timeout 1000 --verbose 2>&1 | tee ~/helm-installation-manual.log
 
 
 How to upgrade Refrepo in VNF SDK from OOM:
