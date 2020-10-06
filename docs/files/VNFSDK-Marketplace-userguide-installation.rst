@@ -75,7 +75,13 @@ How to update only VNF SDK component from OOM
     This folder is in /home/ubuntu folder
     If you need to change a refrepo image or do other modifications, you need to make changes in values.yaml. Mentioned file is in /home/ubuntu/oom/kubernetes/vnfsdk.
 
-**4. Install ONAP on lab**
+
+**4. Then you have to make entire ONAP project**
+
+    make onap -e SKIP_LINT=TRUE
+
+
+**5. Install ONAP on lab**
 
     helm deploy dev-vnfsdk local/onap --namespace onap -f onap/resources/overrides/onap-all.yaml -f ./openstack-30-elalto.yaml  --timeout 1000 --verbose 2>&1 | tee ~/helm-installation-manual.log
 
