@@ -14,6 +14,74 @@ Release Notes
    * developing tools for vendor CI/CD toolchains
    * developing validation and testing tools
 
+
+ Version: 1.6.0
+ --------------
+
+ :Release Date: 2020-06-10
+ :Docker Version: 1.6.0
+
+
+ **New Features**
+  * The PNF software information file is included in the package and it MUST be compliant to:
+        The file extension which contains the PNF software version must be .yaml
+        The PNF software version information must be specified as following: onap_pnf_sw_information: pnf_software_version:  "<version>"
+  * The VNF/PNF package shall contain a Digest (a.k.a. hash) for each of the components of the VNF package.
+        The table of hashes is included in the manifest file, which is signed with the VNF provider private key.
+        In addition, the VNF provider shall include a signing certificate that includes the VNF provider public key,
+        following a pre-defined naming convention and located either at the root of the archive or in a predefined location (e.g. directory).
+  * The VNF or PNF PROVIDER MUST provide the Service Provider with PM Meta Data (PM Dictionary)
+        to support the analysis of PM events delivered to DCAE. The PM Dictionary is to be provided as a separate YAML artifact at onboarding and must follow
+        the VES Event Listener Specification and VES Event Registration Specification
+        which contain the format and content required.
+  * Added rule R972082 to validate PM_Dictionary using schema.
+  * Upgraded from java 8 to java 11
+  * Add new field called "warnings" to oclip json response. All ignored errors are now reported as warnings.
+
+
+ **Bug Fixes**
+
+  * Fixed bug that was generating invalid report when user run validation with all rules and single validation fails.
+  * Fixed bug that was causing problem with loading rules properties.
+  * Fixed package security SOL004 Option 1 make rule less restrictive as this rule is not implemented in SDC Onboarding
+  * Fixed VNFSDK doesn't check if all files in package are listed in manifest file
+  * Fixed rule R01123 that was reporting all files in ZIP as not present in manifest
+  * Fixed rule R816745 that wasn't sending all exceptions connected with YAML parsing as validation error
+  * Fixed rule R816745 that was searching for the path to PM_Dictionary in manifest file under name source,
+      instead of Source (starting with a capital letter).
+      Now  both versions (source and Source) are accepted by this rule.
+  * Fixed rule R130206 CMS and certificate searching and validation mechanism
+  *
+
+ **Known Issues**
+
+ N/A
+
+ **Security Notes**
+
+  * Fixed Security Issues*
+  * Update certs expiration date from default 30 days to 730 days (2 years)
+  * Added non-vulnerable log4j version
+
+ *Known Security Issues*
+
+ N/A
+
+ *Known Vulnerabilities in Used Modules*
+
+ **Upgrade Notes**
+
+ N/A
+
+ **Deprecation Notes**
+
+ N/A
+
+ **Other**
+
+ N/A
+
+
  Version: 1.5.2
  --------------
 
