@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "7a1a1de1_3d3aec39",
+        "filename": "docs/release-notes.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 5098
+      },
+      "writtenOn": "2020-10-08T06:34:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d2e4190a_80dda622",
+      "revId": "c33fc7b92074803251649c56726c9b8bb98c47fb",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8d350972_e694aead",
         "filename": "docs/release-notes.rst",
         "patchSetId": 1
@@ -33,6 +51,24 @@
       "revId": "c33fc7b92074803251649c56726c9b8bb98c47fb",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f13a55e3_8dec105e",
+        "filename": "docs/release-notes.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 5098
+      },
+      "writtenOn": "2020-10-08T06:34:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8d350972_e694aead",
+      "revId": "c33fc7b92074803251649c56726c9b8bb98c47fb",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     },
     {
       "key": {
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "7c6ded3c_8b0e599d",
+        "filename": "docs/release-notes.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 5098
+      },
+      "writtenOn": "2020-10-08T06:34:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cec317b8_37ff045e",
+      "revId": "c33fc7b92074803251649c56726c9b8bb98c47fb",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "62f5b24c_cdb99667",
         "filename": "docs/release-notes.rst",
         "patchSetId": 1
@@ -67,6 +121,24 @@
       "revId": "c33fc7b92074803251649c56726c9b8bb98c47fb",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ecb2cf50_f4a43afe",
+        "filename": "docs/release-notes.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 5098
+      },
+      "writtenOn": "2020-10-08T06:34:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "62f5b24c_cdb99667",
+      "revId": "c33fc7b92074803251649c56726c9b8bb98c47fb",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     },
     {
       "key": {
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "1758d9b9_104443f2",
+        "filename": "docs/release-notes.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 5098
+      },
+      "writtenOn": "2020-10-08T06:34:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "60c8d769_47128a00",
+      "revId": "c33fc7b92074803251649c56726c9b8bb98c47fb",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f1b89c4a_8dc456f7",
         "filename": "docs/release-notes.rst",
         "patchSetId": 1
@@ -104,6 +194,24 @@
     },
     {
       "key": {
+        "uuid": "5e545909_645b7215",
+        "filename": "docs/release-notes.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 5098
+      },
+      "writtenOn": "2020-10-08T06:34:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f1b89c4a_8dc456f7",
+      "revId": "c33fc7b92074803251649c56726c9b8bb98c47fb",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5e0dc3dd_9f2e9ca2",
         "filename": "docs/release-notes.rst",
         "patchSetId": 1
@@ -118,6 +226,24 @@
       "revId": "c33fc7b92074803251649c56726c9b8bb98c47fb",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "68280261_b8740d5a",
+        "filename": "docs/release-notes.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 5098
+      },
+      "writtenOn": "2020-10-08T06:34:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5e0dc3dd_9f2e9ca2",
+      "revId": "c33fc7b92074803251649c56726c9b8bb98c47fb",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
