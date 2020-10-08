@@ -14,6 +14,91 @@ Release Notes
    * developing tools for vendor CI/CD toolchains
    * developing validation and testing tools
 
+
+ Version: 1.6.0
+ --------------
+
+ :Release Date: 2020-06-10
+ :Docker Version: 1.6.0
+
+
+ **New Features**
+  * R-972082: The PNF software information file is included in the package and it MUST be compliant to:
+        The file extension which contains the PNF software version must be .yaml
+        The PNF software version information must be specified as following: onap_pnf_sw_information: pnf_software_version:  "<version>"
+  * R-130206: The VNF/PNF package shall contain a Digest (a.k.a. hash) for each of the components of the VNF package.
+        The table of hashes is included in the manifest file, which is signed with the VNF provider private key.
+        In addition, the VNF provider shall include a signing certificate that includes the VNF provider public key,
+        following a pre-defined naming convention and located either at the root of the archive or in a predefined location (e.g. directory).
+  * R-816745: The VNF or PNF PROVIDER MUST provide the Service Provider with PM Meta Data (PM Dictionary)
+        to support the analysis of PM events delivered to DCAE. The PM Dictionary is to be provided as a separate YAML artifact at onboarding and must follow
+        the VES Event Listener Specification and VES Event Registration Specification
+        which contain the format and content required.
+  * Add new field called "warnings" to oclip json response. All ignored errors are now reported as warnings.
+
+
+ **Bug Fixes**
+
+  * Fixed package integrity issue with non mano arifacts.
+     - https://jira.onap.org/browse/VNFSDK-581
+  * Fixed VNF/PNF package integrity issue with CMS signature not containing certificate.
+     - https://jira.onap.org/browse/VNFSDK-582
+  * Fixed bug that was showing errors during validation of CSAR,
+    when any other non_mano_artifact_set than onap_pnf_sw_information was present in manifest file.
+     - https://jira.onap.org/browse/VNFSDK-585
+  * Fixed bug that was generating invalid report when user run validation with all rules and single validation fails.
+     - https://jira.onap.org/browse/VNFSDK-586
+  * Fixed bug that was causing problem with loading rules properties.
+     - https://jira.onap.org/browse/VNFSDK-587
+  * Fixed package security SOL004 Option 1 make rule less restrictive as this rule is not implemented in SDC Onboarding
+     - https://jira.onap.org/browse/VNFSDK-595
+  * Fixed VNFSDK doesn't check if all files in package are listed in manifest file
+     - https://jira.onap.org/browse/VNFSDK-583
+  * Fixed rule R01123 that was reporting all files in ZIP as not present in manifest
+     - https://jira.onap.org/browse/VNFSDK-583
+  * Fixed rule R816745 that wasn't sending all exceptions connected with YAML parsing as validation error
+     - https://jira.onap.org/browse/VNFSDK-644
+  * Fixed rule R816745 that was searching for the path to PM_Dictionary in manifest file under name source,
+      instead of Source (starting with a capital letter).
+      Now  both versions (source and Source) are accepted by this rule.
+     - https://jira.onap.org/browse/VNFSDK-645
+  * Fixed rule R130206 CMS and certificate searching and validation mechanism
+     - https://jira.onap.org/browse/VNFSDK-595
+
+
+ **Known Issues**
+
+ N/A
+
+ **Security Notes**
+
+ * Fixed Security Issues*
+
+  * Upgraded from java 8 to java 11
+    - https://jira.onap.org/browse/VNFSDK-646
+  * Added non-vulnerable log4j version
+    - https://jira.onap.org/browse/VNFSDK-553
+  * Update certs expiration date from default 30 days to 730 days (2 years)
+
+ *Known Security Issues*
+
+ N/A
+
+ *Known Vulnerabilities in Used Modules*
+
+ **Upgrade Notes**
+
+ N/A
+
+ **Deprecation Notes**
+
+ N/A
+
+ **Other**
+
+ N/A
+
+
  Version: 1.5.2
  --------------
 
