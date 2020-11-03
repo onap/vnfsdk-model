@@ -15,6 +15,57 @@ Release Notes
    * developing validation and testing tools
 
 
+ Version: 1.6.2
+ --------------
+
+ :Release Date: 2020-11-03
+ :Docker Version: 1.6.2
+
+ **New Features**
+
+ **Bug Fixes**
+
+  * Fix oclip issue and set OCLIP version used during docker image build, to 6.0.0
+    - https://jira.onap.org/browse/CLI-325
+  * Fix JSON parsing error returned from GET request
+    - https://jira.onap.org/browse/VNFSDK-697
+  * Fixed rule R130206 handling of CSARs with no TOSCA meta and no Certificate in root directory
+    - https://jira.onap.org/browse/VNFSDK-481
+  * Fixed rule R816745 that was not reporting error when CMS and TOSCA meta file were present,
+     however TOSCA did not contain ETSI-Entry-Certificate
+    - https://jira.onap.org/browse/VNFSDK-660
+
+ **Known Issues**
+
+ N/A
+
+ **Security Notes**
+
+ *Fixed Security Issues*
+
+ N/A
+
+ *Known Security Issues*
+
+ N/A
+
+ *Known Vulnerabilities in Used Modules*
+
+ N/A
+
+ **Upgrade Notes**
+
+ N/A
+
+ **Deprecation Notes**
+
+ N/A
+
+ **Other**
+
+ N/A
+
+
  Version: 1.6.0
  --------------
 
