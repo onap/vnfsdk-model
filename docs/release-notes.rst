@@ -23,6 +23,10 @@ Release Notes
 
  **New Features**
 
+  * Added active scenario and profile management support
+  * Added integration with Robot CSIT tests
+  * Enabled auto discovery of test cases from 3rd party tool integration
+
  **Bug Fixes**
 
   * Fix oclip issue and set OCLIP version used during docker image build, to 6.0.0
