@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e8c921d4_17ff0230",
+        "filename": "docs/release-notes.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 741
+      },
+      "writtenOn": "2020-11-18T06:44:44Z",
+      "side": 1,
+      "message": "can you add below items under feature:\n1. active scenario and profile managemet support\n2. Robot integration is added\n3. Auto discovery of test cases from 3rd party tool integration is enabled",
+      "revId": "b412d3c327c8511d5127f3b8da677afde4943b87",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
