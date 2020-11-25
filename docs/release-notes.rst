@@ -20,9 +20,8 @@ Release Notes
  :Release Date: 2020-05-26
  :Docker Version: 1.5.2
 
-
  **New Features**
-  * Pods are enabled to run as non root user
+  * Pods are enabled to run as non-root user
   * Direct Vulnerability issues are addressed
   * HTTPS enabled in OOM deployment
   * Added VTP2OVP result translation tool to support OVP 2019.12
