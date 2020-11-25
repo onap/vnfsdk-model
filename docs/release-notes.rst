@@ -26,6 +26,7 @@ Release Notes
   * Added active scenario and profile management support
   * Added integration with Robot CSIT tests
   * Enabled auto discovery of test cases from 3rd party tool integration
+  * Added support for cnf-conformance test support
 
  **Bug Fixes**
 
