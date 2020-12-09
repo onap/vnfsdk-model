@@ -29,7 +29,7 @@ User Guides
    files/*Bundling*
    files/VNFSDK-Marketplace-userguide-operators
    files/VNFSDK-Marketplace-userguide-vendors
+   files/VNFSDK-Marketplace-userguide-rest-api.rst
    files/Dovetail
    files/VNFSDK-LFN-CVC
    files/VNFSDK-Marketplace-userguide-installation
-   
