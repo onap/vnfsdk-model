@@ -62,3 +62,98 @@ Returns result in json format.
 .. code-block::
 
     curl --location --request GET 'http://{marketplace address}/onapapi/vnfsdk-marketplace/v1/vtp/executions?requestId={executionId}'
+
+
+
+- Example
+
+Request:
+
+.. code-block::
+
+    curl --location --request POST 'http://127.0.0.1:8702/onapapi/vnfsdk-marketplace/v1/vtp/executions' \
+    --header 'Content-Type: multipart/form-data' \
+    --form 'file=@"/csar/invalidSignaturePackage.csar"' \
+    --form 'executions="[{
+      \"scenario\": \"onap-dublin\",
+      \"testSuiteName\": \"validation\",
+      \"testCaseName\": \"csar-validate\",
+      \"parameters\": {
+        \"csar\": \"file://invalidSignaturePackage.csar\",
+        \"pnf\":\"true\",
+        \"rules\":\"r130206,r816745\"
+      }
+    }]"'
+
+
+Response:
+
+.. code-block::
+
+    [
+        {
+            "scenario": "onap-dublin",
+            "testCaseName": "csar-validate",
+            "testSuiteName": "validation",
+            "executionId": "5e7a1726-4c48-42b9-ade4-dfd12ea75107-1608035294086",
+            "parameters": {
+                "csar": "/tmp/data/vtp-tmp-files/invalidSignaturePackage.csar",
+                "pnf": "true",
+                "rules": "r130206,r816745"
+            },
+            "results": {
+                "vnf": {
+                    "name": "RadioNode",
+                    "vendor": "Ericsson",
+                    "version": "1.0",
+                    "type": "TOSCA",
+                    "mode": "WITH_TOSCA_META_DIR"
+                },
+                "date": "Tue Dec 15 12:28:14 UTC 2020",
+                "criteria": "FAILED",
+                "results": [
+                    {
+                        "passed": true,
+                        "vnfreqName": "SOL004",
+                        "description": "V2.4.1 (2018-02)",
+                        "errors": [],
+                        "warnings": []
+                    },
+                    {
+                        "passed": false,
+                        "vnfreqName": "r130206",
+                        "description": "The VNF/PNF package shall contain a Digest (a.k.a. hash) for each of the components of the VNF package. The table of hashes is included in the manifest file, which is signed with the VNF provider private key. In addition, the VNF provider shall include a signing certificate that includes the VNF provider public key, following a pre-defined naming convention and located either at the root of the archive or in a predefined location (e.g. directory).",
+                        "errors": [
+                            {
+                                "vnfreqNo": "R130206",
+                                "code": "0x4007",
+                                "message": "File has invalid signature!",
+                                "lineNumber": -1
+                            }
+                        ],
+                        "warnings": []
+                    },
+                    {
+                        "passed": false,
+                        "vnfreqName": "r816745",
+                        "description": "The VNF or PNF PROVIDER MUST provide the Service Provider with PM Meta Data (PM Dictionary)\nto support the analysis of PM events delivered to DCAE.\nThe PM Dictionary is to be provided as a separate YAML artifact at onboarding and must follow\nthe VES Event Listener Specification and VES Event Registration Specification\nwhich contain the format and content required.",
+                        "errors": [
+                            {
+                                "vnfreqNo": "R816745",
+                                "code": "0x2000",
+                                "message": "Fail to load PM_Dictionary With error: PM_Dictionary YAML file is empty",
+                                "file": "Artifacts/Deployment/Measurements/PM_Dictionary.yml",
+                                "lineNumber": -1
+                            }
+                        ],
+                        "warnings": []
+                    }
+                ],
+                "contact": "ONAP VTP Team onap-discuss@lists.onap.org",
+                "platform": "VNFSDK - VNF Test Platform (VTP) 1.0"
+            },
+            "status": "COMPLETED",
+            "startTime": "2020-12-15T12:28:11.895",
+            "endTime": "2020-12-15T12:28:14.962"
+        }
+    ]
