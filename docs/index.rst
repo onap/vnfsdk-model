@@ -33,3 +33,4 @@ User Guides
    files/Dovetail
    files/VNFSDK-LFN-CVC
    files/VNFSDK-Marketplace-userguide-installation
+   files/VNFSDK-PMValidation-userguide.rst
