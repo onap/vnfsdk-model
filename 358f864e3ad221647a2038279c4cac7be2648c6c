@@ -1,0 +1,389 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d297d7a2_83d80ec7",
+        "filename": "docs/files/VNFSDK-PMValidation-userguide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 5597
+      },
+      "writtenOn": "2020-12-15T15:40:25Z",
+      "side": 1,
+      "message": "\"PM Dictionary Validation\" - is is about PM Dictionary, and not the PM measurement files.",
+      "range": {
+        "startLine": 5,
+        "startChar": 7,
+        "endLine": 5,
+        "endChar": 20
+      },
+      "revId": "358f864e3ad221647a2038279c4cac7be2648c6c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "97446ac8_3f5158b1",
+        "filename": "docs/files/VNFSDK-PMValidation-userguide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 5597
+      },
+      "writtenOn": "2020-12-15T15:40:25Z",
+      "side": 1,
+      "message": "\"xNF ETSI NFV onboarding packages - CSAR files\"",
+      "range": {
+        "startLine": 8,
+        "startChar": 66,
+        "endLine": 8,
+        "endChar": 76
+      },
+      "revId": "358f864e3ad221647a2038279c4cac7be2648c6c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "479cf277_3ec14cc2",
+        "filename": "docs/files/VNFSDK-PMValidation-userguide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 5597
+      },
+      "writtenOn": "2020-12-15T15:40:25Z",
+      "side": 1,
+      "message": "\"PM Dictionary YAML\" - is is about PM Dictionary, and not the PM measurement files.",
+      "range": {
+        "startLine": 8,
+        "startChar": 32,
+        "endLine": 8,
+        "endChar": 39
+      },
+      "revId": "358f864e3ad221647a2038279c4cac7be2648c6c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f7ead71b_6110d672",
+        "filename": "docs/files/VNFSDK-PMValidation-userguide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 5597
+      },
+      "writtenOn": "2020-12-15T15:40:25Z",
+      "side": 1,
+      "message": "\"PM Dictionary validation\" library...",
+      "range": {
+        "startLine": 13,
+        "startChar": 4,
+        "endLine": 13,
+        "endChar": 11
+      },
+      "revId": "358f864e3ad221647a2038279c4cac7be2648c6c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9f61e186_df7b20a0",
+        "filename": "docs/files/VNFSDK-PMValidation-userguide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 5597
+      },
+      "writtenOn": "2020-12-15T15:40:25Z",
+      "side": 1,
+      "message": "PM Dictionary YAML",
+      "range": {
+        "startLine": 14,
+        "startChar": 49,
+        "endLine": 14,
+        "endChar": 56
+      },
+      "revId": "358f864e3ad221647a2038279c4cac7be2648c6c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b3335e08_5841b469",
+        "filename": "docs/files/VNFSDK-PMValidation-userguide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 5597
+      },
+      "writtenOn": "2020-12-15T15:40:25Z",
+      "side": 1,
+      "message": "\"...by any ONAP component\"",
+      "range": {
+        "startLine": 14,
+        "startChar": 95,
+        "endLine": 14,
+        "endChar": 108
+      },
+      "revId": "358f864e3ad221647a2038279c4cac7be2648c6c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "addfca76_77b9a304",
+        "filename": "docs/files/VNFSDK-PMValidation-userguide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 5597
+      },
+      "writtenOn": "2020-12-15T15:40:25Z",
+      "side": 1,
+      "message": "...PM Dictionary YAML...",
+      "range": {
+        "startLine": 16,
+        "startChar": 60,
+        "endLine": 16,
+        "endChar": 67
+      },
+      "revId": "358f864e3ad221647a2038279c4cac7be2648c6c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1a21f78a_7f7a5283",
+        "filename": "docs/files/VNFSDK-PMValidation-userguide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 5597
+      },
+      "writtenOn": "2020-12-15T15:40:25Z",
+      "side": 1,
+      "message": "...PM Dictionary...",
+      "range": {
+        "startLine": 21,
+        "startChar": 25,
+        "endLine": 21,
+        "endChar": 33
+      },
+      "revId": "358f864e3ad221647a2038279c4cac7be2648c6c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8b885672_789b0949",
+        "filename": "docs/files/VNFSDK-PMValidation-userguide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 5597
+      },
+      "writtenOn": "2020-12-15T15:40:25Z",
+      "side": 1,
+      "message": "... PM Dictionary...",
+      "range": {
+        "startLine": 28,
+        "startChar": 36,
+        "endLine": 28,
+        "endChar": 43
+      },
+      "revId": "358f864e3ad221647a2038279c4cac7be2648c6c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "dee07908_81a457ee",
+        "filename": "docs/files/VNFSDK-PMValidation-userguide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 5597
+      },
+      "writtenOn": "2020-12-15T15:40:25Z",
+      "side": 1,
+      "message": "...PM Dictionary YAML...",
+      "range": {
+        "startLine": 43,
+        "startChar": 34,
+        "endLine": 43,
+        "endChar": 41
+      },
+      "revId": "358f864e3ad221647a2038279c4cac7be2648c6c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9b62ba5f_ecd9b962",
+        "filename": "docs/files/VNFSDK-PMValidation-userguide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 5597
+      },
+      "writtenOn": "2020-12-15T15:40:25Z",
+      "side": 1,
+      "message": "Should we have here sth like \"wget https://nexus...\" to provide an example of a HTTP client, which could be used?",
+      "revId": "358f864e3ad221647a2038279c4cac7be2648c6c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d7f3989c_48e261eb",
+        "filename": "docs/files/VNFSDK-PMValidation-userguide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 5597
+      },
+      "writtenOn": "2020-12-15T15:40:25Z",
+      "side": 1,
+      "message": "wget https://nexus...",
+      "range": {
+        "startLine": 45,
+        "startChar": 18,
+        "endLine": 45,
+        "endChar": 37
+      },
+      "revId": "358f864e3ad221647a2038279c4cac7be2648c6c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "30b86e16_3367462a",
+        "filename": "docs/files/VNFSDK-PMValidation-userguide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 5597
+      },
+      "writtenOn": "2020-12-15T15:40:25Z",
+      "side": 1,
+      "message": "add \"_file\". The filename could be anything, herer we somehow give a suggestion, that there is only a single filename, which is supported...",
+      "range": {
+        "startLine": 49,
+        "startChar": 69,
+        "endLine": 49,
+        "endChar": 82
+      },
+      "revId": "358f864e3ad221647a2038279c4cac7be2648c6c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2e67d647_0ad633af",
+        "filename": "docs/files/VNFSDK-PMValidation-userguide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 5597
+      },
+      "writtenOn": "2020-12-15T15:40:25Z",
+      "side": 1,
+      "message": "Shouldn`t this be a section?",
+      "range": {
+        "startLine": 51,
+        "startChar": 3,
+        "endLine": 51,
+        "endChar": 16
+      },
+      "revId": "358f864e3ad221647a2038279c4cac7be2648c6c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7844ffd0_fab26d17",
+        "filename": "docs/files/VNFSDK-PMValidation-userguide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 5597
+      },
+      "writtenOn": "2020-12-15T15:40:25Z",
+      "side": 1,
+      "message": "Shouldn`t this be a section?",
+      "range": {
+        "startLine": 57,
+        "startChar": 4,
+        "endLine": 57,
+        "endChar": 11
+      },
+      "revId": "358f864e3ad221647a2038279c4cac7be2648c6c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "50341137_63fbb476",
+        "filename": "docs/files/VNFSDK-PMValidation-userguide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 5597
+      },
+      "writtenOn": "2020-12-15T15:40:25Z",
+      "side": 1,
+      "message": "...input PM dictionary file...",
+      "range": {
+        "startLine": 61,
+        "startChar": 137,
+        "endLine": 61,
+        "endChar": 151
+      },
+      "revId": "358f864e3ad221647a2038279c4cac7be2648c6c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d5d7fbd8_c2fed35c",
+        "filename": "docs/files/VNFSDK-PMValidation-userguide.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 5597
+      },
+      "writtenOn": "2020-12-15T15:40:25Z",
+      "side": 1,
+      "message": "perhaps \"Successful validation\"",
+      "range": {
+        "startLine": 66,
+        "startChar": 3,
+        "endLine": 66,
+        "endChar": 20
+      },
+      "revId": "358f864e3ad221647a2038279c4cac7be2648c6c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
