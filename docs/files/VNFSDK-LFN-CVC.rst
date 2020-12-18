@@ -44,3 +44,4 @@ CVC Structures
 
    vnf-test-platform.rst
    csar-validation.rst
+   pm-validation.rst
