@@ -18,6 +18,11 @@ The PM Dictionary validation library has two versions:
 
 - validation-pmdictionary-<version>-standalone.jar contains PM Dictionary YAML validation logic which can be run from command line.
 
+The PM Dictionary validation can be started in the two ways:
+
+- as a standalone application
+- using an Oclip command
+
 Release Note
 ------------
 
@@ -63,8 +68,8 @@ Log file            Application creates a log file where all information's gener
 Result json file    Validation result is also available in the file with postfix '-validation-results.json'. The File is stored in a folder with input PM dictionary file.
 ================    ===========
 
-How to run application?
------------------------
+How to run standalone application?
+----------------------------------
 
 1. Install Java 11 JRE
 2. Download standalone version of PM Dictionary YAML validation application
@@ -200,3 +205,26 @@ Examples
 
     2020-12-14 08:23:31,054 ERROR o.o.v.y.YamlLoader [main] Failed to load multi document YAML file
     ...
+
+How to run PM Dictionary YAML validation as an Oclip command?
+-------------------------------------------------------------
+
+1. Run Oclip and execute a command:
+
+Command
+::
+    oclip --product onap-honolulu pm-dictionary-validate --yaml <path-to-yaml-file>
+
+For example
+::
+    vnfadmin@ddc559540515:/tmp$ oclip --product onap-honolulu pm-dictionary-validate --yaml /tmp/Simple_Valid_Schema.yaml
+    {"file":"/tmp/Simple_Valid_Schema.yaml","date":"Mon Dec 28 07:38:43 UTC 2020","criteria":"PASS","errors":"[]"}
+
+    vnfadmin@ddc559540515:/tmp$ oclip --product onap-honolulu pm-dictionary-validate --yaml /tmp/PM_Dictionary.yaml
+    {"file":"/tmp/PM_Dictionary.yaml","date":"Mon Dec 28 07:38:08 UTC 2020","criteria":"FAILED","errors":"
+    [{\"yamlDocumentNumber\":1,\"path\":\"/pmMetaData/pmFields/measResultType\",
+    \"message\":\"Value(s) is/are not in array of accepted values.\\n value(s):  integer\\n  accepted value(s):
+    [float, uint32, uint64]\"},{\"yamlDocumentNumber\":1,\"path\":\"/pmMetaData/pmFields/\",\"message\":\"Key not found: measChangeType\"},
+    {\"yamlDocumentNumber\":2,\"path\":\"/pmMetaData/pmFields/\",\"message\":\"Key not found: measChangeType\"},
+    {\"yamlDocumentNumber\":3,\"path\":\"/pmMetaData/pmFields/measAdditionalFields/vendorField1\",
+    \"message\":\"Value(s) is/are not in array of accepted values.\\n value(s):  [Z, A]\\n  accepted value(s):  [X, Y, Z]\"}]"}
