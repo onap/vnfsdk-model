@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1493a938_043cb42e",
+        "filename": "docs/files/pm-validation.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 5098
+      },
+      "writtenOn": "2020-12-29T10:30:33Z",
+      "side": 1,
+      "message": "I think it should be \"started in two ways\", without \"the\"",
+      "range": {
+        "startLine": 21,
+        "startChar": 36,
+        "endLine": 21,
+        "endChar": 59
+      },
+      "revId": "5412dee99e35e1343569e6467b0bf755f01f0ea0",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
