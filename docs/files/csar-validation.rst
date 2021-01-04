@@ -21,6 +21,24 @@ testcase: csar-validate
 
 And every VNFREQS is modeled as separate test case with name csar-validate-rxxxxx, where xxxxx represents the VNFREQS.
 
+Active VNF requirements
+=======================
+
+.. csv-table:: Table of VNF active requirements.
+   :delim: ;
+   :header: "Release", "Requirement No.", "Description"
+   :widths: 5, 5, 50
+   :url: https://nexus.onap.org/content/sites/raw/org.onap.vnfsdk.validation/master/VnfActiveRulesTable.csv
+
+Active PNF requirements
+=======================
+
+.. csv-table:: Table of PNF active requirements.
+   :delim: ;
+   :header: "Release", "Requirement No.", "Description"
+   :widths: 5, 5, 50
+   :url: https://nexus.onap.org/content/sites/raw/org.onap.vnfsdk.validation/master/PnfActiveRulesTable.csv
+
 Casablanca Implemented requirements
 ===================================
 
