@@ -21,7 +21,7 @@ Otherwise *executionId*, that can be used for checking validation state in the f
     --header 'Content-Type: multipart/form-data' \
     --form 'file=@"{path to csar file}"' \
     --form 'executions="[{
-      \"scenario\": \"onap-dublin\",
+      \"scenario\": \"onap-vtp\",
       \"testSuiteName\": \"validation\",
       \"testCaseName\": \"csar-validate\",
       \"parameters\": {
@@ -43,7 +43,7 @@ Otherwise *executionId*, that can be used for checking validation state in the f
     --header 'Content-Type: multipart/form-data' \
     --form 'file=@"{path to csar file}"' \
     --form 'executions="[{
-      \"scenario\": \"onap-dublin\",
+      \"scenario\": \"onap-vtp\",
       \"testSuiteName\": \"validation\",
       \"testCaseName\": \"csar-validate\",
       \"parameters\": {
@@ -75,7 +75,7 @@ Request:
     --header 'Content-Type: multipart/form-data' \
     --form 'file=@"/csar/invalidSignaturePackage.csar"' \
     --form 'executions="[{
-      \"scenario\": \"onap-dublin\",
+      \"scenario\": \"onap-vtp\",
       \"testSuiteName\": \"validation\",
       \"testCaseName\": \"csar-validate\",
       \"parameters\": {
@@ -92,7 +92,7 @@ Response:
 
     [
         {
-            "scenario": "onap-dublin",
+            "scenario": "onap-vtp",
             "testCaseName": "csar-validate",
             "testSuiteName": "validation",
             "executionId": "5e7a1726-4c48-42b9-ade4-dfd12ea75107-1608035294086",
