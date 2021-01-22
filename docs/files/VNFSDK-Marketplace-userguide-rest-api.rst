@@ -53,6 +53,32 @@ Otherwise *executionId*, that can be used for checking validation state in the f
       }
     }]"'
 
+- CSAR Validation - run validation for selected release
+
+Send and validate a CSAR file using rules which have selected release.
+The 'release' parameter is optional and it can have one of the values: amsterdam, casablanca, dublin, frankfurt, guilin, honolulu, latest
+If user doesn't set parameter then all rules will be used during validation. Otherwise rules are collected according to pattern:
+amsterdam rules <- casablanca rules <-dublin rules <-frankfurt rules <- guilin rules <- honolulu release <- latest
+For example: if user set release to dublin then rules with release dublin, casablanca and amsterdam will be used.
+
+If validation finish before timeout, result will be returned in json format.
+Otherwise *executionId*, that can be used for checking validation state in the future, will be returned.
+
+.. code-block::
+
+    curl --location --request POST 'http://{marketplace address}/onapapi/vnfsdk-marketplace/v1/vtp/executions' \
+    --header 'Content-Type: multipart/form-data' \
+    --form 'file=@"{path to csar file}"' \
+    --form 'executions="[{
+      \"scenario\": \"onap-vtp\",
+      \"testSuiteName\": \"validation\",
+      \"testCaseName\": \"csar-validate\",
+      \"parameters\": {
+        \"csar\": \"file://{csar file name}\",
+        \"pnf\":\"true\",
+        \"release\":\"dublin\"
+      }
+    }]"'
 
 - CSAR Validation - get results of validation
 
