@@ -53,7 +53,7 @@ How to install VNF SDK with ONAP from OOM:
 
     otherwise:
 
-    helm deploy dev local/onap --namespace onap -f onap/resources/overrides/onap-all.yaml -f ./openstack-30-elalto.yaml  --timeout 1000 --verbose 2>&1 | tee ~/helm-installation-manual.log
+    helm deploy dev local/onap --namespace onap -f onap/resources/overrides/onap-all.yaml -f ./openstack-30-elalto.yaml  --timeout 1000s --verbose 2>&1 | tee ~/helm-installation-manual.log
 
 
 How to update only VNF SDK component from OOM
@@ -83,7 +83,7 @@ How to update only VNF SDK component from OOM
 
 **5. Install ONAP on lab**
 
-    helm deploy dev-vnfsdk local/onap --namespace onap -f onap/resources/overrides/onap-all.yaml -f ./openstack-30-elalto.yaml  --timeout 1000 --verbose 2>&1 | tee ~/helm-installation-manual.log
+    helm deploy dev-vnfsdk local/onap --namespace onap -f onap/resources/overrides/onap-all.yaml -f ./openstack-30-elalto.yaml  --timeout 1000s --verbose 2>&1 | tee ~/helm-installation-manual.log
 
 
 How to upgrade Refrepo in VNF SDK from OOM:
