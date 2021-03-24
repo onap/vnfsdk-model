@@ -14,6 +14,51 @@ Release Notes
    * developing tools for vendor CI/CD toolchains
    * developing validation and testing tools
 
+Version: 1.6.3
+--------------
+
+ :Release Date: 2021-04-01
+ :Docker Version: 1.6.3
+
+ **New Features**
+
+   * Test cases are supported to add anotation about the release specific details
+   * CSAR validation is updated to report the table of test cases supported
+
+ **Bug Fixes**
+
+ N/A
+
+ **Known Issues**
+
+ N/A
+
+ **Security Notes**
+
+ *Fixed Security Issues*
+
+ N/A
+
+ *Known Security Issues*
+
+ N/A
+
+ *Known Vulnerabilities in Used Modules*
+
+ N/A
+
+ **Upgrade Notes**
+
+ N/A
+
+ **Deprecation Notes**
+
+ N/A
+
+ **Other**
+
+ N/A
+
 
  Version: 1.6.2
  --------------
