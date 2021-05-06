@@ -162,13 +162,13 @@ Response:
                     {
                         "passed": false,
                         "vnfreqName": "r816745",
-                        "description": "The VNF or PNF PROVIDER MUST provide the Service Provider with PM Meta Data (PM Dictionary)\nto support the analysis of PM events delivered to DCAE.\nThe PM Dictionary is to be provided as a separate YAML artifact at onboarding and must follow\nthe VES Event Listener Specification and VES Event Registration Specification\nwhich contain the format and content required.",
+                        "description": "The VNF or PNF PROVIDER MUST provide the Service Provider with Meta Data (Dictionary)\nto support the analysis of events delivered to DCAE.\nThe Dictionary is to be provided as a separate YAML artifact at onboarding and must follow\nthe VES Event Listener Specification and VES Event Registration Specification\nwhich contain the format and content required.",
                         "errors": [
                             {
                                 "vnfreqNo": "R816745",
                                 "code": "0x2000",
-                                "message": "Fail to load PM_Dictionary With error: PM_Dictionary YAML file is empty",
-                                "file": "Artifacts/Deployment/Measurements/PM_Dictionary.yml",
+                                "message": "Fail to load PDictionary With error: Dictionary YAML file is empty",
+                                "file": "Artifacts/Deployment/Measurements/Dictionary.yml",
                                 "lineNumber": -1
                             }
                         ],
