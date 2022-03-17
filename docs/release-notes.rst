@@ -14,6 +14,14 @@ Release Notes
    * developing tools for vendor CI/CD toolchains
    * developing validation and testing tools
 
+Istanbul Maintenance release
+---------------------------------
+
+As following VNFSDK components are having log4j transitive dependencies, they are verified for log4j vulnerability and no issues identified:
+
+ * refrepo
+ * validation
+
 Version: 1.6.3
 --------------
 
