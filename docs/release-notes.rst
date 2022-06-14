@@ -22,6 +22,13 @@ As following VNFSDK components are having log4j transitive dependencies, they ar
  * refrepo
  * validation
 
+Version: 10.0.0 (Jakarta)
+--------------------------
+
+:Release Date: 2022-06-09
+
+no updates in this release
+
 Version: 1.6.3
 --------------
 
