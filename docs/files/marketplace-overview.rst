@@ -68,7 +68,7 @@ This will start two Docker containers:
 
 Once started, access the Marketplace from your web browser.
 
-3. Connect to http://{host}:8702/onapui/vnfmarket to access the user interface
+3. Connect to http://hostIP:8702/onapui/vnfmarket to access the user interface
 
 VNF SDK Tools
 ~~~~~~~~~~~~~

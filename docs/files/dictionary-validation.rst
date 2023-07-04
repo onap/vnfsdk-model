@@ -31,20 +31,20 @@ The standalone version of Dictionary validation library is available from Honolu
 How to download standalone version
 ----------------------------------
 
-All available jars are available at
-::
-    https://nexus.onap.org/#nexus-search;quick~validation-dictionary
+All available jars are available at::
+
+  https://nexus.onap.org/#nexus-search;quick~validation-dictionary
 
 To download a standalone version of Dictionary validation library you need to prepare a link for selected version of file or
 manually download the file from Nexus (Viewing Repository: Releases).
 
-Template
-::
-    wget -O validation-dictionary-<VERSION>-standalone.jar https://nexus.onap.org/service/local/artifact/maven/redirect?r=releases&g=org.onap.vnfsdk.validation&a=validation-dictionary&v=<VERSION>&e=jar&c=standalone
+Template::
 
-For example link for version 1.2.16 looks like
-::
-    wget -O validation-dictionary-1.2.16-standalone.jar https://nexus.onap.org/service/local/artifact/maven/redirect?r=releases&g=org.onap.vnfsdk.validation&a=validation-dictionary&v=1.2.16&e=jar&c=standalone
+  wget -O validation-dictionary-<VERSION>-standalone.jar https://nexus.onap.org/service/local/artifact/maven/redirect?r=releases&g=org.onap.vnfsdk.validation&a=validation-dictionary&v=<VERSION>&e=jar&c=standalone
+
+For example link for version 1.2.16 looks like::
+
+  wget -O validation-dictionary-1.2.16-standalone.jar https://nexus.onap.org/service/local/artifact/maven/redirect?r=releases&g=org.onap.vnfsdk.validation&a=validation-dictionary&v=1.2.16&e=jar&c=standalone
 
 Application return codes
 ------------------------
@@ -74,19 +74,23 @@ How to run standalone application?
 1. Install Java 11 JRE
 2. Download standalone version of Dictionary YAML validation application
 
-For example
-::
-    wget -O validation-dictionary-1.2.16-standalone.jar https://nexus.onap.org/service/local/artifact/maven/redirect?r=snapshots&g=org.onap.vnfsdk.validation&a=validation-dictionary&v=1.2.16&e=jar&c=standalone
+For example::
 
-3. Go to folder with downloaded application and run it
-::
-    java -jar validation-dictionary-1.2.16-standalone.jar <path to dictionary_file.yaml>
+  wget -O validation-dictionary-1.2.16-standalone.jar https://nexus.onap.org/service/local/artifact/maven/redirect?r=snapshots&g=org.onap.vnfsdk.validation&a=validation-dictionary&v=1.2.16&e=jar&c=standalone
+
+3. Go to folder with downloaded application and run it.
+
+Code::
+
+  java -jar validation-dictionary-1.2.16-standalone.jar <path to dictionary_file.yaml>
 
 Examples
 --------
 
-1. Successful validation
-::
+1. Successful validation.
+
+Code::
+
     ❯ java -jar validation-dictionary-1.2.16-standalone.jar /home/username/yaml_schema/Simple_Valid_Schema.yaml
 
     # Executing a 'Validate Dictionary yaml' operation ...
@@ -116,8 +120,10 @@ Examples
     }
 
 
-2. Failing validation
-::
+2. Failing validation.
+
+Code::
+
     ❯ java -jar validation-dictionary-1.2.16-standalone.jar /home/username/yaml_schema/Dictionary.yaml
 
     # Executing a 'Validate Dictionary yaml' operation ...
@@ -189,7 +195,9 @@ Examples
     }
 
 3. Validation internal error
-::
+
+Code::
+
     ❯ java -jar validation-dictionary-1.2.16-standalone.jar /home/username/Not_Yaml_File.txt
 
     # Executing a 'Validate Dictionary yaml' operation ...
@@ -211,12 +219,14 @@ How to run Dictionary YAML validation as an Oclip command?
 
 1. Run Oclip and execute a command:
 
-Command
-::
+Code::
+
     oclip --product onap-honolulu dictionary-validate --yaml <path-to-yaml-file>
 
-For example
-::
+For example:
+
+Code::
+
     vnfadmin@ddc559540515:/tmp$ oclip --product onap-honolulu dictionary-validate --yaml /tmp/Simple_Valid_Schema.yaml
     {"file":"/tmp/Simple_Valid_Schema.yaml","date":"Mon Dec 28 07:38:43 UTC 2020","criteria":"PASS","errors":"[]"}
 

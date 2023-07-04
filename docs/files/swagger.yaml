@@ -1,0 +1,565 @@
+swagger: "2.0"
+info:
+  description: "These are the APIs for the ONAP VNFSDK Marketplace.  VNFSDK helps to package and validate VNFs for onboarding into ONAP.  You can find out more about     VNFSDK at [http://onap.readthedocs.io](http://onap.readthedocs.io/en/latest/submodules/vnfsdk/model.git/docs/files/vnfsdk-apis.html)."
+  version: "1.0.0"
+  title: "ONAP VNFSDK"
+  contact:
+    email: "onap-discuss@lists.onap.org"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "onap.readthedocs.io"
+basePath: "/onapapi/marketplace/v1"
+tags:
+- name: "csars"
+  description: "VNF CSAR information"
+  externalDocs:
+    description: "Find out more"
+    url: "http://wiki.onap.org"
+- name: VTP Scenario
+- name: VTP Execution
+schemes:
+- "http"
+paths:
+  /csars:
+    get:
+      summary: "Query VNF Package by conditions"
+      description: "Query VNF package"
+      operationId: "queryVnf"
+      produces:
+      - "application/json"
+      tags:
+      - "VNF package"
+      parameters:
+      - name: "conditions"
+        in: "query"
+        description: "Conditions that need to be considered for filter"
+        required: true
+        type: "array"
+        items:
+          type: "string"
+        collectionFormat: "multi"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Csars"
+        400:
+          description: "Invalid status value"
+    post:
+      summary: "Upload/Re-Upload VNF Package"
+      description: ""
+      operationId: "addVnf"
+      consumes:
+      - "multipart/form-data"
+      produces:
+      - "application/json"
+      tags:
+      - "VNF package"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "VNF objects to add to the Marketplace"
+        required: true
+        schema:
+          $ref: "#/definitions/Csars"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/ApiResponse"
+  /csars/{csarId}:
+    get:
+      tags:
+      - "csarId"
+      summary: "Find vnf by CSAR ID"
+      description: "Returns a single vnf"
+      operationId: "getVnfByCsarId"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "csarId"
+        in: "path"
+        description: "CSAR ID of VNF to return"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/Csars"
+        400:
+          description: "Invalid ID supplied"
+        404:
+          description: "VNF not found"
+    post:
+      tags:
+      - "csarId"
+      summary: "Updates a VNF in the Marketplace with form data"
+      description: ""
+      operationId: "updateCsar"
+      consumes:
+      - "application/x-www-form-urlencoded"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "csarId"
+        in: "path"
+        description: "CSAR ID of VNF that needs to be updated"
+        required: true
+        type: "string"
+      - name: "name"
+        in: "formData"
+        description: "Updated name of the VNF"
+        required: false
+        type: "string"
+      - name: "fileNamee"
+        in: "formData"
+        description: "Updated filename of the csar"
+        required: false
+        type: "string"
+      responses:
+        405:
+          description: "Invalid input"
+    delete:
+      tags:
+      - "csarId"
+      summary: "Deletes a VNF"
+      description: ""
+      operationId: "deleteVnf"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "csarId"
+        in: "path"
+        description: "VNF CSAR ID to delete"
+        required: true
+        type: "string"
+      responses:
+        400:
+          description: "Invalid ID supplied"
+  /csars/{csarId}/files:
+    get:
+      tags:
+      - "csarId"
+      summary: "Download vnf"
+      description: "Download a single vnf"
+      operationId: "downloadVnf"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "csarId"
+        in: "path"
+        description: "CSAR ID of VNF to return"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/Csars"
+        400:
+          description: "Invalid ID supplied"
+        404:
+          description: "VNF not found"
+  '/vtp/scenarios/{scenario}/testsuites':
+    get:
+      tags:
+        - VTP Scenario
+      summary: ' List available test suties in given scenario'
+      description: ''
+      operationId: listTestSuties
+      produces:
+        - application/json
+      parameters:
+        - name: scenario
+          in: path
+          description: Test scenario name
+          required: true
+          type: string
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/VTPTestSuite'
+        '500':
+          description: Failed to perform the operation
+          schema:
+            $ref: '#/definitions/VTPError'
+
+  '/vtp/scenarios/{scenario}/testcases':
+    get:
+      tags:
+        - VTP Scenario
+      summary: ' List available test cases'
+      description: ''
+      operationId: listTestcases
+      produces:
+        - application/json
+      parameters:
+        - name: scenario
+          in: path
+          description: Test scenario name
+          required: true
+          type: string
+        - name: testSuiteName
+          in: query
+          description: Test suite name
+          required: false
+          type: string
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/VTPTestCase'
+        '500':
+          description: Failed to perform the operation
+          schema:
+            $ref: '#/definitions/VTPError'
+  '/vtp/scenarios/{scenario}/testsuites/{testSuiteName}/testcases/{testCaseName}':
+    get:
+      tags:
+        - VTP Scenario
+      summary: Retrieve test cases details like inputs outputs and test suite name
+      description: ''
+      operationId: getTestcase
+      produces:
+        - application/json
+      parameters:
+        - name: scenario
+          in: path
+          description: Test scenario name
+          required: true
+          type: string
+        - name: testSuiteName
+          in: path
+          description: Test case name
+          required: true
+          type: string
+        - name: testCaseName
+          in: path
+          description: Test case name
+          required: true
+          type: string
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            $ref: '#/definitions/VTPTestCase'
+        '404':
+          description: Test case does not exist
+          schema:
+            $ref: '#/definitions/VTPError'
+        '500':
+          description: Failed to perform the operation
+          schema:
+            $ref: '#/definitions/VTPError'
+  '/vtp/executions/{executionId}':
+    get:
+      tags:
+        - VTP Execution
+      summary: ' Retrieve test execution complete details'
+      description: ''
+      operationId: getTestExecution
+      produces:
+        - application/json
+      parameters:
+        - name: executionId
+          in: path
+          description: Test execution Id
+          required: true
+          type: string
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            $ref: '#/definitions/VTPTestExecution'
+        '500':
+          description: Failed to perform the operation
+          schema:
+            $ref: '#/definitions/VTPError'
+  /vtp/scenarios:
+    get:
+      tags:
+        - VTP Scenario
+      summary: ' List available test scenarios'
+      description: ''
+      operationId: listTestScenarios
+      produces:
+        - application/json
+      parameters: []
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/VTPTestScenario'
+        '500':
+          description: Failed to perform the operation
+          schema:
+            $ref: '#/definitions/VTPError'
+  /vtp/executions:
+    get:
+      tags:
+        - VTP Execution
+      summary: ' List test executions'
+      description: ''
+      operationId: listTestExecutions
+      produces:
+        - application/json
+      parameters:
+        - name: requestId
+          in: query
+          description: Test request Id
+          required: false
+          type: string
+        - name: scenario
+          in: query
+          description: Test scenario name
+          required: false
+          type: string
+        - name: testsuiteName
+          in: query
+          description: Test suite name
+          required: false
+          type: string
+        - name: testcaseName
+          in: query
+          description: Test case name
+          required: false
+          type: string
+        - name: profileName
+          in: query
+          description: Test profile name
+          required: false
+          type: string
+        - name: startTime
+          in: query
+          description: Test execution start time
+          required: false
+          type: string
+        - name: endTime
+          in: query
+          description: Test execution end time
+          required: false
+          type: string
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/VTPTestExecution'
+        '500':
+          description: Failed to perform the operation
+          schema:
+            $ref: '#/definitions/VTPError'
+    post:
+      tags:
+        - VTP Execution
+      summary: 'Execute the test case with given inputs in ''executions'' form-data as key-value pair of parameter''s name vs parameter''s value. If parameter is binary type thenmulti-part form-data ''file'' should be used to feed the binary file content and it can be more than once. To use the given file as input parameter, prefix the value with file://<filename>.'
+      description: ''
+      operationId: executeTestcases1
+      consumes:
+        - multipart/form-data
+      produces:
+        - application/json
+      parameters:
+        - name: requestId
+          in: query
+          description: Request Id
+          required: false
+          type: string
+        - name: file
+          in: formData
+          description: Testcase File arguments
+          required: false
+          type: array
+          items:
+            $ref: '#/definitions/FormDataBodyPart'
+          collectionFormat: multi
+        - name: executions
+          in: formData
+          required: false
+          type: string
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/VTPTestExecution'
+        '500':
+          description: Failed to perform the operation
+          schema:
+            $ref: '#/definitions/VTPError'  
+definitions:
+  Csars:
+    type: "object"
+    required:
+    - "csarId"
+    properties:
+      type:
+        type: "string"
+        example: "CSAR"
+      name:
+        type: "string"
+        example: "NanocellGateway"
+      fileName:
+        type: "string"
+      creationDate:
+        type: "string"
+      modificationDate:
+        type: "string"
+      readDate:
+        type: "string"
+      size:
+        type: "string"
+        example: "37 MB"
+      provider:
+        type: "string"
+        example: "XYZ"
+      version:
+        type: "string"
+        example: "v1.0.0"
+      createTime:
+        type: "string"
+      modifyTime:
+        type: "string"
+      downloadUri:
+        type: "string"
+        example: "http://msb_ip:msb_port/files/marketplace/CSAR/XYZ/NanocellGW/v1.0"
+      shortdesc:
+        type: "string"
+        example: "XYZ Nanocell Gateway VNF"
+      details:
+        type: "string"
+      csarId:
+        type: "string"
+        example: "78ede6f3-66cc-46ab-b748-38a6c010d272"
+      parameters:
+        type: "array"
+        xml:
+          name: "parameters"
+          wrapped: true
+        items:
+          type: "string"
+    xml:
+      name: "Csars"
+  ApiResponse:
+    type: "object"
+    properties:
+      code:
+        type: "integer"
+        format: "int32"
+      type:
+        type: "string"
+      message:
+        type: "string"
+  VTPTestSuite:
+    type: object
+    properties:
+      name:
+        type: string
+  VTPError:
+    type: object
+    properties:
+      code:
+        type: string
+      message:
+        type: string
+      httpStatus:
+        type: integer
+        format: int32
+  VTPTestCase:
+    type: object
+    properties:
+      scenario:
+        type: string
+      testCaseName:
+        type: string
+      testSuiteName:
+        type: string
+      descripton:
+        type: string
+      author:
+        type: string
+      inputs:
+        type: array
+        items:
+          $ref: '#/definitions/VTPTestCaseInput'
+      outputs:
+        type: array
+        items:
+          $ref: '#/definitions/VTPTestCaseOutput'
+  VTPTestCaseInput:
+    type: object
+    properties:
+      name:
+        type: string
+      description:
+        type: string
+      type:
+        type: string
+      defaultValue:
+        type: string
+      isOptional:
+        type: boolean
+      metadata:
+        type:object
+  VTPTestCaseOutput:
+    type: object
+    properties:
+      name:
+        type: string
+      description:
+        type: string
+      type:
+        type: string
+ 
+  VTPTestExecution:
+    type: object
+    properties:
+      scenario:
+        type: string
+      testCaseName:
+        type: string
+      testSuiteName:
+        type: string
+      executionId:
+        type: string
+      requestId:
+        type: string
+      profile:
+        type: string
+      parameters:
+        $ref: '#/definitions/JsonNode'
+      results:
+        $ref: '#/definitions/JsonNode'
+      status:
+        type: string
+      startTime:
+        type: string
+      endTime:
+        type: string
+  VTPTestScenario:
+    type: object
+    properties:
+      name:
+        type: string
+
+
+externalDocs:
+  description: "Find out more about VNFSDK"
+  url: "https://onap.readthedocs.io/en/latest/submodules/vnfsdk/model.git/docs/index.html"

@@ -59,9 +59,11 @@ Generate certificates
   openssl req -nodes -x509 -sha256 -newkey rsa:4096 -keyout "pnf.key" -out "pnf.cert" -days 365 -subj "/C=NL/ST=Zuid Holland/L=Rotterdam/O=Sparkling Network/OU=IT Dept/CN=$(whoami)s Sign Key"
 
 Sign csar file with the private key
--------------------------------
+-----------------------------------
+
   openssl dgst -sha256 -sign "pnf.key" -out pnf.sha256.cms pnf.csar
 
 Verify signature
 ----------------
+
   openssl dgst -sha256 -verify  <(openssl x509 -in "pnf.cert"  -pubkey -noout) -signature pnf.sha256.cms pnf.csar
