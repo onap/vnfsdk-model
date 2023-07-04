@@ -52,5 +52,8 @@ def setup(app):
     app.add_css_file("css/ribbon.css")
 
 linkcheck_ignore = [
-  r'http://localhost:\d+/'
+  r'http://localhost:\d+/',
+  r'https://WORKER_IP:*',
+  r'http://WORKER_IP:*',
+  r'http://hostIP:*'
 ]

@@ -10,12 +10,16 @@ VNFSDK Documentation
    :maxdepth: 1
    :titlesonly:
 
+   release-notes
    files/vnfsdk-apis
-   :download:`swagger json <files/swagger.json>`
-   :download:`swagger yaml <files/swagger.yaml>`
-
    files/vnf-packaging-model-blueprint
    files/marketplace-overview
+
+
+Files for download:
+   :download:`swagger json <files/swagger.json>`
+
+   :download:`swagger yaml <files/swagger.yaml>`
 
 User Guides
 ===========
@@ -33,4 +37,4 @@ User Guides
    files/Dovetail
    files/VNFSDK-LFN-CVC
    files/VNFSDK-Marketplace-userguide-installation
-   files/VNFSDK-PMValidation-userguide.rst
+

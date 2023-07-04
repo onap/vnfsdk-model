@@ -3,7 +3,7 @@
 .. Copyright 2017 Huawei Technologies Co., Ltd.
 
 VNF SDK Marketplace User Guide for VNF Suppliers
-==========================================
+================================================
 
 The VNF SDK Marketplace helps vendors validate VNFs and connect with suppliers.
 To upload and validate VNFs, vendors will use the web GUI.
