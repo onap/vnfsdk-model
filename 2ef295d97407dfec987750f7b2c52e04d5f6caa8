@@ -1,0 +1,8 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Cedric Ollivier <cedric.ollivier@orange.com>
+Code-Review+2: Dan Xu <xudan16@huawei.com>
+Submitted-by: Dan Xu <xudan16@huawei.com>
+Submitted-at: Thu, 06 Jul 2023 06:51:06 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/vnfsdk/model/+/135092
+Project: vnfsdk/model
+Branch: refs/heads/master
