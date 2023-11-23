@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ab0d3fa9_7e2519c0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5029
+      },
+      "writtenOn": "2023-11-23T02:11:17Z",
+      "side": 1,
+      "message": "It needs to rebase before can be merged. But there is an error when clicking the \u0027REBASE\u0027 button.",
+      "revId": "69a9950eb056edc72cd0610766f96db339d308cc",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    }
+  ]
+}
