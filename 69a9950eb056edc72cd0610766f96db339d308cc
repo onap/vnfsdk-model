@@ -1,0 +1,9 @@
+Code-Review+2: Thomas Kulik <thomas.kulik@telekom.de>
+Verified+1: Thomas Kulik <thomas.kulik@telekom.de>
+Verified+1: ONAP Required GHA <releng+onap.required.gha@linuxfoundation.org>
+Code-Review+2: Dan Xu <xudan16@huawei.com>
+Submitted-by: Thomas Kulik <thomas.kulik@telekom.de>
+Submitted-at: Wed, 29 Nov 2023 15:51:44 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/vnfsdk/model/+/136637
+Project: vnfsdk/model
+Branch: refs/heads/montreal
