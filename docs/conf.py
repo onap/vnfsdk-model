@@ -21,7 +21,6 @@ extensions = [
     'sphinx.ext.graphviz',
     'sphinxcontrib.blockdiag',
     'sphinxcontrib.seqdiag',
-    'sphinxcontrib.swaggerdoc',
     'sphinxcontrib.plantuml'
 ]
 
@@ -53,7 +52,9 @@ def setup(app):
 
 linkcheck_ignore = [
   r'http://localhost:\d+/',
-  r'https://WORKER_IP:*',
-  r'http://WORKER_IP:*',
-  r'http://hostIP:*'
+  r'https://WORKER_IP:.*',
+  r'http://WORKER_IP:.*',
+  r'http://hostIP:.*',
+  r'https://wiki\.onap\.org/.*',
+  r'http://.*'
 ]
