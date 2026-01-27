@@ -99,20 +99,12 @@ Docker Version: 1.6.2
 
 * Fix oclip issue and set OCLIP version used during docker image build, to 6.0.0
 
-  - https://jira.onap.org/browse/CLI-325
-
 * Fix JSON parsing error returned from GET request
-
-  - https://jira.onap.org/browse/VNFSDK-697
 
 * Fixed rule R130206 handling of CSARs with no TOSCA meta and no Certificate in root directory
 
-  - https://jira.onap.org/browse/VNFSDK-481
-
 * Fixed rule R816745 that was not reporting error when CMS and TOSCA meta file were present,
   however TOSCA did not contain ETSI-Entry-Certificate
-
-  - https://jira.onap.org/browse/VNFSDK-660
 
 **Known Issues**
 
@@ -224,15 +216,9 @@ N/A
 
   * Upgraded from java 8 to java 11
 
-  - https://jira.onap.org/browse/VNFSDK-646
-
   * Added non-vulnerable log4j version
 
-  - https://jira.onap.org/browse/VNFSDK-553
-
   * Update certs expiration date from default 30 days to 730 days (2 years)
-
-  - https://jira.onap.org/browse/VNFSDK-650
 
 *Known Security Issues*
 
@@ -329,8 +315,8 @@ N/A
 
 *Known Security Issues*
 
-* In default deployment VNFSDK (refrepo) exposes HTTP port 30297 outside of cluster. [`OJSI-154 <https://jira.onap.org/browse/OJSI-154>`_]
-* CVE-2019-12126 - demo-vnfsdk-vnfsdk exposes JDWP port 8000 on localhost which allows to gain root privileges inside the container [`OJSI-88 <https://jira.onap.org/browse/OJSI-88>`_]
+* In default deployment VNFSDK (refrepo) exposes HTTP port 30297 outside of cluster.
+* CVE-2019-12126 - demo-vnfsdk-vnfsdk exposes JDWP port 8000 on localhost which allows to gain root privileges inside the container.
 
 *Known Vulnerabilities in Used Modules*
 
@@ -372,8 +358,8 @@ N/A
 
 *Known Security Issues*
 
-* In default deployment VNFSDK (refrepo) exposes HTTP port 30297 outside of cluster. [`OJSI-154 <https://jira.onap.org/browse/OJSI-154>`_]
-* CVE-2019-12126 - demo-vnfsdk-vnfsdk exposes JDWP port 8000 on localhost which allows to gain root privileges inside the container [`OJSI-88 <https://jira.onap.org/browse/OJSI-88>`_]
+* In default deployment VNFSDK (refrepo) exposes HTTP port 30297 outside of cluster.
+* CVE-2019-12126 - demo-vnfsdk-vnfsdk exposes JDWP port 8000 on localhost which allows to gain root privileges inside the container.
 
 *Known Vulnerabilities in Used Modules*
 
@@ -414,14 +400,7 @@ N/A
 
 **Security Notes**
 
-VNFSDK code has been formally scanned during build time using NexusIQ and all Critical vulnerabilities have been addressed, items that remain open have been assessed for risk and determined to be false positive. The VNFSDK open Critical security vulnerabilities and their risk assessment have been documented as part of the `project <https://wiki.onap.org/pages/viewpage.action?pageId=45298880>`_.
-
-Quick Links:
-     - `VNFSDK project page <https://wiki.onap.org/display/DW/VNF+SDK+Project>`_
-
-     - `Passing Badge information for VNFSDK <https://bestpractices.coreinfrastructure.org/en/projects/1588>`_
-
-     - `Project Vulnerability Review Table for VNFSDK <https://wiki.onap.org/pages/viewpage.action?pageId=45298880>`__
+VNFSDK code has been formally scanned during build time using NexusIQ and all Critical vulnerabilities have been addressed, items that remain open have been assessed for risk and determined to be false positive. The VNFSDK open Critical security vulnerabilities and their risk assessment have been documented as part of the project.
 
 **Upgrade Notes**
 
@@ -465,13 +444,6 @@ assessed for risk and determined to be false positive. The VNFSDK open critical
 security vulnerabilities and their risk assessment have been documented as part
 of the `project <https://wiki.onap.org/pages/viewpage.action?pageId=28377592>`__.
 
-Quick Links:
-     - `VNFSDK project page <https://wiki.onap.org/display/DW/VNF+SDK+Project>`_
-
-     - `Passing Badge information for VNFSDK <https://bestpractices.coreinfrastructure.org/en/projects/1588>`_
-
-     - `Project Vulnerability Review Table for VNFSDK <https://wiki.onap.org/pages/viewpage.action?pageId=28377592>`__
-
 **Upgrade Notes**
     * Updated to use Swagger for APIs
 
@@ -512,7 +484,7 @@ N/A
 
 **Known Issues**
 
-`VNFSDK-126 <https://jira.onap.org/browse/VNFSDK-126>`_ : The service 'GET /packageresource/csrs' ignores query parameters
+The service 'GET /packageresource/csrs' ignores query parameters
 
 **Security Issues**
 
