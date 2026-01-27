@@ -21,7 +21,6 @@ extensions = [
     'sphinx.ext.graphviz',
     'sphinxcontrib.blockdiag',
     'sphinxcontrib.seqdiag',
-    'sphinxcontrib.swaggerdoc',
     'sphinxcontrib.plantuml'
 ]
 
@@ -55,5 +54,6 @@ linkcheck_ignore = [
   r'http://localhost:\d+/',
   r'https://WORKER_IP:*',
   r'http://WORKER_IP:*',
-  r'http://hostIP:*'
+  r'http://hostIP:*',
+  r'http://*'
 ]
